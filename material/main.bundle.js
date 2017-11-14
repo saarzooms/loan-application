@@ -2555,7 +2555,7 @@ var _a, _b;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-    api_url: 'http://192.168.2.103/loan-calculator-server'
+    api_url: 'http://192.168.2.103/loan-calculator-server'//change by your URL
     //api_url: 'http://bansariflourmill.com/loan-calculator-server'
    // api_url: 'http://loan-calculator.xcartadesigns.com/api'
 };
