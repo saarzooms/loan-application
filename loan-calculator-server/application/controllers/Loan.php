@@ -11,7 +11,7 @@ class Loan extends CI_Controller
 
 	
    //function Loan(){
-   public function __construct() {
+   function __construct() {
         parent::__construct();
         $this->load->model('Loan_model');
         $this->session->set_userdata('userId', 101);
