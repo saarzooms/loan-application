@@ -9,9 +9,13 @@ class Loan extends CI_Controller
         $this->session->set_userdata('userId', 101);
     } */
 
+	function __construct () {
+        parent::__construct();
+    }
+	
    function Loan(){
    // public function __construct() {
-        parent::__construct();
+       // parent::__construct();
         $this->load->model('Loan_model');
         $this->session->set_userdata('userId', 101);
     }
