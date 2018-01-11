@@ -11,7 +11,8 @@ $(document).ready(function() {
 		
 		$.ajax({ 
 					type: "POST",
-					url: "ajax/login_data.php?username="+username+"&pass="+pass,
+					//url: "ajax/login_data.php?username="+username+"&pass="+pass,
+			                url: "http://loanapp-app.herokuapp.com/material/ajax/login_data.php?username="+username+"&pass="+pass,
 					success: function(data)
 					{
 						//alert(data);
