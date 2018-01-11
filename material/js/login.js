@@ -8,7 +8,7 @@ $(document).ready(function() {
 		var pass = document.getElementById('Password_Login').value;
 		
 		//alert(username +' '+pass);
-		var a="ajax/login_data.php?username="+username+"&pass="+pass";
+		
 		
 		$.ajax({ 
 					type: "POST",
