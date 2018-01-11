@@ -2,8 +2,8 @@
 
 class Settings_model extends CI_Model
 {
-    //function Settings_model(){
-     public function __construct() {
+    function Settings_model(){
+    // public function __construct() {
         parent::__construct();
     }
 
