@@ -11,7 +11,7 @@ $(document).ready(function() {
 		
 		$.ajax({ 
 					type: "POST",
-					url: "loan-application/ajax/login_data.php?username="+username+"&pass="+pass,
+					url: "/ajax/login_data.php?username="+username+"&pass="+pass,
 			               	success: function(data)
 					{
 						//alert(data);
