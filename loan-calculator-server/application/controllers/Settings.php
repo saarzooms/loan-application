@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Settings extends CI_Controller {
 
 	//function Settings(){
-	public function __construct() {
+	function __construct() {
 		parent::__construct();
 		$this->load->model('Settings_model');
 		$this->session->set_userdata('userId', 101);
