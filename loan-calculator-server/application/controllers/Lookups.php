@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Lookups extends CI_Controller {
 
 	//function Lookups(){
-	function __construct() {
+	public function __construct() {
 		parent::__construct();
 		$this->load->model('Lookups_model');
 		$this->session->set_userdata('userId', 101);
