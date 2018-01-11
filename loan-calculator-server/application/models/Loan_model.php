@@ -2,8 +2,8 @@
 
 class Loan_model extends CI_Model
 {
-    function Loan_model(){
-	//public function __construct() 
+   // function Loan_model(){
+	public function __construct() 
     {
         parent::__construct();
     }
