@@ -2555,7 +2555,7 @@ var _a, _b;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-    api_url: 'https://loanapp-app.herokuapp.com//loan-calculator-server'
+    api_url: 'https://loanapp-app.herokuapp.com/loan-calculator-server'
 };
 //# sourceMappingURL=environment.js.map
 
