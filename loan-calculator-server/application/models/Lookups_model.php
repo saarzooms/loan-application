@@ -2,8 +2,8 @@
 
 class Lookups_model extends CI_Model
 {
-   // function Lookups_model(){
-    public function __construct() {
+    function Lookups_model(){
+   // public function __construct() {
         parent::__construct();
     }
 
