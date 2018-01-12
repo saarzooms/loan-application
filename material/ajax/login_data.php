@@ -53,10 +53,10 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 							$active = 1;
 							break;
 						}
-					} */
+					} 
 					//echo $subscription['data'][0]['id'];
 					
-			}	
+			}	*/
 		} 
 	}
 	if($id=='')
