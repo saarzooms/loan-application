@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('../db/connection.php');
-//include('../stripe/config.php');
+include('../stripe/config.php');
 if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 {	
 	$username = $_REQUEST['username'];
