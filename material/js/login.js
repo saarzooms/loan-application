@@ -15,7 +15,7 @@ $(document).ready(function() {
 					url: "ajax/login_data.php?username="+username+"&pass="+pass,
 			               	success: function(data)
 					{
-						alert(data);
+						//alert(data);
 						var result = $.trim(data);
 						//$('#l').html(result);		
 						 if(result == 1)
