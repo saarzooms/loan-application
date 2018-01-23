@@ -29,7 +29,7 @@
                </a>
             </div>
             <div class="panel-body">
-               <p class="text-center pv">SIGN IN TO CONTINUE.</p>
+               <p class="text-center pv" style="color:#4c8e41">SIGN IN TO CONTINUE.</p>
                <form role="form" method="post" action="#" id="Login_Form" class="mb-lg">
                   <div class="form-group has-feedback">
                      <input id="Email_Id_Login" name="Email_Id_Login" type="email" placeholder="Enter email" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter email')" onchange="this.setCustomValidity('')">
@@ -48,7 +48,7 @@
                    <!--  <div class="pull-right"><a href="#" class="text-muted">Forgot your password?</a> -->
                      </div>
                   </div>
-                  <button type="submit" class="btn btn-block btn-primary mt-lg">Login</button>
+                  <button type="submit" class="btn btn-block btn-primary mt-lg" style="background-color:#00C853">Login</button>
 									 <label id='l' style="color:red;"></label>
                </form>
                
