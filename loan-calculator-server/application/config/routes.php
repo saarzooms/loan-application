@@ -68,8 +68,11 @@ $route['settings/credit/save'] = 'settings/saveCredit';
 $route['settings/closing-costs/get'] = 'settings/getClosingCosts';
 $route['settings/closing-costs/save'] = 'settings/saveClosingCosts';
 
+$route['settings/closing-costs-type/get'] = 'settings/getClosingCostTypes';
+$route['settings/closing-costs-type/save'] = 'settings/saveClosingCostsType';
 
-
+$route['settings/closing-costs-template/get'] = 'settings/getClosingCostsTemplate';
+$route['settings/closing-costs-template/save'] = 'settings/saveClosingCostsTemplate';
 
 // Lookups
 
@@ -78,4 +81,6 @@ $route['lookup/title-insurance-premium/get'] = 'lookups/getTitleInsurancePremium
 $route['lookup/title-insurance-range/get'] = 'lookups/getTitleInsuranceRange';
 $route['lookup/bpmi/get'] = 'lookups/getBpmi';
 $route['lookup/bpmi-adjustments/get'] = 'lookups/getBpmiAdjustments';
+
+
 
