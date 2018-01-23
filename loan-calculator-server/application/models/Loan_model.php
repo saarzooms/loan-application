@@ -218,8 +218,9 @@ class Loan_model extends CI_Model
 		$this->db->select('id');
 		$this->db->where('loanId', $post['loanId']);
 		$q = $this->db->get('borrowers');
-		// if id is unique, we want to return just one row
-		$data = array_shift($q->result_array());
+        // if id is unique, we want to return just one row
+        $ra=$q->result_array();
+		$data = array_shift($ra);
 
          $id=$data['id'];
 		
@@ -250,8 +251,9 @@ class Loan_model extends CI_Model
 		$this->db->select('id');
 		$this->db->where('loanId', $post['loanId']);
 		$q = $this->db->get('borrowers');
-		// if id is unique, we want to return just one row
-		$data = array_shift($q->result_array());
+        // if id is unique, we want to return just one row
+        $ra1=$q->result_array();
+		$data = array_shift($ra1);
 
          $id=$data['id'];
 		
