@@ -66,6 +66,9 @@
 	tr.hide_all > td, td.hide_all{
         border-style:hidden;
       }
+	   body {
+    overflow: scroll;
+}
   </style>
  <script type="text/javascript">
 	function toggleSibling(sibling){
@@ -216,7 +219,7 @@
 			<div class="col-md-12">
 				<h4>List of recent revisions by customers</h4>
 					<table id="tb" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-        <thead style="background-color:#23b7e5;">
+        <thead style="background-color:#00C853;">
          <tr>
 						<th style="color:#fff;">Loan Id</th>  			
 						<th style="color:#fff;">Customer Name</th>     
@@ -239,7 +242,7 @@
   <tr class="extra hide_all">
     <td colspan="3">
 	<table class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-		<thead style="background-color:#23b7e5;">
+		<thead style="background-color:#00C853;">
 			<th colspan="2" style="text-align:center;color:#fff;">Previous Version</th>
 			<th colspan="2" style="text-align:center;color:#fff;">Customer Version</th>
 		</thead>
@@ -399,7 +402,7 @@
 			<div class="col-md-12">
 				<h4>Loan Instance List</h4>
 					<table id="tb" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-        <thead style="background-color:#23b7e5;">
+        <thead style="background-color:#00C853;">
          <tr>
 						<th style="color:#fff;">Loan Id</th>  			
 						<th style="color:#fff;">Qualifying Credit Score</th>     
@@ -484,7 +487,7 @@
 			<div class="col-md-6">
 					
 					<table id="tb" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-        <thead style="background-color:#23b7e5;">
+        <thead style="background-color:#00C853;">
          <tr>
 		 <th colspan="2" style="color:#fff;text-align:center;">Your Last Saved Version</th>  			  
          </tr>
@@ -582,7 +585,7 @@
 			</div>
 	<div class="col-md-6">
 <table id="tb" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-        <thead style="background-color:#23b7e5;">
+        <thead style="background-color:#00C853;">
          <tr>
 			<th colspan="2" style="color:#fff;text-align:center;">Loan officer's Suggestion</th>  			  
          </tr>
