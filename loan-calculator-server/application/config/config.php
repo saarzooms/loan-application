@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'http://loanapp-app.herokuapp.com/loan-calculator-server/';
-$config['base_url'] = 'http://localhost/loan-calculator-server/';
+$config['base_url'] = 'http://loanapp-app.herokuapp.com/loan-calculator-server/';
+//$config['base_url'] = 'http://localhost/loan-calculator-server/';
 //$config['base_url'] = '';
 
 /*
