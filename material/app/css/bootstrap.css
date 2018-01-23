@@ -3101,8 +3101,8 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #5d9cec;
-  border-color: #5899eb;
+  background-color: #4c8e41;
+  border-color: #4c8e41;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -3112,8 +3112,8 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #4b91ea;
-  border-color: #3483e7;
+  background-color: #1B5E20;
+  border-color: #1B5E20;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -4736,8 +4736,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 3;
   color: #fff;
-  background-color: #5d9cec;
-  border-color: #5d9cec;
+  background-color: #4c8e41;
+  border-color: #4c8e41;
   cursor: default;
 }
 .pagination > .disabled > span,
