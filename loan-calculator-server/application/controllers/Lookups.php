@@ -6,7 +6,8 @@ class Lookups extends CI_Controller {
 	//function Lookups(){
 	public function __construct() {
 		parent::__construct();
-		
+		header('Access-Control-Allow-Origin: *');
+                header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 		$this->load->model('Lookups_model');
 		$this->session->set_userdata('userId', 101);
 	}
