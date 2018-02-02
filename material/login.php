@@ -48,7 +48,7 @@
                    <!--  <div class="pull-right"><a href="#" class="text-muted">Forgot your password?</a> -->
                      </div>
                   </div>
-                  <button type="submit" class="btn btn-block btn-primary mt-lg" style="background-color:#00C853">Login</button>
+                  <button type="submit" class="btn btn-block btn-primary mt-lg" style="background-color:#90b63d">Login</button>
 									 <label id='l' style="color:red;"></label>
                </form>
                
@@ -59,7 +59,7 @@
             <span>&copy;</span>
             <span>2017</span>
             <span>-</span>
-            <span>Angle</span>
+            <span>streetwork</span>
             <br>
             <span>Bootstrap Admin Template</span>
          </div>

@@ -1037,15 +1037,16 @@ _:-ms-lang(x),
   position: relative;
 }
 .topnavbar .navbar-header {
-  background-color: transparent;
-  background-image: -webkit-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
-  background-image: -o-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
-  background-image: linear-gradient(to right, #23b7e5 0%, #51c6ea 100%);
+  background-color: #90b63d;
+  // background-image: -webkit-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
+  // background-image: -o-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
+  // background-image: linear-gradient(to right, #23b7e5 0%, #51c6ea 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff23b7e5', endColorstr='#ff51c6ea', GradientType=1);
 }
-@media only screen and (min-width: 768px) {
-  .topnavbar .navbar-header {
+
+
+ .navbar-header {
     background-image: none;
   }
 }
@@ -1193,15 +1194,16 @@ _:-ms-lang(x),
 @media only screen and (min-width: 768px) {
   .topnavbar {
     border: 0;
-    background-color: #23b7e5;
-    background-image: -webkit-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
-    background-image: -o-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
-   // background-image: linear-gradient(to right, #23b7e5 0%, #51c6ea 100%);
-    background-image: linear-gradient(to right, #00C853 0%, #00C853 100%);
+    background-color: #90b63d;
+    //background-image: -webkit-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
+    //background-image: -o-linear-gradient(left, #23b7e5 0%, #51c6ea 100%);
+    // background-image: linear-gradient(to right, #23b7e5 0%, #51c6ea 100%);
+    // background-image: linear-gradient(to right, #00C853 0%, #00C853 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff23b7e5', endColorstr='#ff51c6ea', GradientType=1);
   }
-  .topnavbar .navbar-header {
+  
+   {
     background-image: none;
     background-repeat: no-repeat;
     filter: none;
@@ -2192,8 +2194,8 @@ fieldset[disabled] .btn-pink.focus {
 }
 .panel-dark > .panel-heading {
   color: #fff;
- // background-color: #3a3f51;
-  background-color: #00C853;
+ // background-color: #90b63d;
+  background-color: #90b63d;
   border-color: #3a3f51;
 }
 .panel-dark > .panel-heading + .panel-collapse > .panel-body {
