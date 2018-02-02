@@ -92,7 +92,7 @@
 				<div class="content-heading">
 						
                Dashboard
-               <small>Welcome to Angle!</small>
+               <small>Welcome to Streetwork !</small>
 				</div>
 				<div class="row">
            <div class="col-md-12">
