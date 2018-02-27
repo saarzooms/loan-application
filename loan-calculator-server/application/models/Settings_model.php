@@ -172,7 +172,7 @@ class Settings_model extends CI_Model
                 'value' => (Double)$clsCost['value'],
                 'percentage' => (Double)$clsCost['percentage'],
                 'isApr'=> (Boolean)$clsCost['isApr'],
-                'isTitleInsurance'=> $clsCost['isTitleInsurance']
+                'category'=> $clsCost['category']
             );
             $subData[]=$c;
     }     
@@ -201,7 +201,7 @@ class Settings_model extends CI_Model
                 'closingCostTypeId'=>$clsCost['closingCostTypeId'],
                 'addToLoan' =>  (Boolean)$clsCost['addToLoan'],
                 'calcOn' => $clsCost['calcOn'],
-                'isTitleInsurance'=> $clsCost['isTitleInsurance']
+                'category'=> $clsCost['category']
             );
             $subData[]=$c;
     }     
@@ -211,7 +211,7 @@ class Settings_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('closing_cost_template');
-        $this->db->where('userId', $this->session->userdata('userId'));
+        // $this->db->where('userId', $this->session->userdata('userId'));
         $data = $this->db->get()->result_array();
         $subData = [];
         foreach( $data as $clsCost){
@@ -280,12 +280,12 @@ class Settings_model extends CI_Model
                 'isPpe'=> $row['isPpe'],
                 'closingCostTypeId'=> $row['closingCostTypeId'],
                 'addToLoan'=> $row['addToLoan'],
-                'isTitleInsurance'=> $row['isTitleInsurance']
+                'category'=> $row['category']
             );
             $response = $this->db->insert('closing_costs', $data);
-            if($index == (count($array) - 1)) {
-                return $response;
-            }
+            // if($index == (count($array) - 1)) {
+            //     return $response;
+            // }
         }
         return $templateId;
         

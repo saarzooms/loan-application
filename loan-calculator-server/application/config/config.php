@@ -24,7 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://loanapp-app.herokuapp.com/loan-calculator-server/';
-//$config['base_url'] = 'http://localhost/loan-calculator-server/';
 //$config['base_url'] = '';
 
 /*

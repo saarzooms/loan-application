@@ -125,6 +125,7 @@ class Loan_model extends CI_Model
                                 
                             ),           
                             'totalClosingCosts' => (Double)$loanOption['totalClosingCosts'],
+                            'closingCostTemplateId' =>$loanOption['closingCostTemplateId'],
                             'cashToClose' => (Double)$loanOption['cashToClose'],
                             'apr' => (Double)$loanOption['apr'],
                             'expiry' => $loanOption['expiry']
@@ -146,6 +147,9 @@ class Loan_model extends CI_Model
                                 'value' => (Double)$clsCost['value'],
                                 'percentage' => (Double)$clsCost['percentage'],
                                 'isApr'=> (Boolean)$clsCost['isApr'],
+                                'isPpe'=>  (Boolean)$clsCost['isPpe'],
+                                'addToLoan'=>  (Boolean)$clsCost['addToLoan'],
+                                'category'=>  $clsCost['category'],
                                 'isVisible'=> (Boolean)$clsCost['isVisible']
                             );
                             $subData['closingCosts'][]=$c;
@@ -428,6 +432,7 @@ class Loan_model extends CI_Model
                 'credit4Amount' => $loanOption['credits']['credit4Amount'],
                 'totalCredits' => $loanOption['credits']['totalCredits'],
                 'totalClosingCosts' => $loanOption['totalClosingCosts'],
+                'closingCostTemplateId'=> $loanOption['closingCostTemplateId'],
                 'cashToClose' => $loanOption['cashToClose'],
                 'apr' => $loanOption['apr'],
                 'expiry' => $loanOption['expiry'],
@@ -447,7 +452,12 @@ class Loan_model extends CI_Model
                     'mode' => $closingCost['mode'],
                     'value' => $closingCost['value'],
                     'percentage' => $closingCost['percentage'],
+                    'percentageTotal' => $closingCost['percentageTotal'],
+                    'total' => $closingCost['total'],                    
                     'isApr'=> $closingCost['isApr'],
+                    'isPpe'=> $closingCost['isPpe'],
+                    'category'=>$closingCost['category'],
+                    'addToLoan'=> $closingCost['addToLoan'],
                     'isVisible'=> $closingCost['isVisible'],
                     'lastUpdatedBy'=> $post['lastUpdatedBy']
                 );

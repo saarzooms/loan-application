@@ -1,13 +1,13 @@
 webpackJsonp([1,7],{
 
-/***/ 1191:
+/***/ 1209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home_component__ = __webpack_require__(1208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home_component__ = __webpack_require__(1231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(54);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -42,11 +42,11 @@ HomeModule = __decorate([
 
 /***/ }),
 
-/***/ 1208:
+/***/ 1231:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -68,8 +68,8 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-home',
-        template: __webpack_require__(1242),
-        styles: [__webpack_require__(1220)]
+        template: __webpack_require__(1266),
+        styles: [__webpack_require__(1243)]
     }),
     __metadata("design:paramtypes", [])
 ], HomeComponent);
@@ -78,10 +78,10 @@ HomeComponent = __decorate([
 
 /***/ }),
 
-/***/ 1220:
+/***/ 1243:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)();
+exports = module.exports = __webpack_require__(6)(false);
 // imports
 
 
@@ -96,7 +96,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1242:
+/***/ 1266:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"home-container\">\r\n    <div class=\"jumbotron\">\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4\">\r\n                <div class=\"text-center\">\r\n                    <img alt=\"Angular2\" class=\"img-responsive center-block home-logo\" src=\"assets/img/angular.svg\" />\r\n                </div>\r\n            </div>\r\n            <div class=\"col-lg-9 col-md-8 home-text\">\r\n                <h1>Angle</h1>\r\n                <p>Bootstrap Admin Template + <strong>Angular2</strong>\r\n                    <br> <small>One framework. Mobile & desktop.</small>\r\n                </p>\r\n                <p><a class=\"btn btn-primary btn-lg\" href=\"https://angular.io/\" target=\"_blank\">Learn more</a></p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n            <div class=\"panel b\">\r\n                <div class=\"panel-heading\">\r\n                    <h3>Angular-cli</h3></div>\r\n                <div class=\"panel-body\">\r\n                    A Webpack powered command line interface with tons of utilities. Serve and build your project with a single command.\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n            <div class=\"panel b\">\r\n                <div class=\"panel-heading\">\r\n                    <h3>Router</h3></div>\r\n                <div class=\"panel-body\">\r\n                    Powerful and modern routes definitions. Easily declare routes and nested routes with components association.\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n            <div class=\"panel b\">\r\n                <div class=\"panel-heading\">\r\n                    <h3>Generators</h3></div>\r\n                <div class=\"panel-body\">\r\n                    Angular-CLI tool provides generators to create components, services, directives and pipe from the command line.\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n            <div class=\"panel b\">\r\n                <div class=\"panel-heading\">\r\n                    <h3>Modularized</h3></div>\r\n                <div class=\"panel-body\">\r\n                    This project has been carefully designed to provide modules for Core, Layout, Shared and Routed components.\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n            <div class=\"panel b\">\r\n                <div class=\"panel-heading\">\r\n                    <h3>Environments</h3></div>\r\n                <div class=\"panel-body\">\r\n                    Ready to work with multiple environments, from first stage development through test and production.\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n            <div class=\"panel b\">\r\n                <div class=\"panel-heading\">\r\n                    <h3>Style Guide</h3></div>\r\n                <div class=\"panel-body\">\r\n                    Better practices for Code organization and Project structure based on the official Angular2 style guide.\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
