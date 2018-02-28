@@ -64,7 +64,7 @@ include('db/connection.php');
 						<select name="template" id="template" class="form-control m-b" oninvalid="this.setCustomValidity('please select template for value')" required>
 							<option value="" selected disabled >---Select Template For---</option>
 							<option value="1">Signup Link</option>
-							<option value="2">Loan Calculator Link</option>
+							<option value="2">Loan Calculator Share</option>
 						</select>
 					  </div>
 				</div>
@@ -83,7 +83,7 @@ include('db/connection.php');
 				<div class="col-md-12">
 					<div class="form-group">
 						<label class="control-label">Subject</label>
-						<input type="text" name="subject" id="subject" class="form-control" placeholder="Enter Subjec">
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="Enter Subject">
 					  </div>
 				</div>
 				<div class="col-md-12">
