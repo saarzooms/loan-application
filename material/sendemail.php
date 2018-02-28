@@ -3,22 +3,23 @@
 include('db/connection.php');
 require('phpmailer/class.phpmailer.php');
 
-if(isset($_POST['id']))
+if(isset($_POST['id']) && isset($_POST['email']))
 {
-	$loanid=$_POST['id'];$cusid='';
+	$loanid=$_POST['id'];
+	$to=$_POST['email'];
+	$cusid='';
 	$sql="select id from borrowers where loanid='$loanid'";
 	foreach($dbh->query($sql) as $row){
 		$cusid=$row['id'];
 	}
 	//file_put_contents('./log_'.date("j.n.Y").'.txt', $cusid, FILE_APPEND);
 	$sql="select customer_master.email,email_master.* from customer_master inner join email_master on email_master.loanofficer_id=customer_master.loanofficer_id where customer_master.id='$cusid' and email_master.template='2'";
-	$from='';$to='';$sub='';$msg='';$sendernm='';$url='';$loanofficer_id='';
+	$from='';$sub='';$msg='';$sendernm='';$url='';$loanofficer_id='';
 	foreach($dbh->query($sql) as $r){
 		$from=$r['sender_email'];
 		$sendernm=$r['sender_name'];
 		$sub=$r['subject'];
 		$msg=$r['message'];
-		$to=$r['email'];
 	}
 	
 	$msg=explode('{URL}',$msg);
