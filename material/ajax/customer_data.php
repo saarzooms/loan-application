@@ -298,7 +298,7 @@ else if(isset($_REQUEST['id']))
 			<?php
 			if($roll!='Admin'){
 				?>
-			<button  class="btn_email btn btn-xs btn-danger" value="<?php echo $row['id']; ?>">
+			<button  class="btn_email btn btn-xs btn-danger" value="<?php echo $row['id']; ?>" data-toggle="tooltip" title="Send Email!">
 			<i class="fa fa-envelope-square"></i></button>
 				<?php
 			}
