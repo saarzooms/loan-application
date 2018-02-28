@@ -184,7 +184,7 @@ else if(isset($_REQUEST['cusid']))
 	//$mail->Host     = "smtp.gmail.com";
 	$mail->Host     = "sg2plcpnl0033.prod.sin2.secureserver.net";
 	$mail->Mailer   = "smtp";
-	$mail->SetFrom("vishalpatel16@gmail.com", $sendernm);
+	$mail->SetFrom($from, $sendernm);
 	//$mail->AddReplyTo("vincy@phppot.com", "PHPPot");
 	$mail->AddAddress($to);
 	$mail->Subject = $sub;
