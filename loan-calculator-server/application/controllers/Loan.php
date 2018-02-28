@@ -31,6 +31,7 @@ class Loan extends CI_Controller
 
     public function getLoan($loanId)
     {
+		$loanId=base64_decode($loanId);
         $loan = $this->Loan_model->getLoan($loanId);
         if ($loan)
             $data = array('status' => 200, 'data' => $loan);
