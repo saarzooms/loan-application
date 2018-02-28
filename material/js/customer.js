@@ -160,18 +160,18 @@ $(document).ready(function() {
 			
 		});
 		
-		$(document).on("click",".btn_email",function(){
-			var cusid=$(this).attr('value');
-			$.ajax({ 
-					type: "POST",
-					url: "ajax/customer_data.php",
-					data:{'cusid':cusid},
-					success: function(data)
-					{
-						$().toastmessage('showSuccessToast',data);
-					}
-			});
-		});
+		// $(document).on("click",".btn_email",function(){
+			// var cusid=$(this).attr('value');
+			// $.ajax({ 
+					// type: "POST",
+					// url: "ajax/customer_data.php",
+					// data:{'cusid':cusid},
+					// success: function(data)
+					// {
+						// $().toastmessage('showSuccessToast',data);
+					// }
+			// });
+		// });
 
 });
 function loadcustomer()
