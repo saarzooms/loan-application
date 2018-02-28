@@ -7,23 +7,24 @@ if(isset($_POST['id']) && isset($_POST['email']))
 {
 	$loanid=$_POST['id'];
 	$to=$_POST['email'];
-	$cusid='';
+	$cusid='';$officerid='';
 	$sql="select id from borrowers where loanid='$loanid'";
 	foreach($dbh->query($sql) as $row){
 		$cusid=$row['id'];
 	}
 	//file_put_contents('./log_'.date("j.n.Y").'.txt', $cusid, FILE_APPEND);
-	$sql="select customer_master.email,email_master.* from customer_master inner join email_master on email_master.loanofficer_id=customer_master.loanofficer_id where customer_master.id='$cusid' and email_master.template='2'";
+	$sql="select customer_master.email,customer_master.loanofficer_id,email_master.* from customer_master inner join email_master on email_master.loanofficer_id=customer_master.loanofficer_id where customer_master.id='$cusid' and email_master.template='2'";
 	$from='';$sub='';$msg='';$sendernm='';$url='';$loanofficer_id='';
 	foreach($dbh->query($sql) as $r){
 		$from=$r['sender_email'];
 		$sendernm=$r['sender_name'];
 		$sub=$r['subject'];
 		$msg=$r['message'];
+		$officerid=$r['loanofficer_id'];
 	}
 	
 	$msg=explode('{URL}',$msg);
-	$msg=$msg[0].'<br/><a href="https://loanapp-app.herokuapp.com/material/calculator.php#/loan-calculator/'.$loanid.'" target="_blank">Loan Calculator</a>';
+	$msg=$msg[0].'<br/><a href="https://loanapp-app.herokuapp.com/material/calculator.php#/loan-calculator/'.sha1($officerid).base64_encode($loanid).'" target="_blank">Loan Calculator</a>';
 	
 	
 	$mail = new PHPMailer();

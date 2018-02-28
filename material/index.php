@@ -1,6 +1,7 @@
 <?php
    include('db/connection.php');
    $user_id=isset($_SESSION['id']);
+   $officerid=sha1($user_id);
    $user_type=isset($_SESSION['usertype']);
 	$roll="";
 	$sql = "SELECT * FROM login_master WHERE user_id='$user_id' and user_type='$user_type'";
@@ -371,7 +372,7 @@
 		<td colspan="2">
 			<center>
 			
-				<a href='calculator.php#/loan-calculator/<?php echo $loanid;?>' target="_blank"><button id="pre" class="btn btn-success">View More</button><a>
+				<a href='calculator.php#/loan-calculator/<?php echo $officerid.$loanid;?>' target="_blank"><button id="pre" class="btn btn-success">View More</button><a>
 			<!--	<a href="http://loan-calculator.xcartadesigns.com/#/loan-calculator/1" target="_blank"><button id="pre" class="btn btn-success">Modify</button><a>
 				<a href="#"><button id="pre" class="btn btn-success">Delete</button><a> -->
 			</center>
@@ -424,7 +425,7 @@
 	   foreach($dbh->query($query) as $row){
 	   ?>
 			<tr>
-				<td><a href='calculator.php#/loan-calculator/<?php echo base64_encode($row['loanId']);?>' target='_blank'><?php echo $row['loanId'];?></a></td>
+				<td><a href='calculator.php#/loan-calculator/<?php echo $officerid.base64_encode($row['loanId']);?>' target='_blank'><?php echo $row['loanId'];?></a></td>
 				<td><?php echo $row['qualifyingCreditScore'];?></td>
 				<td><?php echo $row['name'];?></td>
 				<td><?php echo $row['salesprice'];?></td>
@@ -576,7 +577,7 @@
 		<td colspan="2">
 			<center>
 				
-				<a href='calculator.php#/loan-calculator/customer-view/<?php echo $loanid;?>' target="_blank"><button id="pre" class="btn btn-success">View More</button><a>
+				<a href='calculator.php#/loan-calculator/customer-view/<?php echo $officerid.$loanid;?>' target="_blank"><button id="pre" class="btn btn-success">View More</button><a>
 			<!--	<a href="http://loan-calculator.xcartadesigns.com/#/loan-calculator/1" target="_blank"><button id="pre" class="btn btn-success">Modify</button><a> -->
 			</center>
 		</td>

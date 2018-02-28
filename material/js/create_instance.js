@@ -17,10 +17,11 @@ $(document).ready(function() {
 										url: "ajax/createinstance_data.php?custid="+cust_id+"&loanid="+arr['loanId'],
 										success: function(data)
 										{
+											
 												//window.location.href="\index.html#/loan-calculator/"+arr['loanId'];
 												window.open(
 												 // '\calculator.php#/loan-calculator/'+arr['loanId'],
-												  '\calculator.html#/loan-calculator/'+loan_id,
+												  '\calculator.html#/loan-calculator/'+data+loan_id,
 												  '_blank' // <- This is what makes it open in a new window.
 												);
 										}

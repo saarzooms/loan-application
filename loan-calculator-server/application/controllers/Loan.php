@@ -31,6 +31,7 @@ class Loan extends CI_Controller
 
     public function getLoan($loanId)
     {
+		$loanId=substr($loanId,40);
 		$loanId=base64_decode($loanId);
         $loan = $this->Loan_model->getLoan($loanId);
         if ($loan)
