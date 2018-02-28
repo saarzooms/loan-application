@@ -60,27 +60,37 @@ include('db/connection.php');
       <div class="panel-body">
 			  <div class="col-md-12">
 					<div class="form-group">
-            <label class="control-label">Sender Name</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="Enter Sender Name*" oninvalid="this.setCustomValidity('please enter sender name')" onchange="this.setCustomValidity('')" required>
-          </div>
+						<label class="control-label">Template For</label>
+						<select name="template" id="template" class="form-control m-b" oninvalid="this.setCustomValidity('please select template for value')" required>
+							<option value="" selected disabled >---Select Template For---</option>
+							<option value="1">Signup Link</option>
+							<option value="2">Loan Calculator Link</option>
+						</select>
+					  </div>
 				</div>
 				<div class="col-md-12">
 					<div class="form-group">
-            <label class="control-label">Sender Email *</label>
-            <input type="email" name="senderemail" id="senderemail" class="form-control" placeholder="Enter Sender Email*" oninvalid="this.setCustomValidity('please enter sender email')" onchange="this.setCustomValidity('')" required>
-          </div>
+						<label class="control-label">Sender Name</label>
+						<input type="text" name="name" id="name" class="form-control" placeholder="Enter Sender Name*" oninvalid="this.setCustomValidity('please enter sender name')" onchange="this.setCustomValidity('')" required>
+					  </div>
 				</div>
 				<div class="col-md-12">
 					<div class="form-group">
-            <label class="control-label">Subject</label>
-            <input type="text" name="subject" id="subject" class="form-control" placeholder="Enter Subjec">
-          </div>
+						<label class="control-label">Sender Email *</label>
+						<input type="email" name="senderemail" id="senderemail" class="form-control" placeholder="Enter Sender Email*" oninvalid="this.setCustomValidity('please enter sender email')" onchange="this.setCustomValidity('')" required>
+					  </div>
 				</div>
 				<div class="col-md-12">
 					<div class="form-group">
-            <label class="control-label">Message</label>
-            <textarea id="txtEditor"></textarea> 
-          </div>
+						<label class="control-label">Subject</label>
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="Enter Subjec">
+					  </div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Message</label>
+						<textarea id="txtEditor"></textarea> 
+					  </div>
 				</div>
 		  </div>
 								

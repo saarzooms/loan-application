@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$("#email_form").on('submit',(function(e){
 		e.preventDefault();
+		var template = document.getElementById('template').value;
 		var name = document.getElementById('name').value;
 		var email = document.getElementById('senderemail').value;
 		var subject = document.getElementById('subject').value;
@@ -11,7 +12,7 @@ $(document).ready(function() {
 		//alert(state+","+zipcode+");
 		$.ajax({ 
 							type: "POST",
-							url: "ajax/email_data.php?name="+name+"&email="+email+"&subject="+subject+"&txtEditor="+txtEditor,
+							url: "ajax/email_data.php?name="+name+"&email="+email+"&subject="+subject+"&txtEditor="+txtEditor+"&template="+template,
 							success: function(data)
 							{
 								//$('#msg_save').html(data);

@@ -144,7 +144,7 @@ else if(isset($_REQUEST['officer1']) && isset($_REQUEST['salutation1']) && isset
 else if(isset($_REQUEST['cusid']))
 {
 	$cusid=$_REQUEST['cusid'];
-	$sql="select customer_master.email,email_master.* from customer_master inner join email_master on email_master.loanofficer_id=customer_master.loanofficer_id where customer_master.id='$cusid'";
+	$sql="select customer_master.email,email_master.* from customer_master inner join email_master on email_master.loanofficer_id=customer_master.loanofficer_id where customer_master.id='$cusid' and email_master.template='1'";
 	$from='';$to='';$sub='';$msg='';$sendernm='';$url='';
 	foreach($dbh->query($sql) as $r){
 		$from=$r['sender_email'];
