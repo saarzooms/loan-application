@@ -54,7 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['loan/new'] = 'loan/newLoan';
-$route['loan/get/(:num)'] = 'loan/getLoan/$1';
+$route['loan/get/(:any)'] = 'loan/getLoan/$1';
 $route['loan/save'] = 'loan/saveLoan';
 $route['loan/share'] = 'loan/shareLoan';
 
