@@ -10,7 +10,7 @@ if(isset($_REQUEST['name']) && isset($_REQUEST['email']) && isset($_REQUEST['mob
 	$state=$_REQUEST['state'];
 	$zipcode=$_REQUEST['zipcode'];
 	$password=$_REQUEST['password'];
-	$officerid=$_REQUEST['id'];
+	$officerid=base64_decode($_REQUEST['id']);
 	
 	//file_put_contents('./log_'.date("j.n.Y").'.txt', $state.$zipcode, FILE_APPEND);
 	$msg="";

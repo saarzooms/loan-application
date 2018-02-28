@@ -13,6 +13,7 @@ if(isset($_GET['decode']))
 		$add=explode('/',$uri[1]);
 		
       // header("location:  '".$add."'customersignup.php?id=".$id."");
+	  $id=base64_encode($id);
 	  header("location: customersignup.php?id=".$id."");
 	}
 }
