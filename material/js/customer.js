@@ -182,7 +182,7 @@ function loadcustomer()
 						url: "ajax/customer_data.php?id="+id,
 						//dataType:'json',
 						success: function(data)
-						{
+						{alert(data);
 							$('#table_data').html(data);
 						}
 				});
