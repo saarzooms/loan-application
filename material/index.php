@@ -232,6 +232,7 @@
 	   $query="select loans.id,borrowers.name,loans.updateAt from loans inner join borrowers on borrowers.loanId=loans.id where borrowers.id in (select id from customer_master where loanofficer_id='".$_SESSION['id']."' and borrowerId='B')";
 	   foreach($dbh->query($query) as $row){
 		   $loanid=$row['id'];
+			$loanid=base64_encode($loanid);
 	   ?>
 		<tr id="a" onclick="toggleSibling(this)">
 			<td><?php echo $row['id'];?></td>
@@ -423,7 +424,7 @@
 	   foreach($dbh->query($query) as $row){
 	   ?>
 			<tr>
-				<td><a href='calculator.html#/loan-calculator/<?php echo $row['loanId'];?>' target='_blank'><?php echo $row['loanId'];?></a></td>
+				<td><a href='calculator.php#/loan-calculator/<?php echo $row['loanId'];?>' target='_blank'><?php echo $row['loanId'];?></a></td>
 				<td><?php echo $row['qualifyingCreditScore'];?></td>
 				<td><?php echo $row['name'];?></td>
 				<td><?php echo $row['salesprice'];?></td>
@@ -498,6 +499,7 @@
 		$s="SELECT max(loanId) as loanID FROM `borrowers` where id ='".$_SESSION['id']."' and type = 'B'";
 		foreach($dbh->query($s) as $r){
 			$loanid=$r['loanID'];
+			$loanid=base64_encode($r['loanID']);
 		}
 	   ?>
 	   
