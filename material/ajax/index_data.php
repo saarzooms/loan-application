@@ -3,11 +3,12 @@ session_start();
 include('../db/connection.php');
     $user_id=isset($_SESSION['id']);
 	$roll="";
-	$sql = "SELECT * FROM login_master WHERE user_id='".$_SESSION['id']."' ";
+	$sql = "SELECT * FROM login_master WHERE user_id='".$_SESSION['id']."' and user_type='".$_SESSION['usertype']."' ";
 	foreach ($dbh->query($sql) as $row)
 	{		
 		$roll=$row['user_type'];
 	}
+	//file_put_contents('./log_'.date("j.n.Y").'.txt', $roll, FILE_APPEND);
 if(isset($_REQUEST['id']))
 {
 	$loancnt='';
@@ -42,6 +43,7 @@ if(isset($_REQUEST['id']))
 	}else if($roll=='Loanofficer'){
 		
 		$s1="select count(*) as cnt1 from customer_master where loanofficer_id='".$_SESSION['id']."'";
+		
 		foreach ($dbh->query($s1) as $r1)
 		{		
 			$custcnt=$r1['cnt1'];
