@@ -12,6 +12,7 @@ include('../db/connection.php');
 if(isset($_REQUEST['id']))
 {
 	$loancnt='';
+	$loancalculatorcnt='';
 	$custcnt='';
 	$partnercnt='';
 	$businesscnt='';
@@ -38,7 +39,12 @@ if(isset($_REQUEST['id']))
 		{		
 			$businesscnt=$r3['cnt3'];
 		}
-		array_push($result,'Admin',$loancnt,$custcnt,$partnercnt,$businesscnt);
+		$s4="select count(*) as cnt4 from loans";
+		foreach ($dbh->query($s4) as $r4)
+		{		
+			$loancalculatorcnt=$r4['cnt4'];
+		}
+		array_push($result,'Admin',$loancnt,$custcnt,$partnercnt,$businesscnt,$loancalculatorcnt);
 	    echo json_encode($result);
 	}else if($roll=='Loanofficer'){
 		

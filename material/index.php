@@ -197,7 +197,7 @@
                            <em class="fa fa-calculator fa-3x"></em>
                         </div>
 						             <div class="col-xs-8 pv-lg">
-                           <div id="cal" class="h2 mt0">3</div>
+                           <div id="cal" class="h2 mt0"></div>
                            <div class="text-uppercase">Loan Calculator</div>
                         </div>
                         
