@@ -1758,7 +1758,7 @@ Detects support for inline SVG in HTML (not within XHTML).
 /***/ 1206:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(548);
+module.exports = __webpack_require__(549);
 
 
 /***/ }),
@@ -1858,7 +1858,7 @@ UserblockService = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BorrowerService; });
@@ -1965,7 +1965,7 @@ MessageService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_index__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_index__ = __webpack_require__(215);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoanService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2057,7 +2057,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 214:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2068,7 +2068,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2150,7 +2150,7 @@ ThemesService = __decorate([
 
 /***/ }),
 
-/***/ 217:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2186,7 +2186,7 @@ LayoutComponent = __decorate([
 
 /***/ }),
 
-/***/ 218:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2226,7 +2226,7 @@ var _a;
 
 /***/ }),
 
-/***/ 219:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2266,7 +2266,7 @@ var _a;
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2326,7 +2326,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2385,7 +2385,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2421,7 +2421,7 @@ MaintenanceComponent = __decorate([
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2479,7 +2479,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 224:
+/***/ 225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2548,7 +2548,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2654,7 +2654,7 @@ SettingsService = __decorate([
 
 /***/ }),
 
-/***/ 547:
+/***/ 548:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -2678,12 +2678,12 @@ webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
 module.exports = webpackAsyncContext;
-webpackAsyncContext.id = 547;
+webpackAsyncContext.id = 548;
 
 
 /***/ }),
 
-/***/ 548:
+/***/ 549:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2692,7 +2692,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_dynamic__ = __webpack_require__(558);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(561);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__(226);
 
 
 
@@ -2873,7 +2873,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__layout_layout_module__ = __webpack_require__(567);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_shared_module__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__routes_routes_module__ = __webpack_require__(573);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_services_index__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_services_index__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_app_routes_loan_shared_borrower_service__ = __webpack_require__(212);
 /* unused harmony export createTranslateLoader */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -2939,7 +2939,7 @@ AppModule = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__settings_settings_service__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__themes_themes_service__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__themes_themes_service__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__translator_translator_service__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_menu_service__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__module_import_guard__ = __webpack_require__(563);
@@ -3055,6 +3055,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_routes_loan_shared_loan_service__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_toaster__ = __webpack_require__(214);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3074,8 +3075,9 @@ var browser = __webpack_require__(826);
 
 
 
+
 var HeaderComponent = (function () {
-    function HeaderComponent(menu, userblockService, settings, router, route, loanService, loanSaveService, messageService) {
+    function HeaderComponent(menu, userblockService, settings, router, route, loanService, loanSaveService, messageService, toasterService) {
         var _this = this;
         this.menu = menu;
         this.userblockService = userblockService;
@@ -3085,8 +3087,13 @@ var HeaderComponent = (function () {
         this.loanService = loanService;
         this.loanSaveService = loanSaveService;
         this.messageService = messageService;
+        this.toasterService = toasterService;
         this.navCollapsed = true; // for horizontal layout
         this.menuItems = []; // for horizontal layout
+        this.toasterconfig = new __WEBPACK_IMPORTED_MODULE_7_angular2_toaster__["b" /* ToasterConfig */]({
+            positionClass: 'toast-top-right',
+            showCloseButton: true
+        });
         // show only a few items on demo
         this.menuItems = menu.getMenu().slice(0, 4); // for horizontal layout
         // console.log('sdd', this.router);
@@ -3103,8 +3110,13 @@ var HeaderComponent = (function () {
     }
     HeaderComponent.prototype.saveLoan = function () {
         this.messageService.sendMessage('Save Loan');
+        this.popSaveLoan();
         // this.loanSaveService.loanChange('loan save');
     };
+    HeaderComponent.prototype.popSaveLoan = function () {
+        this.toasterService.pop('success', 'Save Notification', 'Loan saved successfully');
+    };
+    ;
     HeaderComponent.prototype.ngOnInit = function () {
         this.isNavSearchVisible = false;
         if (browser.msie) {
@@ -3174,10 +3186,10 @@ HeaderComponent = __decorate([
         template: __webpack_require__(926),
         styles: [__webpack_require__(797)]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__core_menu_menu_service__["a" /* MenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_menu_menu_service__["a" /* MenuService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__sidebar_userblock_userblock_service__["a" /* UserblockService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__sidebar_userblock_userblock_service__["a" /* UserblockService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_settings_settings_service__["a" /* SettingsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_settings_settings_service__["a" /* SettingsService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* ActivatedRoute */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_app_routes_loan_shared_loan_service__["a" /* LoanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_routes_loan_shared_loan_service__["a" /* LoanService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["a" /* LoanSaveService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["a" /* LoanSaveService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["b" /* MessageService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["b" /* MessageService */]) === "function" && _h || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__core_menu_menu_service__["a" /* MenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_menu_menu_service__["a" /* MenuService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__sidebar_userblock_userblock_service__["a" /* UserblockService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__sidebar_userblock_userblock_service__["a" /* UserblockService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_settings_settings_service__["a" /* SettingsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_settings_settings_service__["a" /* SettingsService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* ActivatedRoute */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_app_routes_loan_shared_loan_service__["a" /* LoanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_routes_loan_shared_loan_service__["a" /* LoanService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["a" /* LoanSaveService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["a" /* LoanSaveService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["b" /* MessageService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_app_routes_loan_shared_borrower_service__["b" /* MessageService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_7_angular2_toaster__["a" /* ToasterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7_angular2_toaster__["a" /* ToasterService */]) === "function" && _j || Object])
 ], HeaderComponent);
 
-var _a, _b, _c, _d, _e, _f, _g, _h;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=header.component.js.map
 
 /***/ }),
@@ -3259,7 +3271,7 @@ var _a;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layout_component__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layout_component__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sidebar_sidebar_component__ = __webpack_require__(569);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_header_component__ = __webpack_require__(565);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__header_navsearch_navsearch_component__ = __webpack_require__(566);
@@ -3331,7 +3343,7 @@ LayoutModule = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_settings_settings_service__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_themes_themes_service__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_themes_themes_service__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_translator_translator_service__ = __webpack_require__(132);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OffsidebarComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -4001,13 +4013,13 @@ var menu = [
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_shared_module__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login_component__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register_component__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__recover_recover_component__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__lock_lock_component__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__maintenance_maintenance_component__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__error404_error404_component__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__error500_error500_component__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login_component__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register_component__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__recover_recover_component__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__lock_lock_component__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__maintenance_maintenance_component__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__error404_error404_component__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__error500_error500_component__ = __webpack_require__(220);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PagesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4132,14 +4144,14 @@ var _a, _b;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layout_layout_component__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_login_login_component__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_register_register_component__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recover_recover_component__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_lock_lock_component__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_maintenance_maintenance_component__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_error404_error404_component__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_error500_error500_component__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layout_layout_component__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_login_login_component__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_register_register_component__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recover_recover_component__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_lock_lock_component__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_maintenance_maintenance_component__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_error404_error404_component__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_error500_error500_component__ = __webpack_require__(220);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
 
 
@@ -4827,13 +4839,13 @@ var _a;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(503);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(504);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -5342,236 +5354,236 @@ module.exports = module.exports.toString();
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 284,
-	"./af.js": 284,
-	"./ar": 291,
-	"./ar-dz": 285,
-	"./ar-dz.js": 285,
-	"./ar-kw": 286,
-	"./ar-kw.js": 286,
-	"./ar-ly": 287,
-	"./ar-ly.js": 287,
-	"./ar-ma": 288,
-	"./ar-ma.js": 288,
-	"./ar-sa": 289,
-	"./ar-sa.js": 289,
-	"./ar-tn": 290,
-	"./ar-tn.js": 290,
-	"./ar.js": 291,
-	"./az": 292,
-	"./az.js": 292,
-	"./be": 293,
-	"./be.js": 293,
-	"./bg": 294,
-	"./bg.js": 294,
-	"./bn": 295,
-	"./bn.js": 295,
-	"./bo": 296,
-	"./bo.js": 296,
-	"./br": 297,
-	"./br.js": 297,
-	"./bs": 298,
-	"./bs.js": 298,
-	"./ca": 299,
-	"./ca.js": 299,
-	"./cs": 300,
-	"./cs.js": 300,
-	"./cv": 301,
-	"./cv.js": 301,
-	"./cy": 302,
-	"./cy.js": 302,
-	"./da": 303,
-	"./da.js": 303,
-	"./de": 306,
-	"./de-at": 304,
-	"./de-at.js": 304,
-	"./de-ch": 305,
-	"./de-ch.js": 305,
-	"./de.js": 306,
-	"./dv": 307,
-	"./dv.js": 307,
-	"./el": 308,
-	"./el.js": 308,
-	"./en-au": 309,
-	"./en-au.js": 309,
-	"./en-ca": 310,
-	"./en-ca.js": 310,
-	"./en-gb": 311,
-	"./en-gb.js": 311,
-	"./en-ie": 312,
-	"./en-ie.js": 312,
-	"./en-nz": 313,
-	"./en-nz.js": 313,
-	"./eo": 314,
-	"./eo.js": 314,
-	"./es": 316,
-	"./es-do": 315,
-	"./es-do.js": 315,
-	"./es.js": 316,
-	"./et": 317,
-	"./et.js": 317,
-	"./eu": 318,
-	"./eu.js": 318,
-	"./fa": 319,
-	"./fa.js": 319,
-	"./fi": 320,
-	"./fi.js": 320,
-	"./fo": 321,
-	"./fo.js": 321,
-	"./fr": 324,
-	"./fr-ca": 322,
-	"./fr-ca.js": 322,
-	"./fr-ch": 323,
-	"./fr-ch.js": 323,
-	"./fr.js": 324,
-	"./fy": 325,
-	"./fy.js": 325,
-	"./gd": 326,
-	"./gd.js": 326,
-	"./gl": 327,
-	"./gl.js": 327,
-	"./gom-latn": 328,
-	"./gom-latn.js": 328,
-	"./he": 329,
-	"./he.js": 329,
-	"./hi": 330,
-	"./hi.js": 330,
-	"./hr": 331,
-	"./hr.js": 331,
-	"./hu": 332,
-	"./hu.js": 332,
-	"./hy-am": 333,
-	"./hy-am.js": 333,
-	"./id": 334,
-	"./id.js": 334,
-	"./is": 335,
-	"./is.js": 335,
-	"./it": 336,
-	"./it.js": 336,
-	"./ja": 337,
-	"./ja.js": 337,
-	"./jv": 338,
-	"./jv.js": 338,
-	"./ka": 339,
-	"./ka.js": 339,
-	"./kk": 340,
-	"./kk.js": 340,
-	"./km": 341,
-	"./km.js": 341,
-	"./kn": 342,
-	"./kn.js": 342,
-	"./ko": 343,
-	"./ko.js": 343,
-	"./ky": 344,
-	"./ky.js": 344,
-	"./lb": 345,
-	"./lb.js": 345,
-	"./lo": 346,
-	"./lo.js": 346,
-	"./lt": 347,
-	"./lt.js": 347,
-	"./lv": 348,
-	"./lv.js": 348,
-	"./me": 349,
-	"./me.js": 349,
-	"./mi": 350,
-	"./mi.js": 350,
-	"./mk": 351,
-	"./mk.js": 351,
-	"./ml": 352,
-	"./ml.js": 352,
-	"./mr": 353,
-	"./mr.js": 353,
-	"./ms": 355,
-	"./ms-my": 354,
-	"./ms-my.js": 354,
-	"./ms.js": 355,
-	"./my": 356,
-	"./my.js": 356,
-	"./nb": 357,
-	"./nb.js": 357,
-	"./ne": 358,
-	"./ne.js": 358,
-	"./nl": 360,
-	"./nl-be": 359,
-	"./nl-be.js": 359,
-	"./nl.js": 360,
-	"./nn": 361,
-	"./nn.js": 361,
-	"./pa-in": 362,
-	"./pa-in.js": 362,
-	"./pl": 363,
-	"./pl.js": 363,
-	"./pt": 365,
-	"./pt-br": 364,
-	"./pt-br.js": 364,
-	"./pt.js": 365,
-	"./ro": 366,
-	"./ro.js": 366,
-	"./ru": 367,
-	"./ru.js": 367,
-	"./sd": 368,
-	"./sd.js": 368,
-	"./se": 369,
-	"./se.js": 369,
-	"./si": 370,
-	"./si.js": 370,
-	"./sk": 371,
-	"./sk.js": 371,
-	"./sl": 372,
-	"./sl.js": 372,
-	"./sq": 373,
-	"./sq.js": 373,
-	"./sr": 375,
-	"./sr-cyrl": 374,
-	"./sr-cyrl.js": 374,
-	"./sr.js": 375,
-	"./ss": 376,
-	"./ss.js": 376,
-	"./sv": 377,
-	"./sv.js": 377,
-	"./sw": 378,
-	"./sw.js": 378,
-	"./ta": 379,
-	"./ta.js": 379,
-	"./te": 380,
-	"./te.js": 380,
-	"./tet": 381,
-	"./tet.js": 381,
-	"./th": 382,
-	"./th.js": 382,
-	"./tl-ph": 383,
-	"./tl-ph.js": 383,
-	"./tlh": 384,
-	"./tlh.js": 384,
-	"./tr": 385,
-	"./tr.js": 385,
-	"./tzl": 386,
-	"./tzl.js": 386,
-	"./tzm": 388,
-	"./tzm-latn": 387,
-	"./tzm-latn.js": 387,
-	"./tzm.js": 388,
-	"./uk": 389,
-	"./uk.js": 389,
-	"./ur": 390,
-	"./ur.js": 390,
-	"./uz": 392,
-	"./uz-latn": 391,
-	"./uz-latn.js": 391,
-	"./uz.js": 392,
-	"./vi": 393,
-	"./vi.js": 393,
-	"./x-pseudo": 394,
-	"./x-pseudo.js": 394,
-	"./yo": 395,
-	"./yo.js": 395,
-	"./zh-cn": 396,
-	"./zh-cn.js": 396,
-	"./zh-hk": 397,
-	"./zh-hk.js": 397,
-	"./zh-tw": 398,
-	"./zh-tw.js": 398
+	"./af": 285,
+	"./af.js": 285,
+	"./ar": 292,
+	"./ar-dz": 286,
+	"./ar-dz.js": 286,
+	"./ar-kw": 287,
+	"./ar-kw.js": 287,
+	"./ar-ly": 288,
+	"./ar-ly.js": 288,
+	"./ar-ma": 289,
+	"./ar-ma.js": 289,
+	"./ar-sa": 290,
+	"./ar-sa.js": 290,
+	"./ar-tn": 291,
+	"./ar-tn.js": 291,
+	"./ar.js": 292,
+	"./az": 293,
+	"./az.js": 293,
+	"./be": 294,
+	"./be.js": 294,
+	"./bg": 295,
+	"./bg.js": 295,
+	"./bn": 296,
+	"./bn.js": 296,
+	"./bo": 297,
+	"./bo.js": 297,
+	"./br": 298,
+	"./br.js": 298,
+	"./bs": 299,
+	"./bs.js": 299,
+	"./ca": 300,
+	"./ca.js": 300,
+	"./cs": 301,
+	"./cs.js": 301,
+	"./cv": 302,
+	"./cv.js": 302,
+	"./cy": 303,
+	"./cy.js": 303,
+	"./da": 304,
+	"./da.js": 304,
+	"./de": 307,
+	"./de-at": 305,
+	"./de-at.js": 305,
+	"./de-ch": 306,
+	"./de-ch.js": 306,
+	"./de.js": 307,
+	"./dv": 308,
+	"./dv.js": 308,
+	"./el": 309,
+	"./el.js": 309,
+	"./en-au": 310,
+	"./en-au.js": 310,
+	"./en-ca": 311,
+	"./en-ca.js": 311,
+	"./en-gb": 312,
+	"./en-gb.js": 312,
+	"./en-ie": 313,
+	"./en-ie.js": 313,
+	"./en-nz": 314,
+	"./en-nz.js": 314,
+	"./eo": 315,
+	"./eo.js": 315,
+	"./es": 317,
+	"./es-do": 316,
+	"./es-do.js": 316,
+	"./es.js": 317,
+	"./et": 318,
+	"./et.js": 318,
+	"./eu": 319,
+	"./eu.js": 319,
+	"./fa": 320,
+	"./fa.js": 320,
+	"./fi": 321,
+	"./fi.js": 321,
+	"./fo": 322,
+	"./fo.js": 322,
+	"./fr": 325,
+	"./fr-ca": 323,
+	"./fr-ca.js": 323,
+	"./fr-ch": 324,
+	"./fr-ch.js": 324,
+	"./fr.js": 325,
+	"./fy": 326,
+	"./fy.js": 326,
+	"./gd": 327,
+	"./gd.js": 327,
+	"./gl": 328,
+	"./gl.js": 328,
+	"./gom-latn": 329,
+	"./gom-latn.js": 329,
+	"./he": 330,
+	"./he.js": 330,
+	"./hi": 331,
+	"./hi.js": 331,
+	"./hr": 332,
+	"./hr.js": 332,
+	"./hu": 333,
+	"./hu.js": 333,
+	"./hy-am": 334,
+	"./hy-am.js": 334,
+	"./id": 335,
+	"./id.js": 335,
+	"./is": 336,
+	"./is.js": 336,
+	"./it": 337,
+	"./it.js": 337,
+	"./ja": 338,
+	"./ja.js": 338,
+	"./jv": 339,
+	"./jv.js": 339,
+	"./ka": 340,
+	"./ka.js": 340,
+	"./kk": 341,
+	"./kk.js": 341,
+	"./km": 342,
+	"./km.js": 342,
+	"./kn": 343,
+	"./kn.js": 343,
+	"./ko": 344,
+	"./ko.js": 344,
+	"./ky": 345,
+	"./ky.js": 345,
+	"./lb": 346,
+	"./lb.js": 346,
+	"./lo": 347,
+	"./lo.js": 347,
+	"./lt": 348,
+	"./lt.js": 348,
+	"./lv": 349,
+	"./lv.js": 349,
+	"./me": 350,
+	"./me.js": 350,
+	"./mi": 351,
+	"./mi.js": 351,
+	"./mk": 352,
+	"./mk.js": 352,
+	"./ml": 353,
+	"./ml.js": 353,
+	"./mr": 354,
+	"./mr.js": 354,
+	"./ms": 356,
+	"./ms-my": 355,
+	"./ms-my.js": 355,
+	"./ms.js": 356,
+	"./my": 357,
+	"./my.js": 357,
+	"./nb": 358,
+	"./nb.js": 358,
+	"./ne": 359,
+	"./ne.js": 359,
+	"./nl": 361,
+	"./nl-be": 360,
+	"./nl-be.js": 360,
+	"./nl.js": 361,
+	"./nn": 362,
+	"./nn.js": 362,
+	"./pa-in": 363,
+	"./pa-in.js": 363,
+	"./pl": 364,
+	"./pl.js": 364,
+	"./pt": 366,
+	"./pt-br": 365,
+	"./pt-br.js": 365,
+	"./pt.js": 366,
+	"./ro": 367,
+	"./ro.js": 367,
+	"./ru": 368,
+	"./ru.js": 368,
+	"./sd": 369,
+	"./sd.js": 369,
+	"./se": 370,
+	"./se.js": 370,
+	"./si": 371,
+	"./si.js": 371,
+	"./sk": 372,
+	"./sk.js": 372,
+	"./sl": 373,
+	"./sl.js": 373,
+	"./sq": 374,
+	"./sq.js": 374,
+	"./sr": 376,
+	"./sr-cyrl": 375,
+	"./sr-cyrl.js": 375,
+	"./sr.js": 376,
+	"./ss": 377,
+	"./ss.js": 377,
+	"./sv": 378,
+	"./sv.js": 378,
+	"./sw": 379,
+	"./sw.js": 379,
+	"./ta": 380,
+	"./ta.js": 380,
+	"./te": 381,
+	"./te.js": 381,
+	"./tet": 382,
+	"./tet.js": 382,
+	"./th": 383,
+	"./th.js": 383,
+	"./tl-ph": 384,
+	"./tl-ph.js": 384,
+	"./tlh": 385,
+	"./tlh.js": 385,
+	"./tr": 386,
+	"./tr.js": 386,
+	"./tzl": 387,
+	"./tzl.js": 387,
+	"./tzm": 389,
+	"./tzm-latn": 388,
+	"./tzm-latn.js": 388,
+	"./tzm.js": 389,
+	"./uk": 390,
+	"./uk.js": 390,
+	"./ur": 391,
+	"./ur.js": 391,
+	"./uz": 393,
+	"./uz-latn": 392,
+	"./uz-latn.js": 392,
+	"./uz.js": 393,
+	"./vi": 394,
+	"./vi.js": 394,
+	"./x-pseudo": 395,
+	"./x-pseudo.js": 395,
+	"./yo": 396,
+	"./yo.js": 396,
+	"./zh-cn": 397,
+	"./zh-cn.js": 397,
+	"./zh-hk": 398,
+	"./zh-hk.js": 398,
+	"./zh-tw": 399,
+	"./zh-tw.js": 399
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -5609,7 +5621,7 @@ module.exports = "<span>&copy; {{settings.app.year}} - {{ settings.app.name }}</
 /***/ 926:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- START Top Navbar-->\r\n<nav class=\"navbar topnavbar\" role=\"navigation\">\r\n    <!-- START navbar header-->\r\n    <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#/\">\r\n            <div class=\"brand-logo\">\r\n                <img class=\"img-responsive\" src=\"assets/img/logo.png\" alt=\"App Logo\" />\r\n            </div>\r\n            <div class=\"brand-logo-collapsed\">\r\n                <!-- <img class=\"img-responsive\" src=\"assets/img/logo-single.png\" alt=\"App Logo\" /> -->\r\n            </div>\r\n        </a>\r\n    </div>\r\n    <!-- END navbar header-->\r\n    <!-- START Nav wrapper-->\r\n    <div class=\"nav-wrapper\">\r\n        <!-- START Left navbar-->\r\n        <ul class=\"nav navbar-nav\">\r\n            <li>\r\n                <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->\r\n                <a class=\"hidden-xs\" trigger-resize=\"\" (click)=\"toggleCollapsedSideabar()\" *ngIf=\"!isCollapsedText()\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n                <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->\r\n                <a class=\"visible-xs sidebar-toggle\" (click)=\"settings.layout.asideToggled =! settings.layout.asideToggled\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n            </li>\r\n           \r\n            <li>\r\n                <a title=\"Loan calculator\" class=\"btn\" (click)=\"createNewLoan()\">\r\n                   Loan Calculator\r\n                </a>\r\n            </li>\r\n            <li *ngIf=\"isLoanPage\">\r\n                <a title=\"Save Loan\" class=\"btn btn-primary\" (click)=\"saveLoan()\">\r\n                    Save Loan\r\n                </a>\r\n            </li>\r\n            <!-- END lock screen-->\r\n        </ul>\r\n        <!-- END Left navbar-->\r\n        <!-- START Right Navbar-->\r\n        <ul class=\"nav navbar-nav navbar-right\">\r\n            <!-- Fullscreen (only desktops)-->\r\n            <li class=\"visible-lg\">\r\n                <a #fsbutton (click)=\"toggleFullScreen($event)\">\r\n                    <em class=\"fa fa-expand\"></em>\r\n                </a>\r\n            </li>\r\n            <!-- START Offsidebar button-->\r\n            <li>\r\n                <a (click)=\"toggleOffsidebar()\">\r\n                    <em class=\"icon-notebook\"></em>\r\n                </a>\r\n            </li>\r\n            <!-- END Offsidebar menu-->\r\n        </ul>\r\n        <!-- END Right Navbar-->\r\n    </div>\r\n    <!-- END Nav wrapper-->\r\n\r\n    <!-- <app-navsearch [visible]=\"getNavSearchVisible()\" (onclose)=\"setNavSearchVisible(false)\"></app-navsearch> -->\r\n\r\n</nav>\r\n<!-- END Top Navbar-->"
+module.exports = "<!-- START Top Navbar-->\r\n<nav class=\"navbar topnavbar\" role=\"navigation\">\r\n    <!-- START navbar header-->\r\n    <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#/\">\r\n            <div class=\"brand-logo\">\r\n                <img class=\"img-responsive\" src=\"assets/img/logo.png\" alt=\"App Logo\" />\r\n            </div>\r\n            <div class=\"brand-logo-collapsed\">\r\n                <!-- <img class=\"img-responsive\" src=\"assets/img/logo-single.png\" alt=\"App Logo\" /> -->\r\n            </div>\r\n        </a>\r\n    </div>\r\n    <!-- END navbar header-->\r\n    <!-- START Nav wrapper-->\r\n    <div class=\"nav-wrapper\">\r\n        <!-- START Left navbar-->\r\n        <ul class=\"nav navbar-nav\">\r\n            <li>\r\n                <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->\r\n                <a class=\"hidden-xs\" trigger-resize=\"\" (click)=\"toggleCollapsedSideabar()\" *ngIf=\"!isCollapsedText()\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n                <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->\r\n                <a class=\"visible-xs sidebar-toggle\" (click)=\"settings.layout.asideToggled =! settings.layout.asideToggled\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n            </li>\r\n           \r\n            <li>\r\n                <a title=\"Loan calculator\" class=\"btn\" (click)=\"createNewLoan()\">\r\n                   Loan Calculator\r\n                </a>\r\n            </li>\r\n            <li *ngIf=\"isLoanPage\">\r\n                <a title=\"Save Loan\" class=\"btn btn-primary\" (click)=\"saveLoan()\">\r\n                    Save Loan\r\n                </a>\r\n            </li>\r\n            <!-- END lock screen-->\r\n        </ul>\r\n        <!-- END Left navbar-->\r\n        <!-- START Right Navbar-->\r\n        <ul class=\"nav navbar-nav navbar-right\">\r\n            <!-- Fullscreen (only desktops)-->\r\n            <li class=\"visible-lg\">\r\n                <a #fsbutton (click)=\"toggleFullScreen($event)\">\r\n                    <em class=\"fa fa-expand\"></em>\r\n                </a>\r\n            </li>\r\n            <!-- START Offsidebar button-->\r\n            <!-- <li>\r\n                <a (click)=\"toggleOffsidebar()\">\r\n                    <em class=\"icon-notebook\"></em>\r\n                </a>\r\n            </li> -->\r\n            <!-- END Offsidebar menu-->\r\n        </ul>\r\n        <!-- END Right Navbar-->\r\n    </div>\r\n    <!-- END Nav wrapper-->\r\n\r\n    <!-- <app-navsearch [visible]=\"getNavSearchVisible()\" (onclose)=\"setNavSearchVisible(false)\"></app-navsearch> -->\r\n\r\n</nav>\r\n<!-- END Top Navbar-->\r\n<toaster-container [toasterconfig]=\"toasterconfig\"></toaster-container>"
 
 /***/ }),
 
@@ -5706,22 +5718,22 @@ module.exports = "<div class=\"wrapper\">\r\n    <div class=\"block-center mt-xl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_toaster_angular2_toaster__ = __webpack_require__(554);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_bootstrap_accordion__ = __webpack_require__(427);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_alert__ = __webpack_require__(430);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_buttons__ = __webpack_require__(437);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_carousel__ = __webpack_require__(439);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_collapse__ = __webpack_require__(442);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_dropdown__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_toaster_angular2_toaster__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_bootstrap_accordion__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_alert__ = __webpack_require__(431);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_buttons__ = __webpack_require__(438);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_carousel__ = __webpack_require__(440);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_collapse__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_dropdown__ = __webpack_require__(462);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ngx_bootstrap_modal__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ngx_bootstrap_pagination__ = __webpack_require__(466);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ngx_bootstrap_progressbar__ = __webpack_require__(475);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ngx_bootstrap_rating__ = __webpack_require__(478);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ngx_bootstrap_tabs__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ngx_bootstrap_pagination__ = __webpack_require__(467);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ngx_bootstrap_progressbar__ = __webpack_require__(476);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ngx_bootstrap_rating__ = __webpack_require__(479);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ngx_bootstrap_tabs__ = __webpack_require__(484);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ngx_bootstrap_timepicker__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_bootstrap_tooltip__ = __webpack_require__(490);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ngx_bootstrap_typeahead__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ngx_bootstrap_datepicker__ = __webpack_require__(451);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_bootstrap_tooltip__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ngx_bootstrap_typeahead__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ngx_bootstrap_datepicker__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__directives_flot_flot_directive__ = __webpack_require__(578);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__directives_sparkline_sparkline_directive__ = __webpack_require__(582);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__directives_easypiechart_easypiechart_directive__ = __webpack_require__(577);

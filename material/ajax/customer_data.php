@@ -163,7 +163,7 @@ else if(isset($_REQUEST['cusid']))
 	$url=explode('/',$url);
 	
 	$msg=explode('{URL}',$msg);
-	$msg=$msg[0].'<br/><a href="https://loanapp-app.herokuapp.com/material/customersignup.php?id='.base64_encode($user_id).'" target="_blank">Click Here For Signup?</a>';
+	$msg=$msg[0].'<br/><a href="https://loanapp-app.herokuapp.com/material/customersignup.php?id='.$user_id.'" target="_blank">Click Here For Signup?</a>';
 	
 	
 	$mail = new PHPMailer();

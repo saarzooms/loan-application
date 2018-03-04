@@ -17,7 +17,7 @@ if(isset($_SESSION['id'])=="")
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 	 <link rel="stylesheet" href="app/css/styles.css">
-	 <style>
+<style>
   .client-detail {width:98%; height:auto; float:right; border:1px solid #23b7e5; padding:15px 0px 15px 0px;margin-bottom:10px;margin-right:5px;box-shadow:5px 5px 2.5px #23b7e5}
 .client-detail-text {font-size:12px; color:#000; }
 .circle {
@@ -42,6 +42,10 @@ if(isset($_SESSION['id'])=="")
 	tr.hide_all > td, td.hide_all{
         border-style:hidden;
       }
+	  body {
+    overflow: scroll;
+}
+
   </style>
 </head>
 
@@ -60,6 +64,9 @@ if(isset($_SESSION['id'])=="")
 	<script type="text/javascript" src="main.bundle.js"></script>
 	
 	
+ 
+</body>
+
 	<?php
 	if($_SESSION['usertype'] == 'Customer'){
 	?>
@@ -109,6 +116,25 @@ if(isset($_SESSION['id'])=="")
  <script src="app/js/jquery.min.js"></script>
  <script src="app/js/scripts.js"></script>
  <script src="app/js/drawer.js"></script>
-</body>
-
+<script>
+	$(document).ready(function() {
+		//pure javascript
+	//var pathname = window.location.pathname;
+	var pathname = window.location.href;
+	var id=pathname.split("/");
+	<?php
+	if($_SESSION['usertype']=='Customer'){
+		?>
+			// to show it in an alert window
+			//alert(id[7]+<?php echo $_SESSION['id'];?>);
+		<?php
+	}else{
+	?>
+	// to show it in an alert window
+   // alert(id[6]+<?php echo $_SESSION['id'];?>);
+	<?php
+	}
+	?>
+	})
+</script>
 </html>

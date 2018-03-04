@@ -80,7 +80,7 @@ if(isset($_REQUEST['id'])){
 			{
 ?>				
 		<tr>
-		<td><a href='calculator.html#/loan-calculator/<?php echo $row['loanId'];?>' target='_blank'><?php echo $row['loanId'];?></a></td>
+		<td><a href='calculator.php#/loan-calculator/<?php echo $row['loanId'];?>' target='_blank'><?php echo $row['loanId'];?></a></td>
 		<td><?php echo $row['name']; ?></td>
 		<td><?php echo $row['custname']; ?></td>
 		

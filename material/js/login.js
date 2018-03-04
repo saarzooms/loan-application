@@ -9,11 +9,10 @@ $(document).ready(function() {
 		
 		//alert(username +' '+pass);
 		
-		
 		$.ajax({ 
 					type: "POST",
 					url: "ajax/login_data.php?username="+username+"&pass="+pass,
-			               	success: function(data)
+					success: function(data)
 					{
 						//alert(data);
 						var result = $.trim(data);

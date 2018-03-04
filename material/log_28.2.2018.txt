@@ -1,0 +1,1 @@
+SELECT * FROM `loansbackup` where lastUpdatedBy = 'customer' and loanId ='MjA=' and updateAt in (select max(updateAt) from loansbackup where lastUpdatedBy = 'customer' and loanId ='MjA=')

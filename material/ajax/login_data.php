@@ -1,12 +1,12 @@
 <?php
 session_start();
 include('../db/connection.php');
-//include('../stripe/config.php');
+include('../stripe/config.php');
 if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 {	
 	$username = $_REQUEST['username'];
 	$password = $_REQUEST['pass'];
-	$id="";$status="";$type='';
+	$id="";$status="";$type='';$sub_end_dt='';
 	$active = 1; $flag=0;$enddt='';$status='';$cusid='';$todaydt='';$renewdt='';
 	$sql = "SELECT * FROM login_master WHERE `email`='$username' and `password`='$password'";
 	foreach ($dbh->query($sql) as $row)
@@ -28,7 +28,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 			//$enddt=strtotime($enddt);
 //			if(strtotime($todaydt)>strtotime($enddt)){
 	//echo $enddt.' '.$todaydt;
-		/*	if($todaydt>$enddt){
+			if($todaydt>$enddt){
 				$active=0;
 					$subscription =Stripe_Subscription::all(
 					  array('customer'=>$cusid,'limit'=>1000)
@@ -53,10 +53,10 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 							$active = 1;
 							break;
 						}
-					} 
+					}
 					//echo $subscription['data'][0]['id'];
 					
-			}*/
+			}	
 		} 
 	}
 	if($id=='')
