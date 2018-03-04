@@ -59,8 +59,12 @@ if(isset($_REQUEST['id']))
 		{		
 			$partnercnt=$r2['cnt2'];
 		}
-		
-		array_push($result,'Loanofficer',$custcnt,$partnercnt);
+		$s3 = "select count(*) as cnt3 from borrowers where id in (SELECT id FROM `customer_master` where loanofficer_id='".$_SESSION['id']."') and type = 'B'";
+		foreach ($dbh->query($s3) as $r3)
+		{		
+			$loancalculatorcnt=$r3['cnt3'];
+		}
+		array_push($result,'Loanofficer',$custcnt,$partnercnt,$loancalculatorcnt);
 	    echo json_encode($result);
 	}else{
 		

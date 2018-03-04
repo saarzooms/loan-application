@@ -6,6 +6,7 @@ $(document).ready(function() {
 						dataType:'json',
 						success: function(data)
 						{
+							//alert(data);
 							var arr=eval(data);
 							
 							if(arr[0] == 'Admin'){
@@ -18,7 +19,7 @@ $(document).ready(function() {
 								
 								$('#cust').html(arr[1]);
 								$('#part').html(arr[2]);
-								
+								$('#cal').html(arr[3]);
 							}else{
 								
 							}
