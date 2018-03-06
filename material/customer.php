@@ -97,8 +97,8 @@ include('db/connection.php');
 						              </div>
 									      <div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">Salutation *</label>
-                              <input type="text" name="salutation" id="salutation" class="form-control" placeholder="Enter Salutation*" oninvalid="this.setCustomValidity('please enter salutation')" onchange="this.setCustomValidity('')" required>
+                              <label class="control-label">Salutation</label>
+                              <input type="text" name="salutation" id="salutation" class="form-control" placeholder="Enter Salutation">
                            </div>
 						              </div>
 									      <div class="col-md-4">
@@ -112,8 +112,8 @@ include('db/connection.php');
 												<div class="col-md-12">
 												<div class="col-md-4">
                            <div class="form-group">
-                             <label class="control-label">Marital Status *</label>
-                              <select name="Marital" id="Marital" class="form-control m-b" oninvalid="this.setCustomValidity('please select marital status')" required>
+                             <label class="control-label">Marital Status</label>
+                              <select name="Marital" id="Marital" class="form-control m-b">
                                  <option value="" selected disabled>---Select Marital Status---</option>
                                  <option value="Married">Married</option>
                                  <option value="Unmarried">Unmarried</option>
@@ -123,8 +123,8 @@ include('db/connection.php');
 						              </div>
 									      <div class="col-md-4">
                            <div class="form-group">
-                              <label for="control-label">Spouse Name *</label>
-                              <input type="text" name="Spouse" id="Spouse" class="form-control" placeholder="Enter Spouse Name*" oninvalid="this.setCustomValidity('please enter Spouse name')" onchange="this.setCustomValidity('')" required>
+                              <label for="control-label">Spouse Name</label>
+                              <input type="text" name="Spouse" id="Spouse" class="form-control" placeholder="Enter Spouse Name" >
 											     </div>
 						              </div>
 												<div class="col-md-4">
@@ -137,28 +137,28 @@ include('db/connection.php');
 									  <div class="col-md-12">
 									      <div class="col-md-4">
                            <div class="form-group">
-                               <label class="control-label">Phone *</label>
-                              <input type="text" name="phone" id="phone" class="form-control" maxlength="10" placeholder="Enter Phone*" oninvalid="this.setCustomValidity('please enter Phone')" onchange="this.setCustomValidity('')" required>
+                               <label class="control-label">Phone</label>
+                              <input type="text" name="phone" id="phone" class="form-control" maxlength="10" placeholder="Enter Phone Number" >
                            </div>
 						              </div>
 									       <div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">Credit Score *</label>
-                              <input type="text" name="credit" id="credit" class="form-control" placeholder="Enter Credit Score*" oninvalid="this.setCustomValidity('please enter credit score')" onchange="this.setCustomValidity('')" required>
+                              <label class="control-label">Credit Score</label>
+                              <input type="text" name="credit" id="credit" class="form-control" placeholder="Enter Credit Score" >
                            </div>
 						              </div> 
 									      <div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">Address *</label>
-                              <textarea type="text" name="address" id="address" class="form-control" placeholder="Enter Address*" oninvalid="this.setCustomValidity('please enter Address')" onchange="this.setCustomValidity('')" required></textarea>
+                              <label class="control-label">Address</label>
+                              <textarea type="text" name="address" id="address" class="form-control" placeholder="Enter Address" ></textarea>
                            </div>
 						              </div>
 									  </div>
 						         <div class="col-md-12">
 												<div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">State *</label>
-                              <select name="state" id="state" class="form-control m-b" oninvalid="this.setCustomValidity('please select state')" required>
+                              <label class="control-label">State</label>
+                              <select name="state" id="state" class="form-control m-b" >
 																		<option value="" selected disabled >---Select State---</option>
 																	<?php
 																	$sql = "select * from state_table";
@@ -175,14 +175,14 @@ include('db/connection.php');
 						              </div>
 												<div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">ZIP code *</label>
-                              <input type="text" name="zipcode" id="zipcode" class="form-control" maxlength="6" placeholder="Enter ZIP code*" oninvalid="this.setCustomValidity('please enter ZIP code')" onchange="this.setCustomValidity('')" required>
+                              <label class="control-label">ZIP code</label>
+                              <input type="text" name="zipcode" id="zipcode" class="form-control" maxlength="6" placeholder="Enter ZIP code" >
                            </div>
 						              </div>
 												<div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">Facebook Id *</label>
-                              <input type="text" name="facebook" id="facebook" class="form-control" placeholder="Enter Facebook ID*" oninvalid="this.setCustomValidity('please enter facebook ID')" onchange="this.setCustomValidity('')" required>
+                              <label class="control-label">Facebook Id</label>
+                              <input type="text" name="facebook" id="facebook" class="form-control" placeholder="Enter Facebook ID" >
                            </div>
 						              </div>
 								      </div>
