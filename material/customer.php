@@ -80,9 +80,15 @@ include('db/connection.php');
 																	
 																	foreach ($dbh->query($sql) as $row)
 																	{
+																		if($roll=='Admin'){
 																		?>
 																		 <option value="<?php echo $row['id'];?>"><?php echo $row['name'];?></option>
 																		<?php
+																		}else{
+																			?>
+																		 <option value="<?php echo $row['id'];?>" selected><?php echo $row['name'];?></option>
+																		<?php
+																		}
 																	}
 																	?>
                                 
@@ -124,7 +130,7 @@ include('db/connection.php');
 												<div class="col-md-4">
                            <div class="form-group">
                               <label class="control-label">Email *</label>
-                              <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email*" oninvalid="this.setCustomValidity('please enter email')" onchange="this.setCustomValidity('')" required>
+                              <input type="email" name="email1" id="email1" class="form-control" placeholder="Enter Email*" oninvalid="this.setCustomValidity('please enter email')" onchange="this.setCustomValidity('')" required>
                            </div>
 						              </div>
 									  </div>

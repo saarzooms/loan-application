@@ -9,7 +9,7 @@ $(document).ready(function() {
 		var name = document.getElementById('name').value;
 		var Marital = document.getElementById('Marital').value;
 		var Spouse = document.getElementById('Spouse').value;
-		var email = document.getElementById('email').value;
+		var email = document.getElementById('email1').value;
 		var phone = document.getElementById('phone').value;
 		var credit = document.getElementById('credit').value;
 		var address = document.getElementById('address').value;
@@ -30,7 +30,7 @@ $(document).ready(function() {
 								$('#name').val('');
 								$('#Marital').val('');
 								$('#Spouse').val('');
-								$('#email').val('');
+								$('#email1').val('');
 								$('#phone').val('');
 								$('#credit').val('');
 								$('#address').val('');
@@ -91,7 +91,7 @@ $(document).ready(function() {
 										$("#name").val(arr[2]);
 										$("#Marital").val(arr[3]);
 										$("#Spouse").val(arr[4]);
-										$("#email").val(arr[5]);
+										$("#email1").val(arr[5]);
 										$("#phone").val(arr[6]);
 										$("#credit").val(arr[7]);
 										$("#address").val(arr[8]);
@@ -115,7 +115,7 @@ $(document).ready(function() {
 				var name = document.getElementById('name').value;
 				var Marital = document.getElementById('Marital').value;
 				var Spouse = document.getElementById('Spouse').value;
-				var email = document.getElementById('email').value;
+				var email = document.getElementById('email1').value;
 				var phone = document.getElementById('phone').value;
 				var credit = document.getElementById('credit').value;
 				var address = document.getElementById('address').value;
@@ -136,7 +136,7 @@ $(document).ready(function() {
 								$('#name').val('');
 								$('#Marital').val('');
 								$('#Spouse').val('');
-								$('#email').val('');
+								$('#email1').val('');
 								$('#phone').val('');
 								$('#credit').val('');
 								$('#address').val('');
