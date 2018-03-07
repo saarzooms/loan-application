@@ -2038,7 +2038,7 @@ var LoanService = (function () {
     LoanService.prototype.shareLoan = function (loan) {
         var _this = this;
         this.request$.emit('starting');
-        return this.apiService.post('/loan/share', loan)
+        return this.apiService.postExternal('https://loanapp-app.herokuapp.com/material/sendemail.php', loan)
             .map(function (response) {
             _this.request$.emit('finished');
             return response;
@@ -2555,9 +2555,9 @@ var _a, _b;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-    //api_url: 'http://192.168.2.103/loan-calculator-server'
+   // api_url: 'http://192.168.2.103/loan-calculator-server'
    // api_url: 'http://loan-calculator.xcartadesigns.com'
-    api_url: 'https://loanapp-app.herokuapp.com/loan-calculator-server'
+   api_url: 'https://loanapp-app.herokuapp.com/loan-calculator-server'
    // api_url: 'http://loan-calculator.xcartadesigns.com'
 };
 //# sourceMappingURL=environment.js.map
@@ -2592,8 +2592,8 @@ var SettingsService = (function () {
         // App Settings
         // -----------------------------------
         this.app = {
-            name: 'Angle',
-            description: 'Angular Bootstrap Admin Template',
+            name: 'Streetwork',
+            description: 'Streetwork Loan Template',
             year: ((new Date()).getFullYear())
         };
         // Layout Settings
@@ -4899,6 +4899,12 @@ var ApiService = (function () {
             .catch(this.formatErrors)
             .map(function (res) { return res.json(); });
     };
+    ApiService.prototype.postExternal = function (path, body) {
+        if (body === void 0) { body = {}; }
+        return this.http.post("" + path, JSON.stringify(body), { headers: this.setHeaders() })
+            .catch(this.formatErrors)
+            .map(function (res) { return res.json(); });
+    };
     ApiService.prototype.delete = function (path) {
         return this.http.delete("" + __WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].api_url + path, { headers: this.setHeaders() })
             .catch(this.formatErrors)
@@ -5621,7 +5627,7 @@ module.exports = "<span>&copy; {{settings.app.year}} - {{ settings.app.name }}</
 /***/ 926:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- START Top Navbar-->\r\n<nav class=\"navbar topnavbar\" role=\"navigation\">\r\n    <!-- START navbar header-->\r\n    <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#/\">\r\n            <div class=\"brand-logo\">\r\n                <img class=\"img-responsive\" src=\"assets/img/logo.png\" alt=\"App Logo\" />\r\n            </div>\r\n            <div class=\"brand-logo-collapsed\">\r\n                <!-- <img class=\"img-responsive\" src=\"assets/img/logo-single.png\" alt=\"App Logo\" /> -->\r\n            </div>\r\n        </a>\r\n    </div>\r\n    <!-- END navbar header-->\r\n    <!-- START Nav wrapper-->\r\n    <div class=\"nav-wrapper\">\r\n        <!-- START Left navbar-->\r\n        <ul class=\"nav navbar-nav\">\r\n            <li>\r\n                <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->\r\n                <a class=\"hidden-xs\" trigger-resize=\"\" (click)=\"toggleCollapsedSideabar()\" *ngIf=\"!isCollapsedText()\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n                <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->\r\n                <a class=\"visible-xs sidebar-toggle\" (click)=\"settings.layout.asideToggled =! settings.layout.asideToggled\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n            </li>\r\n           \r\n            <li>\r\n                <a title=\"Loan calculator\" class=\"btn\" (click)=\"createNewLoan()\">\r\n                   Loan Calculator\r\n                </a>\r\n            </li>\r\n            <li *ngIf=\"isLoanPage\">\r\n                <a title=\"Save Loan\" class=\"btn btn-primary\" (click)=\"saveLoan()\">\r\n                    Save Loan\r\n                </a>\r\n            </li>\r\n            <!-- END lock screen-->\r\n        </ul>\r\n        <!-- END Left navbar-->\r\n        <!-- START Right Navbar-->\r\n        <ul class=\"nav navbar-nav navbar-right\">\r\n            <!-- Fullscreen (only desktops)-->\r\n            <li class=\"visible-lg\">\r\n                <a #fsbutton (click)=\"toggleFullScreen($event)\">\r\n                    <em class=\"fa fa-expand\"></em>\r\n                </a>\r\n            </li>\r\n            <!-- START Offsidebar button-->\r\n            <!-- <li>\r\n                <a (click)=\"toggleOffsidebar()\">\r\n                    <em class=\"icon-notebook\"></em>\r\n                </a>\r\n            </li> -->\r\n            <!-- END Offsidebar menu-->\r\n        </ul>\r\n        <!-- END Right Navbar-->\r\n    </div>\r\n    <!-- END Nav wrapper-->\r\n\r\n    <!-- <app-navsearch [visible]=\"getNavSearchVisible()\" (onclose)=\"setNavSearchVisible(false)\"></app-navsearch> -->\r\n\r\n</nav>\r\n<!-- END Top Navbar-->\r\n<toaster-container [toasterconfig]=\"toasterconfig\"></toaster-container>"
+module.exports = "<!-- START Top Navbar-->\r\n<nav class=\"navbar topnavbar\" role=\"navigation\">\r\n    <!-- START navbar header-->\r\n    <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#/\">\r\n            <div class=\"brand-logo\">\r\n                <img class=\"img-responsive\" src=\"assets/img/logo.png\" alt=\"App Logo\" />\r\n            </div>\r\n            <div class=\"brand-logo-collapsed\">\r\n                <!-- <img class=\"img-responsive\" src=\"assets/img/logo-single.png\" alt=\"App Logo\" /> -->\r\n            </div>\r\n        </a>\r\n    </div>\r\n    <!-- END navbar header-->\r\n    <!-- START Nav wrapper-->\r\n    <div class=\"nav-wrapper\">\r\n        <!-- START Left navbar-->\r\n        <ul class=\"nav navbar-nav\">\r\n            <li>\r\n                <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->\r\n                <a class=\"hidden-xs\" trigger-resize=\"\" (click)=\"toggleCollapsedSideabar()\" *ngIf=\"!isCollapsedText()\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n                <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->\r\n                <a class=\"visible-xs sidebar-toggle\" (click)=\"settings.layout.asideToggled =! settings.layout.asideToggled\">\r\n                    <em class=\"fa fa-navicon\"></em>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <!-- <a title=\"Loan calculator\" class=\"btn\" (click)=\"createNewLoan()\">\r\n                   Loan Calculator\r\n                </a> -->\r\n                <a title=\"Dashboard\" class=\"btn\" href=\"https://loanapp-app.herokuapp.com/material\">\r\n                    Dashboard\r\n                </a>\r\n            </li>\r\n            <li *ngIf=\"isLoanPage\">\r\n                <a title=\"Save Loan\" class=\"btn btn-primary\" (click)=\"saveLoan()\">\r\n                    Save Loan\r\n                </a>\r\n            </li>\r\n            <!-- END lock screen-->\r\n        </ul>\r\n        <!-- END Left navbar-->\r\n        <!-- START Right Navbar-->\r\n        <ul class=\"nav navbar-nav navbar-right\">\r\n            <!-- Fullscreen (only desktops)-->\r\n            <li class=\"visible-lg\">\r\n                <a #fsbutton (click)=\"toggleFullScreen($event)\">\r\n                    <em class=\"fa fa-expand\"></em>\r\n                </a>\r\n            </li>\r\n            <!-- START Offsidebar button-->\r\n            <!-- <li>\r\n                <a (click)=\"toggleOffsidebar()\">\r\n                    <em class=\"icon-notebook\"></em>\r\n                </a>\r\n            </li> -->\r\n            <!-- END Offsidebar menu-->\r\n        </ul>\r\n        <!-- END Right Navbar-->\r\n    </div>\r\n    <!-- END Nav wrapper-->\r\n\r\n    <!-- <app-navsearch [visible]=\"getNavSearchVisible()\" (onclose)=\"setNavSearchVisible(false)\"></app-navsearch> -->\r\n\r\n</nav>\r\n<!-- END Top Navbar-->\r\n<toaster-container [toasterconfig]=\"toasterconfig\"></toaster-container>"
 
 /***/ }),
 
