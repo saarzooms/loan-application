@@ -49,7 +49,7 @@ if(isset($_SESSION['id'])=="")
   </style>
 </head>
 
-<body class="layout-h" style="overflow: scroll;">
+<body class="layout-h" overflow="scroll">
     <app-root></app-root>
     <div class="preloader">            
         <!-- <div class="preloader-progress">
