@@ -42,9 +42,7 @@ if(isset($_SESSION['id'])=="")
 	tr.hide_all > td, td.hide_all{
         border-style:hidden;
       }
-	  body {
-    overflow: scroll;
-}
+	  
 
   </style>
 </head>
