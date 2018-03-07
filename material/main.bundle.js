@@ -2036,14 +2036,13 @@ var LoanService = (function () {
             .catch(this.handleError);
     };
     LoanService.prototype.shareLoan = function (loan) {
-        var _this = this;
-        this.request$.emit('starting');
-        return this.apiService.postExternal('https://loanapp-app.herokuapp.com/material/sendemail.php', loan)
-            .map(function (response) {
-            _this.request$.emit('finished');
-            return response;
-        })
-            .catch(this.handleError);
+        // this.request$.emit('starting');
+        return this.apiService.postExternal('https://loanapp-app.herokuapp.com/material/sendemail.php', loan);
+        // .map(response => {
+        //   // this.request$.emit('finished');
+        //   return true ;//as ShareLoanModel;
+        // })
+        // .catch(this.handleError);
     };
     return LoanService;
 }());
@@ -2555,7 +2554,7 @@ var _a, _b;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-   // api_url: 'http://192.168.2.103/loan-calculator-server'
+    //api_url: 'http://192.168.2.103/loan-calculator-server'
    // api_url: 'http://loan-calculator.xcartadesigns.com'
    api_url: 'https://loanapp-app.herokuapp.com/loan-calculator-server'
    // api_url: 'http://loan-calculator.xcartadesigns.com'
@@ -3097,8 +3096,8 @@ var HeaderComponent = (function () {
         // show only a few items on demo
         this.menuItems = menu.getMenu().slice(0, 4); // for horizontal layout
         // console.log('sdd', this.router);
-        var re = new RegExp("^/loan-calculator/[0-9]*$");
-        var re1 = new RegExp("^/loan-calculator/customer-view/[0-9]*$");
+        var re = new RegExp("^/loan-calculator/*$");
+        var re1 = new RegExp("^/loan-calculator/customer-view/*$");
         this.router.events.subscribe(function (event) {
             if (re.test(event.url) || re1.test(event.url)) {
                 _this.isLoanPage = true;
@@ -3107,6 +3106,7 @@ var HeaderComponent = (function () {
                 _this.isLoanPage = false;
             }
         });
+        this.isLoanPage = true;
     }
     HeaderComponent.prototype.saveLoan = function () {
         this.messageService.sendMessage('Save Loan');
@@ -4903,7 +4903,7 @@ var ApiService = (function () {
         if (body === void 0) { body = {}; }
         return this.http.post("" + path, JSON.stringify(body), { headers: this.setHeaders() })
             .catch(this.formatErrors)
-            .map(function (res) { return res.json(); });
+            .map(function (res) { return res; });
     };
     ApiService.prototype.delete = function (path) {
         return this.http.delete("" + __WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].api_url + path, { headers: this.setHeaders() })

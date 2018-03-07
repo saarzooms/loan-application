@@ -2667,8 +2667,9 @@ var BorrowerDetailsComponent = (function () {
         model.email = email;
         var pieces = window.location.href.split('/');
         model.id = pieces[pieces.length - 1];
-        model.loanLink = window.location.origin + "/#/loan-calculator/customer-view/" + pieces[pieces.length - 1];
-        this.loanService.shareLoan(model).subscribe(function (x) {
+        // model.loanLink = `${window.location.origin}/#/loan-calculator/customer-view/${pieces[pieces.length - 1]}`;
+        this.loanService.shareLoan(model)
+            .subscribe(function (x) {
             console.log('loan shared');
         });
         this.popShareLoan();
@@ -4471,9 +4472,10 @@ var getMoney = function (value) {
     return (Math.round(parseFloat(value) * 100)) / 100;
 };
 var ShareLoanModel = (function () {
+    // loanLink: string;
     function ShareLoanModel() {
         this.email = '';
-        this.loanLink = '';
+        // this.loanLink = '';
     }
     return ShareLoanModel;
 }());
