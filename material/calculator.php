@@ -42,12 +42,14 @@ if(isset($_SESSION['id'])=="")
 	tr.hide_all > td, td.hide_all{
         border-style:hidden;
       }
-	  
+	  .b {
+    overflow: scroll;
+}
 
   </style>
 </head>
 
-<body class="layout-h">
+<body class="layout-h b">
     <app-root></app-root>
     <div class="preloader">            
         <!-- <div class="preloader-progress">
