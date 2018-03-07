@@ -24,7 +24,7 @@ if(isset($_POST['id']) && isset($_POST['email']))
 	}
 	
 	$msg=explode('{URL}',$msg);
-	$msg=$msg[0].'<br/><a href="http://bansariflourmill.com/material/calculator.php#/loan-calculator/'.sha1($officerid).base64_encode($loanid).'" target="_blank">Loan Calculator</a>';
+	$msg=$msg[0].'<br/><a href="https://loanapp-app.herokuapp.com/material/calculator.php#/loan-calculator/'.sha1($officerid).base64_encode($loanid).'" target="_blank">Loan Calculator</a>';
 	
 	
 	$mail = new PHPMailer();
