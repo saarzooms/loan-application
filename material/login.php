@@ -61,7 +61,7 @@
             <span>-</span>
             <span>streetwork</span>
             <br>
-            <span>Bootstrap Admin Template</span>
+            <!--<span>Bootstrap Admin Template</span>-->
          </div>
       </div>
    </div>
