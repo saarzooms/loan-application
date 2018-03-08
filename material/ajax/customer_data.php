@@ -283,9 +283,10 @@ else if(isset($_REQUEST['id']))
 			$sql = "select * from customer_master where loanofficer_id='".$_SESSION['id']."'";
 		}
 		
-		$officername="";
+		$officername="";$officerid='';
 			foreach ($dbh->query($sql) as $row)
 			{
+				$officerid=$row['loanofficer_id'];
 				$s="select name from loanofficer_master where id='".$row['loanofficer_id']."'";
 				foreach ($dbh->query($s) as $r)
 				{
@@ -296,7 +297,7 @@ else if(isset($_REQUEST['id']))
 		<?php
 			if($roll=='Admin'){
 				?>
-				<td><a href='calculator.html#/loan-calculator/<?php echo $row['loanId'];?>' target='_blank'><?php echo $row['loanId'];?></a></td>
+				<td><a href='calculator.php#/loan-calculator/<?php echo sha1($officerid).base64_encode($row['loanId']);?>' target='_blank'><?php echo $row['loanId'];?></a></td>
 				<?php
 			}
 			?>
