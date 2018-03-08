@@ -66,7 +66,8 @@ include('db/connection.php');
 							<div class="col-md-4">
 							   <div class="form-group">
 								  <label class="control-label">Customer</label>
-								  <select name="cust" id="cust" class="form-control m-b" oninvalid="this.setCustomValidity('please select Customer')" onchange="this.setCustomValidity('')" required>
+								 <!-- <select name="cust" id="cust" class="form-control m-b" oninvalid="this.setCustomValidity('please select Customer')" onchange="this.setCustomValidity('')" required> -->
+								  <select name="cust" id="cust" class="form-control m-b">
 										<option value="" selected disabled >---Select Customer---</option>
 										<?php
 											$sql = "select * from customer_master where loanofficer_id='".$_SESSION['id']."'";

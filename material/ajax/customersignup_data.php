@@ -10,18 +10,24 @@ if(isset($_REQUEST['name']) && isset($_REQUEST['email']) && isset($_REQUEST['mob
 	$state=$_REQUEST['state'];
 	$zipcode=$_REQUEST['zipcode'];
 	$password=$_REQUEST['password'];
-	$officerid=base64_decode($_REQUEST['id']);
+	//$officerid=base64_decode($_REQUEST['id']);
+	$shaemail=substr($_REQUEST['id'],0,40);
+	$officerid=substr($_REQUEST['id'],40);
 	
-	//file_put_contents('./log_'.date("j.n.Y").'.txt', $state.$zipcode, FILE_APPEND);
-	$msg="";
+	$email1=sha1($email);
+	
+	file_put_contents('./log_'.date("j.n.Y").'.txt', $shaemail.'-'.$email1.'-'.$officerid, FILE_APPEND);
+	$msg="";$id='';
 	try {
-		$sql="INSERT INTO `customer_master`(`loanofficer_id`, `salutation`, `name`, `marital_status`, `spouse_name`, `email`, `phone`, `credit_score`, `address`, `facebookid`, `state`, `zipcode`) 
-		VALUES ('$officerid','','$name','','','$email','$mobile','','$address','','$state','$zipcode')";
-		
-		if($dbh->query($sql))
-		{
-			$id = $dbh->lastInsertId();
-			//$password=random_otp($length = 4);
+		if($shaemail == sha1($email)){
+			$sql="UPDATE `customer_master` SET `name`='$name',`phone`='$mobile',`address`='$address',`state`='$state',`zipcode`='$zipcode' WHERE email='$email' and loanofficer_id='".base64_decode($officerid)."'";
+			$dbh->query($sql);
+			$sql="UPDATE `borrowers` SET name='$name', phone='$mobile' where email='$email'";
+			$dbh->query($sql);
+			$sql="select id from customer_master WHERE email='$email' and loanofficer_id='".base64_decode($officerid)."'";
+			foreach($dbh->query($sql) as $r){
+				$id=$r['id'];
+			}
 			$str="INSERT INTO `login_master`(`user_id`, `email`, `password`, `user_type`,`status`) 
 			VALUES ('$id','$email','$password','Customer','0')";
 			if($dbh->query($str))
@@ -42,7 +48,10 @@ if(isset($_REQUEST['name']) && isset($_REQUEST['email']) && isset($_REQUEST['mob
 					<?php
 		
 			}
+		}else{
+			echo 0;
 		}
+		
 	}catch(Exception $e) {
 	  echo 'Message: ' .$e->getMessage();
 	}

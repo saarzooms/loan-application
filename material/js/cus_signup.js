@@ -22,19 +22,22 @@ $(document).ready(function() {
 							url: "ajax/customersignup_data.php?name="+name+"&email="+email+"&mobile="+mobile+"&address="+address+"&state="+state+"&zipcode="+zipcode+"&password="+pass+"&id="+id,
 							success: function(data)
 							{
-								//$('#msg_save').html(data);
-								$('#name').val('');
-								$('#email').val('');
-								$('#mobile').val('');
-								$('#address').val('');
-								$('#state').val('');
-								$('#zipcode').val('');
-								$('#password').val('');
-								$('#repassword').val('');
-								
-								
-								$().toastmessage('showSuccessToast',data);
-								
+								if(data == 0){
+									$('#msg').html('Enter Email Not Matched in Existing Recoeds. Please enter Valid Email !!!');
+								}else{
+									//$('#msg_save').html(data);
+									$('#name').val('');
+									$('#email').val('');
+									$('#mobile').val('');
+									$('#address').val('');
+									$('#state').val('');
+									$('#zipcode').val('');
+									$('#password').val('');
+									$('#repassword').val('');
+									
+									
+									$().toastmessage('showSuccessToast',data);
+								}
 							}
 					});
 		

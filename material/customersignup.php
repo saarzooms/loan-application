@@ -42,7 +42,7 @@ include('db/connection.php');
                   </div>
                   <div class="form-group has-feedback">
                      <input id="email" name="email" type="email" placeholder="Enter email*" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter email')" onchange="this.setCustomValidity('')">
-                     
+                     <label id="msg" style="color:red;"></label>
                   </div>
 				           <div class="form-group has-feedback">
                      <input id="mobile" name="mobile" type="text" maxlength="10" placeholder="Enter contact no*" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter contact no')" onchange="this.setCustomValidity('')">
