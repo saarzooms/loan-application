@@ -23,7 +23,7 @@ $(document).ready(function() {
 							success: function(data)
 							{
 								if(data == 0){
-									$('#msg').html('Enter Email Not Matched in Existing Recoeds. Please enter Valid Email !!!');
+									$('#msg').html('Entered Email Not Matched in Existing Recoeds. Please enter Valid Email !!!');
 								}else{
 									//$('#msg_save').html(data);
 									$('#name').val('');

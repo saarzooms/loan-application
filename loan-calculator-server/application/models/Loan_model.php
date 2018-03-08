@@ -1,5 +1,4 @@
 <?php
-
 class Loan_model extends CI_Model
 {
    // function Loan_model(){
@@ -227,6 +226,55 @@ class Loan_model extends CI_Model
 		$data = array_shift($ra);
 
          $id=$data['id'];
+		 
+		 if(!$id){
+			 $this->db->select('loanofficer_id');
+			$this->db->where('loanid', $post['loanId']);
+			$q = $this->db->get('loan_loanofficer_mapping');
+			// if id is unique, we want to return just one row
+			$ra=$q->result_array();
+			$data = array_shift($ra);
+			$officerid=$data['loanofficer_id'];
+			 if ($post['borrowers']) {
+				foreach ($post['borrowers'] as $borrower) {
+					$data = array(
+				
+						'loanofficer_id' => $officerid,
+						'salutation' => '',
+						'name' => $borrower['name'],
+						'marital_status' => '',
+						'spouse_name' => '',
+						'email' => $borrower['email'],
+						'phone' => $borrower['phone'],
+						'credit_score' => 0,
+						'address' => '',
+						'facebookid' => '',
+						'state' => '',
+						'zipcode' => 0
+						
+
+					);
+					$this->db->insert('customer_master', $data);
+					$id=$this->db->insert_id();
+					
+				}
+			}
+		 }else{
+			 if ($post['borrowers']) {
+				foreach ($post['borrowers'] as $borrower) {
+					$data = array(
+				
+						'name' => $borrower['name'],
+						'email' => $borrower['email'],
+						'phone' => $borrower['phone']
+					
+					);
+					$this->db->where('id', $id);
+					$this->db->update('customer_master', $data);
+					
+				}
+			}
+		 }
 		
         // if ($post['borrowers'] && empty($post['borrowers'])) {
             $this->db->where('loanId', $post['loanId']);
