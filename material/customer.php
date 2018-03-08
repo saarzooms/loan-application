@@ -131,6 +131,7 @@ include('db/connection.php');
                            <div class="form-group">
                               <label class="control-label">Email *</label>
                               <input type="email" name="email1" id="email1" class="form-control" placeholder="Enter Email*" oninvalid="this.setCustomValidity('please enter email')" onchange="this.setCustomValidity('')" required>
+							  <label id='emailmsg' style='color:red;'></label>
                            </div>
 						              </div>
 									  </div>

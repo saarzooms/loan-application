@@ -137,8 +137,15 @@ else if(isset($_REQUEST['officer1']) && isset($_REQUEST['salutation1']) && isset
 	$sql="UPDATE `customer_master` SET `loanofficer_id`='$officer',`salutation`='$salutation',`name`='$name',`marital_status`='$Marital',`spouse_name`='$Spouse',`email`='$email',`phone`='$phone',`credit_score`='$credit',`address`='$address',`facebookid`='$facebook',`state`='$state',`zipcode`='$zipcode' WHERE id='$custid'";
 	if($dbh->query($sql))
 	{
-		$msg="Customer Data Update Successfully";
-		echo $msg;
+		$sql="UPDATE `borrowers` SET name='$name', phone='$phone', email='$email' where id='$custid'";
+		$dbh->query($sql);
+		
+		$sql="UPDATE login_master SET email='$email' where user_id='$custid' and user_type='Customer'";
+		if($dbh->query($sql))
+		{
+			$msg="Customer Data Update Successfully";
+			echo $msg;
+		}
 	}
 }
 else if(isset($_REQUEST['cusid']))
@@ -195,6 +202,19 @@ else if(isset($_REQUEST['cusid']))
 		echo "Problem on sending mail";
 	else 
 	echo "Mail Sent Successfully !!!";
+}
+else if(isset($_REQUEST['emailid'])){
+	$email=$_REQUEST['emailid'];
+	$cnt='';
+	$sql="select count(*) as cnt from customer_master where email='$email'";
+	foreach($dbh->query($sql) as $r){
+		$cnt=$r['cnt'];
+	}
+	if($cnt==0){
+		echo 0;
+	}else{
+		echo 'Entered Email is Registerd. Please use another Email !!!';
+	}
 }
 else if(isset($_REQUEST['id']))
 {

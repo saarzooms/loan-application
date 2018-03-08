@@ -172,6 +172,25 @@ $(document).ready(function() {
 					}
 			});
 		});
+		
+		$(document).on("blur","#email1",function(){
+			var emailid=$('#email1').val();
+			$.ajax({ 
+					type: "POST",
+					url: "ajax/customer_data.php",
+					data:{'emailid':emailid},
+					success: function(data)
+					{
+						if(data == 0){
+							$('#emailmsg').html('');
+						}else{
+							$('#emailmsg').html(data);
+						}
+						
+					}
+			});
+			
+		});
 
 });
 function loadcustomer()
