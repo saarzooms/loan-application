@@ -21,7 +21,7 @@ $(document).ready(function() {
 												//window.location.href="\index.html#/loan-calculator/"+arr['loanId'];
 												window.open(
 												 // '\calculator.php#/loan-calculator/'+arr['loanId'],
-												  '\calculator.html#/loan-calculator/'+data+loan_id,
+												  '\calculator.php#/loan-calculator/'+data+loan_id,
 												  '_blank' // <- This is what makes it open in a new window.
 												);
 										}
