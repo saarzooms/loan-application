@@ -237,6 +237,13 @@ class Loan_model extends CI_Model
 			$officerid=$data['loanofficer_id'];
 			 if ($post['borrowers']) {
 				foreach ($post['borrowers'] as $borrower) {
+					
+					if($borrower['phone']==''){
+						$phone='';
+					}
+					else{
+						$phone=$borrower['phone'];
+					}
 					$data = array(
 				
 						'loanofficer_id' => $officerid,
@@ -245,7 +252,7 @@ class Loan_model extends CI_Model
 						'marital_status' => '',
 						'spouse_name' => '',
 						'email' => $borrower['email'],
-						'phone' => $borrower['phone'],
+						'phone' => $phone,
 						'credit_score' => 0,
 						'address' => '',
 						'facebookid' => '',
