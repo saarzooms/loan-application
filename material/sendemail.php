@@ -3,10 +3,19 @@
 include('db/connection.php');
 require('phpmailer/class.phpmailer.php');
 
-if(isset($_POST['id']) && isset($_POST['email']))
+if(isset($_POST))
 {
-	$loanid=$_POST['id'];
-	$to=$_POST['email'];
+	//$post = file_get_contents('php://input');
+	$data = json_decode(file_get_contents('php://input'), true);
+	//print_r($data);
+	//echo $data["id"].'-'.$data['email'];
+	
+	$loanid=$data["id"];
+	$to=$data['email'];
+	
+	// $loanid=$_POST['id'];
+	// $to=$_POST['email'];
+	
 	$cusid='';$officerid='';
 	$sql="select id from borrowers where loanid='$loanid'";
 	foreach($dbh->query($sql) as $row){
@@ -24,7 +33,7 @@ if(isset($_POST['id']) && isset($_POST['email']))
 	}
 	
 	$msg=explode('{URL}',$msg);
-	$msg=$msg[0].'<br/><a href="https://loanapp-app.herokuapp.com/material/calculator.php#/loan-calculator/'.sha1($officerid).base64_encode($loanid).'" target="_blank">Loan Calculator</a>';
+	$msg=$msg[0].'<br/><a href="http://bansariflourmill.com/material/calculator.php#/loan-calculator/'.sha1($officerid).base64_encode($loanid).'" target="_blank">Loan Calculator</a>';
 	
 	
 	$mail = new PHPMailer();
@@ -52,6 +61,8 @@ if(isset($_POST['id']) && isset($_POST['email']))
 	$mail->WordWrap   = 80;
 	$mail->MsgHTML($content);
 	$mail->IsHTML(true);
+	//print_r($_POST);
+	
 	if(!$mail->Send()) 
 		echo "Problem on sending mail";
 	else 
