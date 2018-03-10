@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('db/connection.php');
 require('phpmailer/class.phpmailer.php');
 
@@ -17,12 +17,19 @@ if(isset($_POST))
 	// $to=$_POST['email'];
 	
 	$cusid='';$officerid='';
-	$sql="select id from borrowers where loanid='$loanid'";
+	// $sql="select id from borrowers where loanid='$loanid'";
+	// foreach($dbh->query($sql) as $row){
+		// $cusid=$row['id'];
+	// }
+	
+	$sql="select loanofficer_id from loan_loanofficer_mapping where loanid='$loanid'";
 	foreach($dbh->query($sql) as $row){
-		$cusid=$row['id'];
+		$cusid=$row['loanofficer_id'];
 	}
+	
 	//file_put_contents('./log_'.date("j.n.Y").'.txt', $cusid, FILE_APPEND);
-	$sql="select customer_master.email,customer_master.loanofficer_id,email_master.* from customer_master inner join email_master on email_master.loanofficer_id=customer_master.loanofficer_id where customer_master.id='$cusid' and email_master.template='2'";
+	//$sql="select customer_master.email,customer_master.loanofficer_id,email_master.* from customer_master inner join email_master on email_master.loanofficer_id=customer_master.loanofficer_id where customer_master.id='$cusid' and email_master.template='2'";
+	$sql="select email_master.* from email_master where email_master.loanofficer_id='$cusid' and email_master.template='2'";
 	$from='';$sub='';$msg='';$sendernm='';$url='';$loanofficer_id='';
 	foreach($dbh->query($sql) as $r){
 		$from=$r['sender_email'];
