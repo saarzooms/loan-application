@@ -692,7 +692,7 @@
       <div class="settings-inner" id="inner">
          <div class="settings-ctrl">
            <!-- <em id="change" class="fa fa-arrow-left">Get Help !</em> -->
-							<div id="arrow" style="margin-top:4px;margin-left:4px;height:40px;box-shadow:-5px 5px 10px gray;"><i id="change1" class="fa fa-arrow-left" style="margin-top:12px;"></i><strong id="change" style="margin-left:5px;margin-top:10px;">Get Help!</strong></div>
+							<div id="arrow" style="margin-top:4px;margin-left:4px;height:40px;box-shadow:-5px 5px 10px gray;"><i id="change1" class="fa fa-arrow-left" style="margin-top:12px;"></i><strong id="change" style="margin-left:5px;margin-top:10px;">My Agent!</strong></div>
          </div>
          <div class="settings-content">
            <center><h4>Here To assist</h4></center>
