@@ -2666,7 +2666,12 @@ var BorrowerDetailsComponent = (function () {
         var model = new __WEBPACK_IMPORTED_MODULE_1__shared_models_index__["r" /* ShareLoanModel */]();
         model.email = email;
         var pieces = window.location.href.split('/');
-        model.id = pieces[pieces.length - 1];
+        // model.id = pieces[pieces.length - 1];
+        var loanId = pieces[pieces.length - 1];
+        if (loanId.length > 40) {
+            loanId = atob(loanId.slice(40));
+        }
+        model.id = loanId;
         // model.loanLink = `${window.location.origin}/#/loan-calculator/customer-view/${pieces[pieces.length - 1]}`;
         this.loanService.shareLoan(model)
             .subscribe(function (x) {

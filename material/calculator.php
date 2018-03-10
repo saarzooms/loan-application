@@ -42,10 +42,27 @@ if(isset($_SESSION['id'])=="")
 	tr.hide_all > td, td.hide_all{
         border-style:hidden;
       }
-	  .scroll {
+	 .scroll {
     overflow: scroll;
-}
+} 
 
+  datetime-popup>.dropdown .btn-group button {
+            background-color: #4c8e41;
+            margin-left: 10px !important;
+            color: #fff;
+        }
+
+        .toast-top-right {
+            margin-top: 50px;
+        }
+
+        #toast-container {
+            margin-top: 50px !important;
+        }
+
+        datetime-popup>.dropdown .btn-group button:first-child {
+            display: none;
+        }
   </style>
 </head>
 
@@ -75,7 +92,7 @@ if(isset($_SESSION['id'])=="")
       <div class="settings-inner" id="inner">
          <div class="settings-ctrl">
            <!-- <em id="change" class="fa fa-arrow-left">Get Help !</em> -->
-							<div id="arrow" style="margin-top:4px;margin-left:4px;height:40px;box-shadow:-5px 5px 10px gray;"><i id="change1" class="fa fa-arrow-left" style="margin-top:12px;"></i><strong id="change" style="margin-left:5px;margin-top:10px;">Get Help!</strong></div>
+							<div id="arrow" style="margin-top:4px;margin-left:4px;height:40px;box-shadow:-5px 5px 10px gray;"><i id="change1" class="fa fa-arrow-left" style="margin-top:12px;"></i><strong id="change" style="margin-left:5px;margin-top:10px;">My Agent!</strong></div>
          </div>
          <div class="settings-content">
            <center><h4>Here To assist</h4></center>
@@ -116,25 +133,5 @@ if(isset($_SESSION['id'])=="")
  <script src="app/js/jquery.min.js"></script>
  <script src="app/js/scripts.js"></script>
  <script src="app/js/drawer.js"></script>
-<script>
-	$(document).ready(function() {
-		//pure javascript
-	//var pathname = window.location.pathname;
-	var pathname = window.location.href;
-	var id=pathname.split("/");
-	<?php
-	if($_SESSION['usertype']=='Customer'){
-		?>
-			// to show it in an alert window
-			//alert(id[7]+<?php echo $_SESSION['id'];?>);
-		<?php
-	}else{
-	?>
-	// to show it in an alert window
-   // alert(id[6]+<?php echo $_SESSION['id'];?>);
-	<?php
-	}
-	?>
-	})
-</script>
+
 </html>
