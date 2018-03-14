@@ -93,7 +93,7 @@ if($dbh->query($a)){
 				 $message="	  
 						 <p>
 						 URL:
-						 <a href='http://bansariflourmill.com/material/login.php'>Click Here To Login</a>
+						 <a href='http://http://loanapp-app.herokuapp.com/material/login.php'>Click Here To Login</a>
 						 </p>
 						 <p>
 						 User ID:
