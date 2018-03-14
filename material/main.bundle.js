@@ -1861,13 +1861,12 @@ UserblockService = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-   // api_url: 'http://192.168.2.103/loan-calculator-server',
+   // api_url: 'http://localhost/loan-calculator-server',
    // api_url: 'http://loan-calculator.xcartadesigns.com'
     api_url: 'https://loanapp-app.herokuapp.com/loan-calculator-server',
    // api_url: 'http://loan-calculator.xcartadesigns.com'
     email_url: '//loanapp-app.herokuapp.com/material/sendemail.php'
-   // email_url: '//192.168.2.103/material/sendemail.php'
-    
+    //email_url: '//localhost/material/sendemail.php'
 };
 //# sourceMappingURL=environment.js.map
 
