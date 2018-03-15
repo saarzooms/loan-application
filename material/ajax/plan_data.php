@@ -61,10 +61,10 @@ if(isset($_REQUEST['id']))
 		<tr>
 		<td><?php echo $row['id']; ?></td>
 		<td><?php echo $row['planname']; ?></td>
-		<td><?php echo number_format($row['planamount']/100,2); ?></td>
+		<td><?php echo number_format($row['planamount'],2); ?></td>
 		<td><?php echo $row['planstartdate']; ?></td>
 		<td><?php echo $row['planenddate']; ?></td>
-		<td><?php echo number_format($row['signupamount']/100,2); ?></td>
+		<td><?php echo number_format($row['signupamount'],2); ?></td>
 		
 		</tr>
 

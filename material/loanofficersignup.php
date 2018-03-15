@@ -315,9 +315,9 @@ if($dbh->query($a)){
 	<div class="col-md-6">
 		<h3>Payment Details</h3>
 		<hr width="50%" align="left"/>
-		<h4>Monthly Subscription :<span id="monthlyfee"><?php echo ' '.'$ '.($planamount/100);?></span></h4><br/>
-		<h4>One Time Setup Fee :<span id="setupfee"><?php echo ' '.'$ '.($signupamt/100);?></span></h4><br/>
-		<h4>Total :<span id="monthlyfee"><?php echo ' '.'$ '.(($planamount+$signupamt)/100);?></span></h4>
+		<h4>Monthly Subscription :<span id="monthlyfee"><?php echo ' '.'$ '.($planamount);?></span></h4><br/>
+		<h4>One Time Setup Fee :<span id="setupfee"><?php echo ' '.'$ '.($signupamt);?></span></h4><br/>
+		<h4>Total :<span id="monthlyfee"><?php echo ' '.'$ '.(($planamount+$signupamt));?></span></h4>
 	</div>
 	<div class="col-md-6">
 		<h3>Card Details</h3>
