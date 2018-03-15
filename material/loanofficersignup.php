@@ -93,7 +93,7 @@ if($dbh->query($a)){
 				 $message="	  
 						 <p>
 						 URL:
-						 <a href='http://http://loanapp-app.herokuapp.com/material/login.php'>Click Here To Login</a>
+						 <a href='http://bansariflourmill.com/material/login.php'>Click Here To Login</a>
 						 </p>
 						 <p>
 						 User ID:
@@ -315,8 +315,8 @@ if($dbh->query($a)){
 	<div class="col-md-6">
 		<h3>Payment Details</h3>
 		<hr width="50%" align="left"/>
-		<h4>Monthly Subscription :<span id="monthlyfee"><?php echo ' '.'$ '.($signupamt/100);?></span></h4><br/>
-		<h4>One Time Setup Fee :<span id="setupfee"><?php echo ' '.'$ '.($planamount/100);?></span></h4><br/>
+		<h4>Monthly Subscription :<span id="monthlyfee"><?php echo ' '.'$ '.($planamount/100);?></span></h4><br/>
+		<h4>One Time Setup Fee :<span id="setupfee"><?php echo ' '.'$ '.($signupamt/100);?></span></h4><br/>
 		<h4>Total :<span id="monthlyfee"><?php echo ' '.'$ '.(($planamount+$signupamt)/100);?></span></h4>
 	</div>
 	<div class="col-md-6">
