@@ -151,22 +151,22 @@ if(isset($_GET['id']))
 												
 									      <div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">Facebook Profile *</label>
-                              <input type="text" name="facebook" id="facebook" class="form-control"  placeholder="Enter Facebook Profile*" oninvalid="this.setCustomValidity('please enter facebook profile')" onchange="this.setCustomValidity('')" required>
+                              <label class="control-label">Facebook Profile</label>
+                              <input type="text" name="facebook" id="facebook" class="form-control"  placeholder="Enter Facebook Profile">
                            </div>
 						              </div>
 									       <div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">Linked In Profile *</label>
-                              <input type="text" name="linked" id="linked" class="form-control" placeholder="Enter Linked In Profile*" oninvalid="this.setCustomValidity('please enter Linked In Profile')" onchange="this.setCustomValidity('')" required>
+                              <label class="control-label">Linked In Profile</label>
+                              <input type="text" name="linked" id="linked" class="form-control" placeholder="Enter Linked In Profile">
                            </div>
 						              </div> 
 									  </div>
 									   <div class="col-md-12">
 									    <div class="col-md-4">
                            <div class="form-group">
-                              <label class="control-label">Twitter handle *</label>
-                              <input type="text" name="twitter" id="twitter" class="form-control" placeholder="Enter Twitter handle*" oninvalid="this.setCustomValidity('please enter Twitter handle')" onchange="this.setCustomValidity('')" required>
+                              <label class="control-label">Twitter handle</label>
+                              <input type="text" name="twitter" id="twitter" class="form-control" placeholder="Enter Twitter handle">
                            </div>
 						              </div> 
 									      <div class="col-md-4">

@@ -74,7 +74,7 @@ include('db/connection.php');
 									      <div class="col-md-2">
                            <div class="form-group">
                               <label for="user name">Select Photo:</label>
-                              <input type="file" class="form-control" id="uploadFile" name="uploadFile[]" accept="image/*" oninvalid="this.setCustomValidity('please Select Photo')" onchange="this.setCustomValidity('')" required>
+                              <input type="file" class="form-control" id="uploadFile" name="uploadFile[]" accept="image/*">
 															<input type="hidden" id="file_attach" value=""/>
 															<div id="msg"></div>
 											     </div>
@@ -99,7 +99,7 @@ include('db/connection.php');
 												<div class="col-md-4">
                            <div class="form-group">
                               <label class="control-label">State *</label>
-                              <select name="state" id="state" class="form-control m-b" oninvalid="this.setCustomValidity('please select state')" onchange="this.setCustomValidity('') required>
+                              <select name="state" id="state" class="form-control m-b" oninvalid="this.setCustomValidity('please select state')" onchange="this.setCustomValidity('')" required>
 																		<option value="" selected disabled >---Select State---</option>
 																	<?php
 																	$sql = "select * from state_table";
