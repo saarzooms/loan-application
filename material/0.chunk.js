@@ -3348,78 +3348,79 @@ var LoanOptionComponent = (function () {
         var ltv = this.helperService.getMoney(this.loanOption.ltv);
         var loanAmount = this.helperService.getMoney(this.loanOption.firstMortgage.loanAmount);
         var mi = 0;
-        // if (+this.loanOption.miType === 1) {
-        if (currentLoanType.type === "CONV") {
-            var borrowerCreditScores = this.borrowers.filter(function (x) { return x.isActive; }).map(function (x) { return x.creditScore; });
-            var minCreditScore_1 = Math.min.apply(Math, borrowerCreditScores);
-            if (ltv > 80) {
-                var term_1 = +this.loanOption.firstMortgage.term || 0;
-                var bmpi = 0;
-                if (this.bpmiList !== undefined && term_1 > 0) {
-                    var bmpiValue = this.bpmiList.filter(function (x) { return x.creditScoreFrom <= minCreditScore_1 &&
-                        (x.creditScoreTo === 0 ? minCreditScore_1 : x.creditScoreTo) >= minCreditScore_1 &&
-                        x.termFrom <= term_1 &&
-                        (x.termTo === null || x.termTo >= term_1) &&
-                        x.ltvFrom <= ltv && ltv <= x.ltvTo; });
-                    if (bmpiValue !== undefined && bmpiValue.length > 0) {
-                        bmpi = bmpiValue[0].bpmi;
-                    }
-                    var bmpiLoanLimit = 650000;
-                    if (B18 > bmpiLoanLimit) {
-                        if (this.bpmiAdjustmentList && this.bpmiAdjustmentList.length > 0) {
-                            var bpmiAdj = this.bpmiAdjustmentList.filter(function (x) { return x.creditScoreFrom <= minCreditScore_1 &&
-                                (x.creditScoreTo === 0 ? minCreditScore_1 : x.creditScoreTo) >= minCreditScore_1; });
-                            if (bpmiAdj !== undefined && bpmiAdj.length > 0) {
-                                bmpi += bpmiAdj[0].bpmi;
+        if (+this.loanOption.miType === 1) {
+            if (currentLoanType.type === "CONV") {
+                var borrowerCreditScores = this.borrowers.filter(function (x) { return x.isActive; }).map(function (x) { return x.creditScore; });
+                var minCreditScore_1 = Math.min.apply(Math, borrowerCreditScores);
+                if (ltv > 80) {
+                    var term_1 = +this.loanOption.firstMortgage.term || 0;
+                    var bmpi = 0;
+                    if (this.bpmiList !== undefined && term_1 > 0) {
+                        var bmpiValue = this.bpmiList.filter(function (x) { return x.creditScoreFrom <= minCreditScore_1 &&
+                            (x.creditScoreTo === 0 ? minCreditScore_1 : x.creditScoreTo) >= minCreditScore_1 &&
+                            x.termFrom <= term_1 &&
+                            (x.termTo === null || x.termTo >= term_1) &&
+                            x.ltvFrom <= ltv && ltv <= x.ltvTo; });
+                        if (bmpiValue !== undefined && bmpiValue.length > 0) {
+                            bmpi = bmpiValue[0].bpmi;
+                        }
+                        var bmpiLoanLimit = 650000;
+                        if (B18 > bmpiLoanLimit) {
+                            if (this.bpmiAdjustmentList && this.bpmiAdjustmentList.length > 0) {
+                                var bpmiAdj = this.bpmiAdjustmentList.filter(function (x) { return x.creditScoreFrom <= minCreditScore_1 &&
+                                    (x.creditScoreTo === 0 ? minCreditScore_1 : x.creditScoreTo) >= minCreditScore_1; });
+                                if (bpmiAdj !== undefined && bpmiAdj.length > 0) {
+                                    bmpi += bpmiAdj[0].bpmi;
+                                }
                             }
                         }
                     }
-                }
-                mi = ((B18 * bmpi) / 100) / 12;
-            }
-        }
-        else if (currentLoanType.type === "VA") {
-            mi = 0;
-        }
-        else if (currentLoanType.type === "FHA") {
-            if (term >= 180 && term <= 360) {
-                if (loanAmount > 625500 && ltv >= 95) {
-                    //LTV at 95% or higher AND loan > $625,500 – 105 bps (1.05%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0105) / 12);
-                }
-                else if (ltv < 95 && loanAmount > 625000) {
-                    // LTV less than 95 % AND loan > $625, 000 – 100 bps(1.00 %)[multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.010) / 12);
-                }
-                else if (ltv >= 95) {
-                    //LTV at 95% or higher - .85 bps (.85%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0085) / 12);
-                }
-                else if (ltv < 95) {
-                    // LTV at less than 95%  - .80 bps (.80%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0080) / 12);
+                    mi = ((B18 * bmpi) / 100) / 12;
                 }
             }
-            else if (term <= 180) {
-                if (loanAmount > 625500 && ltv >= 90) {
-                    //LTV at 90% or higher AND loan > $625,500 - .95 bps (.95%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0095) / 12);
+            else if (currentLoanType.type === "VA") {
+                mi = 0;
+            }
+            else if (currentLoanType.type === "FHA") {
+                if (term >= 180 && term <= 360) {
+                    if (loanAmount > 625500 && ltv >= 95) {
+                        //LTV at 95% or higher AND loan > $625,500 – 105 bps (1.05%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0105) / 12);
+                    }
+                    else if (ltv < 95 && loanAmount > 625000) {
+                        // LTV less than 95 % AND loan > $625, 000 – 100 bps(1.00 %)[multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.010) / 12);
+                    }
+                    else if (ltv >= 95) {
+                        //LTV at 95% or higher - .85 bps (.85%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0085) / 12);
+                    }
+                    else if (ltv < 95) {
+                        // LTV at less than 95%  - .80 bps (.80%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0080) / 12);
+                    }
                 }
-                else if (ltv <= 78.01 && ltv < 90 && loanAmount > 625500) {
-                    // LTV at 78.01% - 90% AND loan > $625,500 - .70 bps (.70%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0070) / 12);
-                }
-                else if (loanAmount > 625500 && ltv <= 78) {
-                    // LTV at 78% or less AND LOAN > $625,500 - .45 BPS (.45%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0045) / 12);
-                }
-                else if (ltv >= 90) {
-                    // LTV at 90% or higher – 70 bps (.70%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0070) / 12);
-                }
-                else if (ltv < 90) {
-                    // LTV at less than 90% - 45 bps (.45%) [multiplied by loan amount / 12]
-                    mi = ((loanAmount * 0.0045) / 12);
+                else if (term <= 180) {
+                    if (loanAmount > 625500 && ltv >= 90) {
+                        //LTV at 90% or higher AND loan > $625,500 - .95 bps (.95%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0095) / 12);
+                    }
+                    else if (ltv <= 78.01 && ltv < 90 && loanAmount > 625500) {
+                        // LTV at 78.01% - 90% AND loan > $625,500 - .70 bps (.70%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0070) / 12);
+                    }
+                    else if (loanAmount > 625500 && ltv <= 78) {
+                        // LTV at 78% or less AND LOAN > $625,500 - .45 BPS (.45%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0045) / 12);
+                    }
+                    else if (ltv >= 90) {
+                        // LTV at 90% or higher – 70 bps (.70%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0070) / 12);
+                    }
+                    else if (ltv < 90) {
+                        // LTV at less than 90% - 45 bps (.45%) [multiplied by loan amount / 12]
+                        mi = ((loanAmount * 0.0045) / 12);
+                    }
                 }
             }
         }
