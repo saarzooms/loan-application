@@ -28,7 +28,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 			//$enddt=strtotime($enddt);
 //			if(strtotime($todaydt)>strtotime($enddt)){
 	//echo $enddt.' '.$todaydt;
-		/*	if($todaydt>$enddt){
+			if($todaydt>$enddt){
 				$active=0;
 					$subscription =Stripe_Subscription::all(
 					  array('customer'=>$cusid,'limit'=>1000)
@@ -56,7 +56,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 					}
 					//echo $subscription['data'][0]['id'];
 					
-			}*/	
+			}
 		} 
 	}
 	if($id=='')
