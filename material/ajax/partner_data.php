@@ -17,7 +17,7 @@ include('../db/connection.php');
 	if($roll =='Admin'){
 		$username='Admin';
 	}
-if(isset($_REQUEST['photo']) && isset($_REQUEST['email']) && isset($_REQUEST['phone']) && isset($_REQUEST['business']) && isset($_REQUEST['contact']) && isset($_REQUEST['address']) && isset($_REQUEST['facebook'])  && isset($_REQUEST['linked']) && isset($_REQUEST['hours']) && isset($_REQUEST['type']) && isset($_REQUEST['twitter']))
+if(isset($_REQUEST['photo']) && isset($_REQUEST['email']) && isset($_REQUEST['phone']) && isset($_REQUEST['business']) && isset($_REQUEST['contact']) && isset($_REQUEST['address']) && isset($_REQUEST['facebook'])  && isset($_REQUEST['linked']) && isset($_REQUEST['hours']) && isset($_REQUEST['type']) && isset($_REQUEST['twitter']) && isset($_REQUEST['freetxt1'])&& isset($_REQUEST['freetxt2']))
 {
 	$photo=$_REQUEST['photo'];
 	$email=$_REQUEST['email'];
@@ -31,6 +31,8 @@ if(isset($_REQUEST['photo']) && isset($_REQUEST['email']) && isset($_REQUEST['ph
 	$note=$_REQUEST['note'];
 	$type=$_REQUEST['type'];
 	$twitter=$_REQUEST['twitter'];
+	$freetxt1=$_REQUEST['freetxt1'];
+	$freetxt2=$_REQUEST['freetxt2'];
 	$check=$_REQUEST['check'];
 	$date=$_REQUEST['date'];
 	if($date=='-')
@@ -42,8 +44,8 @@ if(isset($_REQUEST['photo']) && isset($_REQUEST['email']) && isset($_REQUEST['ph
 	
 	//file_put_contents('./log_'.date("j.n.Y").'.txt',$date, FILE_APPEND);
 	$msg="";
-	$sql="INSERT INTO `trusted_partner`(`photo`, `email`, `phone`, `business_name`, `contact_name`, `address`, `facebook_profile`, `linkedin_profile`, `business_hours`, `note`, `business_type`, `twitter_handle`, `user`, `forcedisplay`, `display_date`) 
-	VALUES ('$photo','$email','$phone','$business','$contact','$address','$facebook','$linked','$hours','$note','$type','$twitter','$username','$check','$date')";
+	$sql="INSERT INTO `trusted_partner`(`photo`, `email`, `phone`, `business_name`, `contact_name`, `address`, `facebook_profile`, `linkedin_profile`, `business_hours`, `note`, `business_type`, `twitter_handle`, `user`, `forcedisplay`, `display_date`, `freetext1`, `freetext2`) 
+	VALUES ('$photo','$email','$phone','$business','$contact','$address','$facebook','$linked','$hours','$note','$type','$twitter','$username','$check','$date','$freetxt1','$freetxt2')";
 	if($dbh->query($sql))
 	{
 		$msg="Data Save Successfully";
@@ -86,15 +88,17 @@ if(isset($id)){
 				$twitter=$row2['twitter_handle'];
 				$check=$row2['forcedisplay'];
 				$date=$row2['display_date'];
+				$freetxt1=$row2['freetext1'];
+				$freetxt2=$row2['freetext2'];
 				
 				//$dt=date("d-m-Y", strtotime($row2['sch_date']));
 		}
-    array_push($result,$photo,$email,$phone,$business_name,$contact_name,$address,$facebook_profile,$linkedin_profile,$business_hours,$note,$type,$twitter,$check,$date);
+    array_push($result,$photo,$email,$phone,$business_name,$contact_name,$address,$facebook_profile,$linkedin_profile,$business_hours,$note,$type,$twitter,$check,$date,$freetxt1,$freetxt2);
 	echo json_encode($result);			
 }
 
 }
-else if(isset($_REQUEST['photo1']) && isset($_REQUEST['email1']) && isset($_REQUEST['phone1']) && isset($_REQUEST['business1']) && isset($_REQUEST['contact1']) && isset($_REQUEST['address1']) && isset($_REQUEST['facebook1'])  && isset($_REQUEST['linked1']) && isset($_REQUEST['hours1']) && isset($_REQUEST['partnerid']) && isset($_REQUEST['type1']) && isset($_REQUEST['twitter1']))
+else if(isset($_REQUEST['photo1']) && isset($_REQUEST['email1']) && isset($_REQUEST['phone1']) && isset($_REQUEST['business1']) && isset($_REQUEST['contact1']) && isset($_REQUEST['address1']) && isset($_REQUEST['facebook1'])  && isset($_REQUEST['linked1']) && isset($_REQUEST['hours1']) && isset($_REQUEST['partnerid']) && isset($_REQUEST['type1']) && isset($_REQUEST['twitter1']) && isset($_REQUEST['freetxt1'])&& isset($_REQUEST['freetxt2']))
 {
 	$photo=$_REQUEST['photo1'];
 	$email=$_REQUEST['email1'];
@@ -111,6 +115,8 @@ else if(isset($_REQUEST['photo1']) && isset($_REQUEST['email1']) && isset($_REQU
 	$twitter=$_REQUEST['twitter1'];
 	$check=$_REQUEST['check'];
 	$date=$_REQUEST['date'];
+	$freetxt1=$_REQUEST['freetxt1'];
+	$freetxt2=$_REQUEST['freetxt2'];
 	if($check=='No')
 	{
 		$date='-';
@@ -119,7 +125,7 @@ else if(isset($_REQUEST['photo1']) && isset($_REQUEST['email1']) && isset($_REQU
 	}
 	
 	$msg="";
-	$sql="UPDATE `trusted_partner` SET `photo`='$photo',`email`='$email',`phone`='$phone',`business_name`='$business',`contact_name`='$contact',`address`='$address',`facebook_profile`='$facebook',`linkedin_profile`='$linked',`business_hours`='$hours',`note`='$note',`business_type`='$type',`twitter_handle`='$twitter',`forcedisplay`='$check',`display_date`='$date' WHERE id='$id'";
+	$sql="UPDATE `trusted_partner` SET `photo`='$photo',`email`='$email',`phone`='$phone',`business_name`='$business',`contact_name`='$contact',`address`='$address',`facebook_profile`='$facebook',`linkedin_profile`='$linked',`business_hours`='$hours',`note`='$note',`business_type`='$type',`twitter_handle`='$twitter',`forcedisplay`='$check',`display_date`='$date', `freetext1`='$freetxt1', `freetext2`='$freetxt2' WHERE id='$id'";
 	if($dbh->query($sql))
 	{
 		$msg="Data Update Successfully";
@@ -207,7 +213,7 @@ else if(isset($_REQUEST['id']))
 				<th>Address</th>   
 				<th>Business Hours</th>   
 				<th>Note</th>   
-				<th><center>Action</center></th>
+				
 				<?php
 				if($roll=='Loanofficer'){
 					?>
@@ -225,7 +231,9 @@ else if(isset($_REQUEST['id']))
 				}
 				
 				?> 
-				
+				<th>Free Text 1</th>
+				<th>Free Text 2</th>
+				<th><center>Action</center></th>
             </tr>
         </thead>
        <tbody>
@@ -266,6 +274,8 @@ else if(isset($_REQUEST['id']))
 			<?php
 		}
 		?>
+		<td><?php echo $row['freetext1']; ?></td>
+		<td><?php echo $row['freetext2']; ?></td>
 		<td><center><button  class="btn_up btn btn-xs btn-danger"  value="<?php echo $row['id']; ?>" >
 			<i class="fa fa-edit"></i></button>
 			<button  class="btn_del btn btn-xs btn-danger" value="<?php echo $row['id']; ?>">

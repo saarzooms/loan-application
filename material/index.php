@@ -67,6 +67,27 @@
 	tr.hide_all > td, td.hide_all{
         border-style:hidden;
       }
+	  .fa {
+		  padding: 5px;
+		  font-size: 10px;
+		  width: 22px;
+		  text-align: center;
+		  text-decoration: none;
+		  margin: 5px 2px;
+		  border-radius: 25px;
+		}
+	  .fa-facebook {
+		  background: #3B5998;
+		  color: white;
+		}
+		.fa-twitter {
+		  background: #55ACEE;
+		  color: white;
+		}
+		.fa-linkedin {
+		  background: #007bb5;
+		  color: white;
+		}
 	   body {
     overflow: scroll;
 }
@@ -690,9 +711,9 @@
  <!-- floating button close -->
    <div id="floatbtn" class="settings">
       <div class="settings-inner" id="inner">
-         <div class="settings-ctrl">
+         <div class="settings-ctrl" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
            <!-- <em id="change" class="fa fa-arrow-left">Get Help !</em> -->
-							<div id="arrow" style="margin-top:4px;margin-left:4px;height:40px;box-shadow:-5px 5px 10px gray;"><i id="change1" class="fa fa-arrow-left" style="margin-top:12px;"></i><strong id="change" style="margin-left:5px;margin-top:10px;">My Agent!</strong></div>
+							<div id="arrow"  style="margin-top:4px;margin-left:3px;height:40px;box-shadow:-5px 5px 10px gray;border-top-left-radius: 15px;border-bottom-left-radius: 15px;"><i id="change1" class="fa fa-arrow-left" style="margin-top:12px;"></i><strong id="change" style="margin-left:1px;margin-top:10px;font-family:'Source Sans Pro', sans-serif;color: #656565;">My Agent!</strong></div>
          </div>
          <div class="settings-content">
            <center><h4>Here To assist</h4></center>
@@ -706,15 +727,24 @@
 		<div class="client-detail">
     	<div class="col-md-12">
         	<div class="row">
-    			<div class="col-md-4"><div class="profile_icon"><img class="" src="<?php echo $row['photo'];?>"></div></div>
+    			<div class="col-md-4">
+					<div class="row" style="margin-left:-10px;">
+						<div class="profile_icon">
+							<img class="img-circle" src="<?php echo $row['photo'];?>" style="width:80px;height:80px">
+						</div>
+					</div>
+					<div class="row" style="margin-top:25px;">
+						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='fa fa-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='fa fa-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="fa fa-facebook"></a> </p></center>
+					</div>
+				</div>
+					
+					
         		<div class="col-md-8" class="pull-right">
-        			<p class="client-detail-text"><strong>Name:</strong>&nbsp; <?php echo $row['contact_name'];?></p>
-        			<p class="client-detail-text"><strong>Business Name:</strong>&nbsp; <?php echo $row['business_name'];?></p>
-        			<p class="client-detail-text"><strong>Business Type:</strong>&nbsp; <?php echo $row['businesstype_name'];?></p>
-            <p class="client-detail-text"><strong>Phone:</strong>&nbsp; <?php echo $row['phone'];?></p>
-            <p class="client-detail-text"><strong>Email:</strong>&nbsp; <?php echo $row['email'];?></p>
-            <p class="client-detail-text"><a href="<?php echo $row['twitter_handle'];?>"<i class='fa fa-twitter'></i></a>&nbsp;<a href="<?php echo $row['linkedin_profile'];?>"<i class='fa fa-linkedin'></i></a>&nbsp;<a href="<?php echo $row['facebook_profile'];?>"<i class='fa fa-facebook'></i></a> </p>
-			</div>
+        			<h3 style="margin-top:5px;color:#000;"><?php echo $row['contact_name'];?></h3>
+        			<h4 style="margin-top:5px;color:#000;"><?php echo $row['freetext1'];?></h4>
+        			<h5 style="margin-top:5px;color:#000;"><?php echo $row['freetext2'];?></h5>
+        	
+				</div>
 			
     			</div>
             </div>    

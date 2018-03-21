@@ -19,6 +19,8 @@ $(document).ready(function() {
 		var note = document.getElementById('note').value;
 		var type = document.getElementById('type').value;
 		var twitter = document.getElementById('twitter').value;
+		var freetxt1 = document.getElementById('freetxt1').value;
+		var freetxt2 = document.getElementById('freetxt2').value;
 		 var check='';
 		 var date='';
 		if($('#check').is(':checked')){
@@ -43,7 +45,7 @@ $(document).ready(function() {
 		
 		$.ajax({ 
 							type: "POST",
-							url: "ajax/partner_data.php?photo="+photo+"&email="+email+"&phone="+phone+"&business="+business+"&contact="+contact+"&address="+address+"&facebook="+facebook+"&linked="+linked+"&hours="+hours+"&note="+note+"&type="+type+"&twitter="+twitter+"&check="+check+"&date="+date,
+							url: "ajax/partner_data.php?photo="+photo+"&email="+email+"&phone="+phone+"&business="+business+"&contact="+contact+"&address="+address+"&facebook="+facebook+"&linked="+linked+"&hours="+hours+"&note="+note+"&type="+type+"&twitter="+twitter+"&check="+check+"&date="+date+"&freetxt1="+freetxt1+"&freetxt2="+freetxt2,
 							success: function(data)
 							{
 								//$('#msg_save').html(data);
@@ -60,6 +62,8 @@ $(document).ready(function() {
 								$('#note').val('');
 								$('#type').val('');
 								$('#twitter').val('');
+								$('#freetxt1').val('');
+								$('#freetxt2').val('');
 								$('#check').prop('checked', false); 
 								$('#date').val('');
 								
@@ -137,7 +141,8 @@ $(document).ready(function() {
 											$('#date').val(arr[13]);
 											$('#dt').show();
 										}
-										
+										$("#freetxt1").val(arr[14]);
+										$("#freetxt2").val(arr[15]);
 										
 									
 										var url = getRootUrl();  
@@ -169,6 +174,8 @@ $(document).ready(function() {
 				var note = document.getElementById('note').value;
 				var type = document.getElementById('type').value;
 				var twitter = document.getElementById('twitter').value;
+				var freetxt1 = document.getElementById('freetxt1').value;
+				var freetxt2 = document.getElementById('freetxt2').value;
 				
 				var partnerid=document.getElementById('co_id').value;
 				 var check='';
@@ -196,7 +203,7 @@ $(document).ready(function() {
 				
 				$.ajax({ 
 							type: "POST",
-							url: "ajax/partner_data.php?photo1="+photo+"&email1="+email+"&phone1="+phone+"&business1="+business+"&contact1="+contact+"&address1="+address+"&facebook1="+facebook+"&linked1="+linked+"&hours1="+hours+"&note1="+note+"&partnerid="+partnerid+"&type1="+type+"&twitter1="+twitter+"&check="+check+"&date="+date,
+							url: "ajax/partner_data.php?photo1="+photo+"&email1="+email+"&phone1="+phone+"&business1="+business+"&contact1="+contact+"&address1="+address+"&facebook1="+facebook+"&linked1="+linked+"&hours1="+hours+"&note1="+note+"&partnerid="+partnerid+"&type1="+type+"&twitter1="+twitter+"&check="+check+"&date="+date+"&freetxt1="+freetxt1+"&freetxt2="+freetxt2,
 							success: function(data)
 							{
 								$('#file_attach').val('');
@@ -212,6 +219,8 @@ $(document).ready(function() {
 								$('#note').val('');
 								$('#type').val('');
 								$('#twitter').val('');
+								$('#freetxt1').val('');
+								$('#freetxt2').val('');
 								$('#check').prop('checked', false); 
 								$('#date').val('');
 								

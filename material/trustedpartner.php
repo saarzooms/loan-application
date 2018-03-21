@@ -162,40 +162,55 @@ if(isset($_GET['id']))
                            </div>
 						              </div> 
 									  </div>
-									   <div class="col-md-12">
-									    <div class="col-md-4">
-                           <div class="form-group">
-                              <label class="control-label">Twitter handle</label>
-                              <input type="text" name="twitter" id="twitter" class="form-control" placeholder="Enter Twitter handle">
-                           </div>
-						              </div> 
-									      <div class="col-md-4">
-                           <div class="form-group">
-                              <label class="control-label">Business Hours *</label>
-                              <input type="text" name="hours" id="hours" class="form-control" placeholder="Enter Business Hours*" oninvalid="this.setCustomValidity('please enter business hours')" onchange="this.setCustomValidity('')" required>
-                           </div>
-						              </div>
-									  <div class="col-md-4">
-                           <div class="form-group">
-                              <label class="control-label">Note</label>
-                              <textarea  name="note" id="note" class="form-control" placeholder="Enter Address"></textarea>
-                           </div>
-						              </div>
-									  </div>
+			<div class="col-md-12">
+				<div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Twitter handle</label>
+                            <input type="text" name="twitter" id="twitter" class="form-control" placeholder="Enter Twitter handle">
+                    </div>
+				</div> 
+				<div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Business Hours *</label>
+                        <input type="text" name="hours" id="hours" class="form-control" placeholder="Enter Business Hours*" oninvalid="this.setCustomValidity('please enter business hours')" onchange="this.setCustomValidity('')" required>
+                    </div>
+			    </div>
+				<div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Note</label>
+                            <textarea  name="note" id="note" class="form-control" placeholder="Enter Note"></textarea>
+                        </div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<div class="form-group">
+                        <label class="control-label">Free Text 1 *</label>
+                        <input type="text" name="freetxt1" id="freetxt1" class="form-control" placeholder="Enter Free Text 1*" oninvalid="this.setCustomValidity('please enter Free Text 1')" onchange="this.setCustomValidity('')" required>
+                    </div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+                        <label class="control-label">Free Text 2 *</label>
+                        <input type="text" name="freetxt2" id="freetxt2" class="form-control" placeholder="Enter Free Text 2*" oninvalid="this.setCustomValidity('please enter Free Text 2')" onchange="this.setCustomValidity('')" required>
+                    </div>
+				</div>
+			
+			</div>
 									  <?php
 									  if($roll=='Admin')
 									  {
 									  ?>
-									  <div class="col-md-12">
-									    <div class="col-md-4">
-													<div class="checkbox c-checkbox pull-left mt0" id="terms">
+				<div class="col-md-12">
+					<div class="col-md-4">
+						<div class="checkbox c-checkbox pull-left mt0" id="terms">
                            <label>
                            <input type="checkbox" id="check" value="" name="check" >
                            <span class="fa fa-check"></span> Force display</label>
                         </div>
-										  </div>
-									    <div class="col-md-4" id="dt" style="display:none;">
-													<div class="form-group">
+					</div>
+					<div class="col-md-4" id="dt" style="display:none;">
+						<div class="form-group">
                            <label class="control-label">Force display till *</label>
                            
                               <div id="datetimepicker1" class="input-group date">
@@ -204,10 +219,10 @@ if(isset($_GET['id']))
                               </div>
                           
                         </div>
-										  </div>
-									    <div class="col-md-4"></div>
+					</div>
+					<div class="col-md-4"></div>
 												
-									  </div>
+					</div>
 									  <?php
 											}
 											?>
