@@ -44,7 +44,7 @@
                </form>
 			   <br/>
 			   <center>
-               <a href="login.php" id="resetpass">Go Back</a>
+               <a href="login.php" id="resetpass" style="color:#4c8e41;">Go Back</a>
 			   </center>
 			   
             </div>
