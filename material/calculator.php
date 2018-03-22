@@ -63,7 +63,7 @@ if(isset($_SESSION['id'])=="")
         datetime-popup>.dropdown .btn-group button:first-child {
             display: none;
         }
-		.fa {
+		.social {
 		  padding: 5px;
 		  font-size: 10px;
 		  width: 20px;
@@ -72,15 +72,15 @@ if(isset($_SESSION['id'])=="")
 		  margin: 5px 2px;
 		  border-radius: 25px;
 		}
-	  .fa-facebook {
+	  .social-facebook {
 		  background: #3B5998;
 		  color: white;
 		}
-		.fa-twitter {
+		.social-twitter {
 		  background: #55ACEE;
 		  color: white;
 		}
-		.fa-linkedin {
+		.social-linkedin {
 		  background: #007bb5;
 		  color: white;
 		}
@@ -133,7 +133,7 @@ if(isset($_SESSION['id'])=="")
 						</div>
 					</div>
 					<div class="row" style="margin-top:25px;">
-						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='fa fa-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='fa fa-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="fa fa-facebook"></a> </p></center>
+						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='social social-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='social social-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="social social-facebook"></a> </p></center>
 					</div>
 				</div>
 					
