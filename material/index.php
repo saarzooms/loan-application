@@ -21,6 +21,7 @@
    <meta name="description" content="Bootstrap Admin App + jQuery">
    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
    <title>Index Page</title>
+   <link rel='icon' type='image/x-icon' href='favicon.ico' />
    <link rel="stylesheet" href="app/css/styles.css">
    
    <!-- =============== VENDOR STYLES ===============-->

@@ -153,6 +153,7 @@ if($dbh->query($a)){
    <meta name="description" content="Bootstrap Admin App + jQuery">
    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
    <title>Loan Officer Signup</title>
+   <link rel='icon' type='image/x-icon' href='favicon.ico' />
    <!-- =============== VENDOR STYLES ===============-->
    <!-- FONT AWESOME-->
    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
