@@ -19,6 +19,7 @@ else{
 	}
 }
 ?>
+<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
   <!-- top navbar-->
       <header class="topnavbar-wrapper">
          <!-- START Top Navbar-->
