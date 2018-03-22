@@ -51,7 +51,9 @@
                   <button type="submit" class="btn btn-block btn-primary mt-lg" style="background-color:#90b63d">Login</button>
 									 <label id='l' style="color:red;"></label>
                </form>
-               
+			   <br/>
+               <a href="forgotpassword.php" id="resetpass">Forgotten Password?</a>
+			   
             </div>
          </div>
          <!-- END panel-->
@@ -61,10 +63,12 @@
             <span>-</span>
             <span>streetwork</span>
             <br>
-            <!--<span>Bootstrap Admin Template</span>-->
+            <span>Bootstrap Admin Template</span>
          </div>
       </div>
    </div>
+   
+   
    <!-- =============== VENDOR SCRIPTS ===============-->
    <!-- MODERNIZR-->
    <script src="vendor/modernizr/modernizr.custom.js"></script>
