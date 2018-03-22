@@ -52,7 +52,7 @@
 									 <label id='l' style="color:red;"></label>
                </form>
 			   <br/>
-               <a href="forgotpassword.php" id="resetpass">Forgotten Password?</a>
+               <a href="forgotpassword.php" id="resetpass" style="color:#4c8e41;">Forgotten Password?</a>
 			   
             </div>
          </div>
