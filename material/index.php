@@ -707,7 +707,7 @@
    <?php include('footer.php');?>
   </div> 
   <?php
-  if($roll == 'Customer'){
+  if($roll != 'Admin'){
   ?>
  <!-- floating button close -->
    <div id="floatbtn" class="settings">
@@ -721,7 +721,11 @@
   <div class="detail-box" style="overflow-y:auto;height:500px;">
   <?php
   //$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where forcedisplay='Yes' and display_date>=CURDATE() ";
-  $query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where (forcedisplay='Yes' and display_date>=CURDATE()) or tp.id in (SELECT mm.partner_id FROM `mypartner_master` mm WHERE mm.loanofficer_id in (SELECT cm.loanofficer_id FROM `customer_master` cm WHERE cm.id='".$_SESSION['id']."'))";
+  if($roll == 'Customer'){
+	  $query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where (forcedisplay='Yes' and display_date>=CURDATE()) or tp.id in (SELECT mm.partner_id FROM `mypartner_master` mm WHERE mm.loanofficer_id in (SELECT cm.loanofficer_id FROM `customer_master` cm WHERE cm.id='".$_SESSION['id']."'))";
+  }else if($roll == "Loanofficer"){
+		$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where (forcedisplay='Yes' and display_date>=CURDATE()) or tp.id in (SELECT mm.partner_id FROM `mypartner_master` mm WHERE mm.loanofficer_id='".$_SESSION['id']."' )";
+  }
   foreach ($dbh->query($query) as $row)
 			{
   ?>

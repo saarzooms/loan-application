@@ -106,7 +106,7 @@ if(isset($_SESSION['id'])=="")
 </body>
 
 	<?php
-	if($_SESSION['usertype'] == 'Customer'){
+	if($_SESSION['usertype'] != 'Admin'){
 	?>
 	<!-- floating button close -->
    <div id="floatbtn" class="settings">
@@ -120,7 +120,11 @@ if(isset($_SESSION['id'])=="")
   <div class="detail-box" style="overflow-y:auto;height:500px;">
   <?php
   //$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where forcedisplay='Yes' and display_date>=CURDATE() ";
-  $query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where (forcedisplay='Yes' and display_date>=CURDATE()) or tp.id in (SELECT mm.partner_id FROM `mypartner_master` mm WHERE mm.loanofficer_id in (SELECT cm.loanofficer_id FROM `customer_master` cm WHERE cm.id='".$_SESSION['id']."'))";
+  if($_SESSION['usertype'] == 'Customer'){
+	  $query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where (forcedisplay='Yes' and display_date>=CURDATE()) or tp.id in (SELECT mm.partner_id FROM `mypartner_master` mm WHERE mm.loanofficer_id in (SELECT cm.loanofficer_id FROM `customer_master` cm WHERE cm.id='".$_SESSION['id']."'))";
+  }else if($_SESSION['usertype'] == "Loanofficer"){
+		$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where (forcedisplay='Yes' and display_date>=CURDATE()) or tp.id in (SELECT mm.partner_id FROM `mypartner_master` mm WHERE mm.loanofficer_id='".$_SESSION['id']."' )";
+  }
   foreach ($dbh->query($query) as $row)
 			{
   ?>
