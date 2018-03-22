@@ -88,6 +88,18 @@ else if(isset($_REQUEST['name1']) && isset($_REQUEST['email1']) && isset($_REQUE
 		$msg="Loan Officer Data Update Successfully";
 		echo $msg;
 	}
+}else if(isset($_REQUEST['emailid'])){
+	$email=$_REQUEST['emailid'];
+	$cnt='';
+	$sql="select count(*) as cnt from loanofficer_master where email='$email'";
+	foreach($dbh->query($sql) as $r){
+		$cnt=$r['cnt'];
+	}
+	if($cnt==0){
+		echo 0;
+	}else{
+		echo 'Entered Email is Registerd. Please use another Email !!!';
+	}
 }
 else if(isset($_REQUEST['id']))
 {

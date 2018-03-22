@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <meta name="description" content="Bootstrap Admin App + jQuery">
    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
-   <title>Reset Password</title>
+   <title>Forgot Password</title>
    <!-- =============== VENDOR STYLES ===============-->
    <!-- FONT AWESOME-->
    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
@@ -14,8 +14,6 @@
    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
    <!-- =============== BOOTSTRAP STYLES ===============-->
    <link rel="stylesheet" href="app/css/bootstrap.css" id="bscss">
-   <!-- =============== Toast Message ===============-->
-   <link rel="stylesheet" href="toastmessage/css/jquery.toastmessage.css" id="maincss">
    <!-- =============== APP STYLES ===============-->
    <link rel="stylesheet" href="app/css/app.css" id="maincss">
    <!-- =============== Toast Message ===============-->
@@ -33,23 +31,21 @@
                </a>
             </div>
             <div class="panel-body">
-               <p class="text-center pv" style="color:#4c8e41">Reset Your Password</p>
-            <form role="form" method="post" action="#" id="reset_Form" class="mb-lg">
+               <p class="text-center pv" style="color:#4c8e41">If you've forgotten your password, enter your email address that you used to create an account and we will send it to you</p>
+               <form role="form" method="post" action="#" id="Login_Form" class="mb-lg">
                   <div class="form-group has-feedback">
-                     <input id="newpass" name="newpass" type="password" placeholder="Enter New Password" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter new password')" onchange="this.setCustomValidity('')">
-                    
+                     <input id="email" name="email" type="email" placeholder="Enter Your email" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter email')" onchange="this.setCustomValidity('')">
+                     <span class="fa fa-envelope form-control-feedback text-muted"></span>
                   </div>
-				  <div class="form-group has-feedback">
-                     <input id="conpass" name="conpass" type="text" placeholder="Enter Confirm Password" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter Confirm password')" onchange="this.setCustomValidity('')">
-                    <label id='msg' style="color:red;"></label>
-                  </div>
-                 
+                 <label id='l' style="color:red;"></label>
             </div>
-			<input type="hidden" id="useremail">
-            <button type="submit" id="btn_reset" class="btn btn-block btn-primary mt-lg" style="background-color:#90b63d" disabled>Submit</button>
+            <button type="submit" id="forgot_pass" class="btn btn-block btn-primary mt-lg" style="background-color:#90b63d" disabled>Send</button>
 			
-           </form>
-			   
+               </form>
+			   <br/>
+			   <center>
+               <a href="login.php" id="resetpass">Go Back</a>
+			   </center>
 			   
             </div>
          </div>
@@ -79,11 +75,9 @@
    <script src="vendor/parsleyjs/dist/parsley.min.js"></script>
    <!-- =============== APP SCRIPTS ===============-->
    <script src="app/js/app.js"></script>
-   <!-- JQUERY-->
-   <script src="vendor/jquery/dist/jquery.js"></script>
    <!-- =============== Toast Message ===============-->
    <script type="text/javascript" src="toastmessage/javascript/jquery.toastmessage.js"></script>
-  <script src="js/forgotpass.js"></script>
+   <script src="js/forgotpass.js"></script>
 </body>
 
 </html>

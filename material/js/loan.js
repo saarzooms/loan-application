@@ -157,6 +157,25 @@ $(document).ready(function() {
 					});
 			
 		});
+		
+		$(document).on("blur","#email",function(){
+			var emailid=$('#email').val();
+			$.ajax({ 
+					type: "POST",
+					url: "ajax/loanofficer_data.php",
+					data:{'emailid':emailid},
+					success: function(data)
+					{
+						if(data == 0){
+							$('#emailmsg').html('');
+						}else{
+							$('#emailmsg').html(data);
+						}
+						
+					}
+			});
+			
+		});
 
 });
 function loadloanofficer()
