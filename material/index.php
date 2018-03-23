@@ -68,7 +68,7 @@
 	tr.hide_all > td, td.hide_all{
         border-style:hidden;
       }
-	  .social {
+	  .fa {
 		  padding: 5px;
 		  font-size: 10px;
 		  width: 22px;
@@ -77,15 +77,15 @@
 		  margin: 5px 2px;
 		  border-radius: 25px;
 		}
-	  .social-facebook {
+	  .fa-facebook {
 		  background: #3B5998;
 		  color: white;
 		}
-		.social-twitter {
+		.fa-twitter {
 		  background: #55ACEE;
 		  color: white;
 		}
-		.social-linkedin {
+		.fa-linkedin {
 		  background: #007bb5;
 		  color: white;
 		}
@@ -739,7 +739,7 @@
 						</div>
 					</div>
 					<div class="row" style="margin-top:25px;">
-						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='social social-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='social social-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="social social-facebook"></a> </p></center>
+						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='fa fa-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='fa fa-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="fa fa-facebook"></a> </p></center>
 					</div>
 				</div>
 					
