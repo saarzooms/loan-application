@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="app/css/bootstrap-drawer.css">
  
   <style>
-  .client-detail {width:98%; height:auto; float:right; border:1px solid #23b7e5; padding:15px 0px 15px 0px;margin-bottom:10px;margin-right:5px;box-shadow:5px 5px 2.5px #23b7e5}
+  .client-detail {width:98%; height:130px; float:right; border:1px solid #23b7e5; padding:15px 0px 15px 0px;margin-bottom:10px;margin-right:5px;box-shadow:5px 5px 2.5px #23b7e5}
 .client-detail-text {font-size:12px; color:#000; }
 .circle {
   display: block;
@@ -718,7 +718,7 @@
          </div>
          <div class="settings-content">
            <center><h4>Here To assist</h4></center>
-  <div class="detail-box" style="overflow-y:auto;">
+  <div class="detail-box" style="overflow-y:auto;height:500px;">
   <?php
   //$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where forcedisplay='Yes' and display_date>=CURDATE() ";
   if($roll == 'Customer'){
