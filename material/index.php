@@ -718,7 +718,7 @@
          </div>
          <div class="settings-content">
            <center><h4>Here To assist</h4></center>
-  <div class="detail-box" style="overflow-y:auto;height:500px;">
+  <div class="detail-box" style="overflow-y:auto;">
   <?php
   //$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where forcedisplay='Yes' and display_date>=CURDATE() ";
   if($roll == 'Customer'){
