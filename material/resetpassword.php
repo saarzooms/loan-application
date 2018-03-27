@@ -41,7 +41,7 @@
                     
                   </div>
 				  <div class="form-group has-feedback">
-                     <input id="conpass" name="conpass" type="text" placeholder="Enter Confirm Password" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter Confirm password')" onchange="this.setCustomValidity('')">
+                     <input id="conpass" name="conpass" type="password" placeholder="Enter Confirm Password" autocomplete="off" required class="form-control" oninvalid="this.setCustomValidity('please enter Confirm password')" onchange="this.setCustomValidity('')">
                     <label id='msg' style="color:red;"></label>
                   </div>
                  
