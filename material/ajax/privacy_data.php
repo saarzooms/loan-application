@@ -2,8 +2,8 @@
 include('../db/connection.php');
 if(isset($_REQUEST['privacy']) && isset($_REQUEST['terms']))
 {
-	$privacy=addslashes($_REQUEST['privacy']);
-	$terms=addslashes($_REQUEST['terms']);
+	$privacy=base64_encode($_REQUEST['privacy']);
+	$terms=base64_encode($_REQUEST['terms']);
 	
 	$msg="";
 	try {
@@ -53,9 +53,9 @@ if(isset($id)){
 else if(isset($_REQUEST['privacy1']) && isset($_REQUEST['terms1']) && isset($_REQUEST['typeid']) )
 {
 	// $privacy=mysql_real_escape_string($_REQUEST['privacy1']);
-	// $terms=mysql_real_escape_string($_REQUEST['terms1']);
-	$privacy=addslashes($_REQUEST['privacy1']);
-	$terms=addslashes($_REQUEST['terms1']);
+	// $terms=mysql_real_escape_string($_REQUEST['terms1']); 
+	$privacy=base64_encode($_REQUEST['privacy1']);
+	$terms=base64_encode($_REQUEST['terms1']);
 	$typeid=$_REQUEST['typeid'];
 	
 	
@@ -125,8 +125,8 @@ else if(isset($_REQUEST['id']))
 ?>				
 		<tr>
 		<td><?php echo $row['id']; ?></td>
-		<td><?php echo $row['privacypolicy']; ?></td>
-		<td><?php echo $row['terms_of_service']; ?></td>
+		<td><?php echo base64_decode($row['privacypolicy']); ?></td>
+		<td><?php echo base64_decode($row['terms_of_service']); ?></td>
 		
 		<td><center><button  class="btn_up btn btn-xs btn-danger"  value="<?php echo $row['id']; ?>" >
 			<i class="fa fa-edit"></i></button>
