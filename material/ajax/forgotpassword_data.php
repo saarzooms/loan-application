@@ -6,8 +6,8 @@ if(isset($_REQUEST['email'])){
 	
 	$to=$_REQUEST['email'];
 	
-	$from='vishalpatel16@gmail.com';
-	$sendernm='Vishal Patel';
+	$from='numbercruncher@acmesoftware.net';
+	$sendernm='Number Cruncher';
 	$sub='Reset Password Link';
 	
 	$msg='Dear user,'.'<br/>Access below link to reset your password'.'<br/><a href="https://loanapp-app.herokuapp.com/material/resetpassword.php?value='.base64_encode($to).'" target="_blank">Reset Your Password?</a>';
