@@ -47,9 +47,9 @@ include('db/connection.php');
 						<div class="pull-left">
 							<h3>Privacy Policy and Terms of Service</h3>
 						</div>
-						<div class="pull-right">
+						<!-- <div class="pull-right">
 						<button type="button" class="btn btn-primary" id="new"><em class="fa fa-plus"></em> Privacy Policy</button>		
-						</div>
+						</div> -->
           </div>  
             <!-- START row-->
             <div class="row">
@@ -61,7 +61,7 @@ include('db/connection.php');
                            <div class="panel-title">New Privacy Policy</div>
                         </div>
                 <div class="panel-body">
-				<!--	<div class="col-md-12">
+					<div class="col-md-12">
 						<div class="col-md-2">
 						</div>
 						             
@@ -73,7 +73,7 @@ include('db/connection.php');
 						</div>
 						<div class="col-md-2">
                        </div>
-					</div> -->
+					</div>
 					<div class="col-md-12">
 						<div class="col-md-2">
 						</div>
