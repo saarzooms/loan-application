@@ -53,7 +53,7 @@ $(document).ready(function() {
 		});
 		
 		$(document).on("click",'.btn_up',function(){	
-		
+							
 							var did2 = $(this).attr('value');
 							$("#btn_insert").attr("disabled", "disabled");
 							$(".btn_update").removeAttr("disabled", "disabled");
@@ -62,7 +62,8 @@ $(document).ready(function() {
 							//alert(did2);
 							$.ajax({        
 										type: "POST",											
-										url: "ajax/privacy_data.php?did2="+did2,
+										url: "ajax/privacy_data.php",
+										data:{'did2':did2},
 										dataType: 'json',
 										success: function(data){//alert(data);
 														
@@ -91,7 +92,8 @@ $(document).ready(function() {
 				
 				$.ajax({ 
 							type: "POST",
-							url: "ajax/privacy_data.php?privacy1="+privacy+"&terms1="+terms+"&typeid="+typeid,
+							url: "ajax/privacy_data.php",
+							data:{'privacy1':privacy,'terms1':terms,'typeid':typeid},
 							success: function(data)
 							{
 								$('#Privacy').val('');

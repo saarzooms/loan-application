@@ -68,7 +68,7 @@ include('db/connection.php');
 						<div class="col-md-8">
                            <div class="form-group">
                               <label class="control-label">Privacy Policy *</label>
-                              <textarea name="Privacy" id="Privacy" class="form-control" placeholder="Enter Privacy Policy*" oninvalid="this.setCustomValidity('please enter Privacy policy')" onchange="this.setCustomValidity('')" required></textarea>
+                              <textarea name="Privacy" id="Privacy" class="form-control"  placeholder="Enter Privacy Policy*" oninvalid="this.setCustomValidity('please enter Privacy policy')" onchange="this.setCustomValidity('')" required></textarea>
                            </div>
 						</div>
 						<div class="col-md-2">
@@ -81,7 +81,7 @@ include('db/connection.php');
 						<div class="col-md-8">
                            <div class="form-group">
                               <label class="control-label">Terms of service *</label>
-                              <textarea name="terms" id="terms" class="form-control" placeholder="Enter Terms of service*" oninvalid="this.setCustomValidity('please enter Terms of service')" onchange="this.setCustomValidity('')" required></textarea>
+                              <textarea name="terms" id="terms" class="form-control"  placeholder="Enter Terms of service*" oninvalid="this.setCustomValidity('please enter Terms of service')" onchange="this.setCustomValidity('')" required></textarea>
                            </div>
 						</div>
 						<div class="col-md-2">

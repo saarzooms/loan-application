@@ -45,6 +45,7 @@ if(isset($id)){
 				
 		}
     array_push($result,$privacy,$terms);
+	$result = array_map('utf8_encode', $result);
 	echo json_encode($result);			
 }
 
@@ -58,6 +59,7 @@ else if(isset($_REQUEST['privacy1']) && isset($_REQUEST['terms1']) && isset($_RE
 	
 	$msg="";
 	$sql="UPDATE `privacy_policy` SET `privacypolicy`='$privacy',`terms_of_service`='$terms' WHERE id='$typeid'";
+	//file_put_contents('./log_'.date("j.n.Y").'.txt', $sql, FILE_APPEND);
 	if($dbh->query($sql))
 	{
 		$msg="Data Update Successfully";
