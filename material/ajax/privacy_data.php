@@ -54,8 +54,8 @@ else if(isset($_REQUEST['privacy1']) && isset($_REQUEST['terms1']) && isset($_RE
 {
 	// $privacy=mysql_real_escape_string($_REQUEST['privacy1']);
 	// $terms=mysql_real_escape_string($_REQUEST['terms1']);
-	$privacy=$_REQUEST['privacy1'];
-	$terms=$_REQUEST['terms1'];
+	$privacy=addslashes($_REQUEST['privacy1']);
+	$terms=addslashes($_REQUEST['terms1']);
 	$typeid=$_REQUEST['typeid'];
 	
 	
