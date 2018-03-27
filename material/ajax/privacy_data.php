@@ -2,13 +2,13 @@
 include('../db/connection.php');
 if(isset($_REQUEST['privacy']) && isset($_REQUEST['terms']))
 {
-	$privacy=$_REQUEST['privacy'];
-	$terms=$_REQUEST['terms'];
+	$privacy=mysql_real_escape_string($_REQUEST['privacy']);
+	$terms=mysql_real_escape_string($_REQUEST['terms']);
 	
 	$msg="";
 	try {
 		$sql="INSERT INTO `privacy_policy`(`privacypolicy`, `terms_of_service`) VALUES ('$privacy','$terms')";
-		
+		//file_put_contents('./log_'.date("j.n.Y").'.txt', $sql, FILE_APPEND);
 		if($dbh->query($sql))
 		{
 			$msg="Data Save Successfully";
@@ -52,14 +52,14 @@ if(isset($id)){
 }
 else if(isset($_REQUEST['privacy1']) && isset($_REQUEST['terms1']) && isset($_REQUEST['typeid']) )
 {
-	$privacy=$_REQUEST['privacy1'];
-	$terms=$_REQUEST['terms1'];
+	$privacy=mysql_real_escape_string($_REQUEST['privacy1']);
+	$terms=mysql_real_escape_string($_REQUEST['terms1']);
 	$typeid=$_REQUEST['typeid'];
 	
 	
 	$msg="";
 	$sql="UPDATE `privacy_policy` SET `privacypolicy`='$privacy',`terms_of_service`='$terms' WHERE id='$typeid'";
-	//file_put_contents('./log_'.date("j.n.Y").'.txt', $sql, FILE_APPEND);
+	file_put_contents('./log_'.date("j.n.Y").'.txt', $sql, FILE_APPEND);
 	if($dbh->query($sql))
 	{
 		$msg="Data Update Successfully";
