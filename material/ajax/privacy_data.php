@@ -130,8 +130,8 @@ else if(isset($_REQUEST['id']))
 		
 		<td><center><button  class="btn_up btn btn-xs btn-danger"  value="<?php echo $row['id']; ?>" >
 			<i class="fa fa-edit"></i></button>
-			<button class="btn_del btn btn-xs btn-danger" value="<?php echo $row['id']; ?>">
-			<i class="fa fa-trash"></i></button></center></td>
+			<!--<button class="btn_del btn btn-xs btn-danger" value="<?php echo $row['id']; ?>">
+			<i class="fa fa-trash"></i></button> --></center></td>
 		</tr>
 
 	<?php
