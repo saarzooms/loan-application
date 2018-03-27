@@ -40,8 +40,8 @@ if(isset($id)){
 	$result = array();
 		foreach ($dbh->query($sql2) as $row2)
 			{
-				$privacy=$row2['privacypolicy'];
-				$terms=$row2['terms_of_service'];
+				$privacy=base64_decode($row2['privacypolicy']);
+				$terms=base64_decode($row2['terms_of_service']);
 				
 		}
     array_push($result,$privacy,$terms);
