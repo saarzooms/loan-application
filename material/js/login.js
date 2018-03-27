@@ -55,7 +55,7 @@ $(document).ready(function() {
 						{
 							if(res[1] == 0){
 								$('#terms').show();
-								$("#check").attr("oninvalid", "this.setCustomValidity('please check this box if you want to proceed')");
+								$("#check").attr("oninvalid", "this.setCustomValidity('To sign in to NumberCruncher, you will have to agree to both the Privacy Policy & the Terms of Use')");
 								$("#check").attr("onchange", "this.setCustomValidity('')");
 								$("#check").prop('required',true);
 							}else{
@@ -66,7 +66,7 @@ $(document).ready(function() {
 							}
 							if(res[2] == 0){
 								$('#terms1').show();
-								$("#check1").attr("oninvalid", "this.setCustomValidity('please check this box if you want to proceed')");
+								$("#check1").attr("oninvalid", "this.setCustomValidity('To sign in to NumberCruncher, you will have to agree to both the Privacy Policy & the Terms of Use')");
 								$("#check1").attr("onchange", "this.setCustomValidity('')");
 								$("#check1").prop('required',true);
 							}else{
@@ -79,7 +79,7 @@ $(document).ready(function() {
 						else if(res[0] == 'Customer'){
 							if(res[1] == 0){
 								$('#terms').show();
-								$("#check").attr("oninvalid", "this.setCustomValidity('please check this box if you want to proceed')");
+								$("#check").attr("oninvalid", "this.setCustomValidity('To sign in to NumberCruncher, you will have to agree to both the Privacy Policy & the Terms of Use')");
 								$("#check").attr("onchange", "this.setCustomValidity('')");
 								$("#check").prop('required',true);
 							}else{
@@ -90,7 +90,7 @@ $(document).ready(function() {
 							}
 							if(res[2] == 0){
 								$('#terms1').show();
-								$("#check1").attr("oninvalid", "this.setCustomValidity('please check this box if you want to proceed')");
+								$("#check1").attr("oninvalid", "this.setCustomValidity('To sign in to NumberCruncher, you will have to agree to both the Privacy Policy & the Terms of Use')");
 								$("#check1").attr("onchange", "this.setCustomValidity('')");
 								$("#check1").prop('required',true);
 							}else{

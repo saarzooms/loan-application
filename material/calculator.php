@@ -18,7 +18,7 @@ if(isset($_SESSION['id'])=="")
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 	 <link rel="stylesheet" href="app/css/styles.css">
 <style>
-  .client-detail {width:98%; height:auto; float:right; border:1px solid #23b7e5; padding:15px 0px 15px 0px;margin-bottom:10px;margin-right:5px;box-shadow:5px 5px 2.5px #23b7e5}
+  .client-detail {width:98%; height:130px; float:right; border:1px solid #23b7e5; padding:15px 0px 15px 0px;margin-bottom:10px;margin-right:5px;box-shadow:5px 5px 2.5px #23b7e5}
 .client-detail-text {font-size:12px; color:#000; }
 .circle {
   display: block;
@@ -63,26 +63,29 @@ if(isset($_SESSION['id'])=="")
         datetime-popup>.dropdown .btn-group button:first-child {
             display: none;
         }
-		.social {
-		  padding: 5px;
-		  font-size: 10px;
-		  width: 20px;
-		  text-align: center;
-		  text-decoration: none;
-		  margin: 5px 2px;
-		  border-radius: 25px;
-		}
-	  .social-facebook {
+		.fa-facebook {
 		  background: #3B5998;
 		  color: white;
+		  border-radius:100px;
+		  padding:6px;
+		  margin-left:5px;
+		 
 		}
-		.social-twitter {
+		.fa-twitter {
 		  background: #55ACEE;
 		  color: white;
+		    border-radius:100px;
+		  padding:5px;
+		   margin-left:5px;
+		  
 		}
-		.social-linkedin {
+		.fa-linkedin {
 		  background: #007bb5;
 		  color: white;
+		   border-radius:100px;
+		  padding:5px;
+		   margin-left:5px;
+		 
 		}
   </style>
 </head>
@@ -117,7 +120,7 @@ if(isset($_SESSION['id'])=="")
          </div>
          <div class="settings-content">
            <center><h4>Here To assist</h4></center>
-  <div class="detail-box" style="overflow-y:auto;height:500px;">
+  <div class="detail-box" style="overflow-y:auto;height:700px;">
   <?php
   //$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where forcedisplay='Yes' and display_date>=CURDATE() ";
   if($_SESSION['usertype'] == 'Customer'){
@@ -137,7 +140,7 @@ if(isset($_SESSION['id'])=="")
 						</div>
 					</div>
 					<div class="row" style="margin-top:25px;">
-						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='social social-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='social social-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="social social-facebook"></a> </p></center>
+						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='fa fa-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='fa fa-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="fa fa-facebook"></a> </p></center>
 					</div>
 				</div>
 					

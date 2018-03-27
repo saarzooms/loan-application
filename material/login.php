@@ -69,7 +69,9 @@ foreach($dbh->query($sql) as $row)
 									 <label id='l' style="color:red;"></label>
                </form>
 			   <br/>
-               <a href="forgotpassword.php" id="resetpass" style="color:#4c8e41;">Forgotten Password?</a>
+			   <center>
+               <a href="forgotpassword.php" id="resetpass" style="color:#4c8e41;">Forgot Password?</a>
+			   </center>
 			   
             </div>
          </div>
