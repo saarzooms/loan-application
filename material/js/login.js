@@ -64,6 +64,17 @@ $(document).ready(function() {
 								$("#check").removeAttr("onchange");
 								$("#check").removeAttr('required');
 							}
+							if(res[2] == 0){
+								$('#terms1').show();
+								$("#check1").attr("oninvalid", "this.setCustomValidity('please check this box if you want to proceed')");
+								$("#check1").attr("onchange", "this.setCustomValidity('')");
+								$("#check1").prop('required',true);
+							}else{
+								$('#terms1').hide();
+								$("#check1").removeAttr("oninvalid");
+								$("#check1").removeAttr("onchange");
+								$("#check1").removeAttr('required');
+							}
 						}
 						else if(res[0] == 'Customer'){
 							if(res[1] == 0){
@@ -77,12 +88,27 @@ $(document).ready(function() {
 								$("#check").removeAttr("onchange");
 								$("#check").removeAttr('required');
 							}
+							if(res[2] == 0){
+								$('#terms1').show();
+								$("#check1").attr("oninvalid", "this.setCustomValidity('please check this box if you want to proceed')");
+								$("#check1").attr("onchange", "this.setCustomValidity('')");
+								$("#check1").prop('required',true);
+							}else{
+								$('#terms1').hide();
+								$("#check1").removeAttr("oninvalid");
+								$("#check").removeAttr("onchange");
+								$("#check1").removeAttr('required');
+							}
 						}
 						else if(res[0] == 'Admin'){
 							$('#terms').hide();
 							$("#check").removeAttr("oninvalid");
 							$("#check").removeAttr("onchange");
 							$("#check").removeAttr('required');
+							$('#terms1').hide();
+							$("#check1").removeAttr("oninvalid");
+							$("#check1").removeAttr("onchange");
+							$("#check1").removeAttr('required');
 						}
 						else{}
 						

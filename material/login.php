@@ -1,3 +1,14 @@
+<?php
+include('db/connection.php');
+$terms='';$privacy='';
+$sql="select * from privacy_policy";
+foreach($dbh->query($sql) as $row)
+{
+	$privacy=$row['privacypolicy'];
+	$terms=$row['terms_of_service'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +55,12 @@
                      <div class="checkbox c-checkbox pull-left mt0" id="terms" style="display:none;">
                         <label>
                            <input type="checkbox" id="check" value="" name="remember" >
-                           <span class="fa fa-check"></span> I accept the Terms and Conditions</label>
+                           <span class="fa fa-check"></span><a data-toggle="modal" data-target="#myModal"> I accept the Terms and Conditions</a></label>
+                     </div>
+					 <div class="checkbox c-checkbox pull-left mt0" id="terms1" style="display:none;">
+                        <label>
+                           <input type="checkbox" id="check1" value="" name="remember" >
+                           <span class="fa fa-check"></span><a data-toggle="modal" data-target="#myModal1"> I accept the Privacy Policy</a></label>
                      </div>
                    <!--  <div class="pull-right"><a href="#" class="text-muted">Forgot your password?</a> -->
                      </div>
@@ -68,7 +84,45 @@
          </div>
       </div>
    </div>
+   <!-- Modal for terms and condition-->
+   <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog" style="height:800px !important;">
+         <div class="modal-content" style="height: 60% !important;overflow-Y:auto;">
+            <div class="modal-header" style="background-color:#90b63d;color:#fff;">
+               <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+               <h4 id="myModalLabel" class="modal-title">Terms and Conditions</h4>
+            </div>
+            <div class="modal-body">
+				<?php echo $terms;?> 
+			</div>
+            <div class="modal-footer">
+               <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+            </div>
+         </div>
+      </div>
+   </div> 
    
+   <!-- Modal for privacy policy-->
+   <div id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog" style="height:800px !important;">
+         <div class="modal-content" style="height: 60% !important;overflow-Y:auto;">
+            <div class="modal-header" style="background-color:#90b63d;color:#fff;">
+               <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+               <h4 id="myModalLabel" class="modal-title">Privacy Policy</h4>
+            </div>
+            <div class="modal-body">
+				<?php echo $privacy;?> 
+			</div>
+            <div class="modal-footer">
+               <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
    
    <!-- =============== VENDOR SCRIPTS ===============-->
    <!-- MODERNIZR-->

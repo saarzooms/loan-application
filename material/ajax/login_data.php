@@ -1,18 +1,19 @@
 <?php
 session_start();
 include('../db/connection.php');
-//include('../stripe/config.php');
+include('../stripe/config.php');
 if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 {	
 	$username = $_REQUEST['username'];
 	$password = $_REQUEST['pass'];
-	$id="";$status="";$type='';//$sub_end_dt='';
-	$active = 1; $flag=0;$enddt='';$status='';$cusid='';$todaydt='';$renewdt='';
+	$id="";$status="";$type='';$sub_end_dt='';
+	$active = 1; $flag=0;$enddt='';$status='';$status1='';$cusid='';$todaydt='';$renewdt='';
 	$sql = "SELECT * FROM login_master WHERE `email`='$username' and `password`='$password'";
 	foreach ($dbh->query($sql) as $row)
 	{		
 		$id=$row['user_id'];
 		$status=$row['status'];
+		$status1=$row['status1'];
 		$type=$row['user_type'];
 		 if($type=='Loanofficer'){
 			$sql_loan="select * from loanofficer_master where id='$id'";
@@ -56,7 +57,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 					}
 					//echo $subscription['data'][0]['id'];
 					
-			}*/	
+			}	*/
 		} 
 	}
 	if($id=='')
@@ -71,9 +72,9 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 	{
 		$_SESSION['id']=$id;
 		$_SESSION['usertype']=$type;
-		if($status==0)
+		if($status==0 || $status1 == 0)
 		{
-			$str="update login_master set status='1' where `email`='$username' and `password`='$password'";
+			$str="update login_master set status='1', status1='1' where `email`='$username' and `password`='$password'";
 			if($dbh->query($str))
 			{ 
 			$flag=1;
@@ -88,15 +89,16 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['pass']))
 if(isset($_REQUEST['email']))
 {
 	$email=$_REQUEST['email'];
-	$usertype='';$status='';$result = array();
-	$sql = "SELECT user_type,status FROM login_master WHERE `email`='$email'";
+	$usertype='';$status='';$status1='';$result = array();
+	$sql = "SELECT user_type,status,status1 FROM login_master WHERE `email`='$email'";
 	foreach ($dbh->query($sql) as $row)
 	{		
 		$usertype=$row['user_type'];
 		$status=$row['status'];
+		$status1=$row['status1'];
 	}
 	//echo $usertype.'-'.$status;
-	array_push($result,$usertype,$status);
+	array_push($result,$usertype,$status,$status1);
 	echo json_encode($result);	
 }
 ?>
