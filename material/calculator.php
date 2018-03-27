@@ -112,7 +112,7 @@ if(isset($_SESSION['id'])=="")
 	if($_SESSION['usertype'] != 'Admin'){
 	?>
 	<!-- floating button close -->
-   <div id="floatbtn" class="settings">
+   <div id="floatbtn" class="settings" style="height:auto;">
       <div class="settings-inner" id="inner">
          <div class="settings-ctrl" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
            <!-- <em id="change" class="fa fa-arrow-left">Get Help !</em> -->
@@ -120,7 +120,7 @@ if(isset($_SESSION['id'])=="")
          </div>
          <div class="settings-content">
            <center><h5><strong>Here To assist</strong></h5></center>
-  <div class="detail-box" style="overflow-y:auto;height:700px;">
+  <div class="detail-box" style="overflow-y:auto;height:530px;">
   <?php
   //$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where forcedisplay='Yes' and display_date>=CURDATE() ";
   if($_SESSION['usertype'] == 'Customer'){
