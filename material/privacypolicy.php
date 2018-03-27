@@ -45,7 +45,7 @@ include('db/connection.php');
     <div class="content-wrapper">
 					<div class="clearfix">
 						<div class="pull-left">
-							<h3>Privacy Policy Details</h3>
+							<h3>Privacy Policy and Terms of Service</h3>
 						</div>
 						<div class="pull-right">
 						<button type="button" class="btn btn-primary" id="new"><em class="fa fa-plus"></em> Privacy Policy</button>		
