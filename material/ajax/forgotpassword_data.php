@@ -6,8 +6,8 @@ if(isset($_REQUEST['email'])){
 	
 	$to=$_REQUEST['email'];
 	
-	$from='numbercruncher@acmesoftware.net';
-	$sendernm='Number Cruncher';
+	//$from='numbercruncher@acmesoftware.net';
+	//$sendernm='Number Cruncher';
 	$sub='Reset Password Link';
 	
 	$msg='Dear user,'.'<br/>Access below link to reset your password'.'<br/><a href="https://loanapp-app.herokuapp.com/material/resetpassword.php?value='.base64_encode($to).'" target="_blank">Reset Your Password?</a>';
@@ -30,7 +30,7 @@ if(isset($_REQUEST['email'])){
 	//$mail->Host     = "smtp.gmail.com";
 	$mail->Host     = "mx1.hostinger.in";
 	$mail->Mailer   = "smtp";
-	$mail->SetFrom($from, $sendernm);
+	$mail->SetFrom('numbercruncher@acmesoftware.net', 'Number Cruncher');
 	//$mail->AddReplyTo("vincy@phppot.com", "PHPPot");
 	$mail->AddAddress($to);
 	$mail->Subject = $sub;
