@@ -4,8 +4,8 @@ $terms='';$privacy='';
 $sql="select * from privacy_policy";
 foreach($dbh->query($sql) as $row)
 {
-	$privacy=$row['privacypolicy'];
-	$terms=$row['terms_of_service'];
+	$privacy=addslashes($row['privacypolicy']);
+	$terms=addslashes($row['terms_of_service']);
 }
 
 ?>
