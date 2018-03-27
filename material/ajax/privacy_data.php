@@ -45,7 +45,7 @@ if(isset($id)){
 				
 		}
     array_push($result,$privacy,$terms);
-	$result = array_map('utf8_encode', $result);
+	//$result = array_map('utf8_encode', $result);
 	echo json_encode($result);			
 }
 
