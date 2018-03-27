@@ -338,13 +338,13 @@ else{
 				        <li class=" ">
                     <a href="#privacy" title="privacy" data-toggle="collapse">
                         <em class="fa fa-user-secret"></em>
-                        <span data-localize="sidebar.nav.DASHBOARD">Privacy Policy</span>
+                        <span data-localize="sidebar.nav.DASHBOARD">PP & TOS</span>
                      </a>  
                      <ul id="privacy" class="nav sidebar-subnav collapse">
                        
                         <li class=" ">
                            <a href="privacypolicy.php" title="business">
-							<span><em class="icon-plus"></em> Privacy Policy</span>
+							<span><em class="icon-plus"></em> PP & TOS</span>
                            </a>
                         </li>
 						         
