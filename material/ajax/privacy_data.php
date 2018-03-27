@@ -109,8 +109,8 @@ else if(isset($_REQUEST['id']))
         <thead>
             <tr>
 				<th>Id</th>  			
-				<th>privacy policy</th>  
-				<th>terms of service</th>  
+				<th>Privacy Policy</th>  
+				<th>Terms of Service</th>  
 				   
 				<th><center>Action</center></th>  
             </tr>
