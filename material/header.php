@@ -19,7 +19,7 @@ else{
 	}
 }
 ?>
-<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
   <!-- top navbar-->
       <header class="topnavbar-wrapper">
          <!-- START Top Navbar-->
@@ -324,6 +324,27 @@ else{
                         <li class=" ">
                            <a href="report.php" title="business">
 							<span><em class="icon-list"></em> Loan Officer subscriptions</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
+		   <?php
+				  if($roll=='Admin'){
+					  ?>
+				        <li class=" ">
+                    <a href="#privacy" title="privacy" data-toggle="collapse">
+                        <em class="fa fa-user-secret"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Privacy Policy</span>
+                     </a>  
+                     <ul id="privacy" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="privacypolicy.php" title="business">
+							<span><em class="icon-plus"></em> Privacy Policy</span>
                            </a>
                         </li>
 						         
