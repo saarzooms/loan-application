@@ -18,7 +18,7 @@ if(isset($_SESSION['id'])=="")
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 	 <link rel="stylesheet" href="app/css/styles.css">
 <style>
-  .client-detail {width:98%; height:130px; float:right; border:1px solid #23b7e5; padding:15px 0px 15px 0px;margin-bottom:10px;margin-right:5px;box-shadow:5px 5px 2.5px #23b7e5}
+  .client-detail {width:98%; height:100px; float:right; border:1px solid #23b7e5; padding:10px 0px 15px 0px;margin-bottom:10px;margin-right:5px;box-shadow:5px 5px 2.5px #23b7e5}
 .client-detail-text {font-size:12px; color:#000; }
 .circle {
   display: block;
@@ -119,7 +119,7 @@ if(isset($_SESSION['id'])=="")
 							<div id="arrow" style="margin-top:4px;margin-left:4px;height:40px;box-shadow:-5px 5px 10px gray;border-top-left-radius: 15px;border-bottom-left-radius: 15px;"><i id="change1" class="fa fa-arrow-left rounded-left" style="margin-top:8px;"></i><strong id="change" style="margin-left:5px;margin-top:10px;">My Agent!</strong></div>
          </div>
          <div class="settings-content">
-           <center><h4>Here To assist</h4></center>
+           <center><h5><strong>Here To assist</strong></h5></center>
   <div class="detail-box" style="overflow-y:auto;height:700px;">
   <?php
   //$query="select * from trusted_partner tp inner join businesstype_master bm on bm.id = tp.business_type where forcedisplay='Yes' and display_date>=CURDATE() ";
@@ -134,21 +134,21 @@ if(isset($_SESSION['id'])=="")
 		<div class="client-detail">
 			<div class="col-md-12">
 				<div class="col-md-4">
-					<div class="row" style="margin-left:-10px;">
+					<div class="row" style="margin-left:20px;">
 						<div class="profile_icon">
-							<img class="img-circle" src="<?php echo $row['photo'];?>" style="width:80px;height:80px">
+							<img class="img-circle" src="<?php echo $row['photo'];?>" style="width:50px;height:50px">
 						</div>
 					</div>
-					<div class="row" style="margin-top:25px;">
+					<div class="row" style="margin-bottom:5px;">
 						<center><p class=""><a href="https://twitter.com/<?php echo $row['twitter_handle'];?>" class='fa fa-twitter'></a>&nbsp;<a href="https://www.linkedin.com/<?php echo $row['linkedin_profile'];?>" class='fa fa-linkedin'></a>&nbsp;<a href="https://www.facebook.com/<?php echo $row['facebook_profile'];?>" class="fa fa-facebook"></a> </p></center>
 					</div>
 				</div>
 					
 					
         		<div class="col-md-8" class="pull-right">
-        			<h3 style="margin-top:5px;"><?php echo $row['contact_name'];?></h3>
-					<h4 style="margin-top:5px;color:#000;"><?php echo $row['freetext1'];?></h4>
-        			<h5 style="margin-top:5px;color:#000;"><?php echo $row['freetext2'];?></h5>
+        			<h5 style="margin-top:5px;color:#000;"><b><?php echo $row['contact_name'];?></b></h3>
+        			<h6 style="margin-top:5px;color:#000;"><?php echo $row['freetext1'];?></h4>
+        			<h6 style="margin-top:5px;color:#000;"><?php echo $row['freetext2'];?></h5>
         	
 				</div>
             </div>    

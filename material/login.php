@@ -4,8 +4,8 @@ $terms='';$privacy='';
 $sql="select * from privacy_policy";
 foreach($dbh->query($sql) as $row)
 {
-	$privacy=addslashes($row['privacypolicy']);
-	$terms=addslashes($row['terms_of_service']);
+	$privacy=base64_decode($row['privacypolicy']);
+	$terms=base64_decode($row['terms_of_service']);
 }
 
 ?>
@@ -89,14 +89,14 @@ foreach($dbh->query($sql) as $row)
    <!-- Modal for terms and condition-->
    <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
       <div class="modal-dialog" style="height:800px !important;">
-         <div class="modal-content" style="height: 60% !important;overflow-Y:auto;">
+         <div class="modal-content">
             <div class="modal-header" style="background-color:#90b63d;color:#fff;">
                <button type="button" data-dismiss="modal" aria-label="Close" class="close">
                   <span aria-hidden="true">&times;</span>
                </button>
                <h4 id="myModalLabel" class="modal-title">Terms and Conditions</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="height: 500px !important;overflow-Y:auto;">
 				<?php echo $terms;?> 
 			</div>
             <div class="modal-footer">
@@ -108,15 +108,15 @@ foreach($dbh->query($sql) as $row)
    
    <!-- Modal for privacy policy-->
    <div id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog" style="height:800px !important;">
-         <div class="modal-content" style="height: 60% !important;overflow-Y:auto;">
+      <div class="modal-dialog" style="height:700px !important;">
+         <div class="modal-content">
             <div class="modal-header" style="background-color:#90b63d;color:#fff;">
                <button type="button" data-dismiss="modal" aria-label="Close" class="close">
                   <span aria-hidden="true">&times;</span>
                </button>
                <h4 id="myModalLabel" class="modal-title">Privacy Policy</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="height: 500px !important;overflow-Y:auto;">
 				<?php echo $privacy;?> 
 			</div>
             <div class="modal-footer">
