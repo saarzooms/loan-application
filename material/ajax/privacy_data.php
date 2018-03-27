@@ -2,8 +2,8 @@
 include('../db/connection.php');
 if(isset($_REQUEST['privacy']) && isset($_REQUEST['terms']))
 {
-	$privacy=mysql_real_escape_string($_REQUEST['privacy']);
-	$terms=mysql_real_escape_string($_REQUEST['terms']);
+	$privacy=addslashes($_REQUEST['privacy']);
+	$terms=addslashes($_REQUEST['terms']);
 	
 	$msg="";
 	try {
