@@ -53,13 +53,13 @@ if(isset($_POST))
 	$mail->Port     = 587;  
 	//$mail->Username = "postmaster@sandbox89f874254d224787840918e8bf9a804f.mailgun.org";
 	//$mail->Password = "31527ba1cdd587c4bc2e93d7ca3a3240";
-	$mail->Username = "info@allysoftsolutions.com";
-	$mail->Password = "@llY07890";
+	$mail->Username = "numbercruncher@acmesoftware.net";
+	$mail->Password = "Reset123";
 	//$mail->Host     = "localhost";
 	//$mail->Host     = "smtp.mailgun.org";
 	//$mail->Host     = "smtp.sendgrid.net";
 	//$mail->Host     = "smtp.gmail.com";
-	$mail->Host     = "sg2plcpnl0033.prod.sin2.secureserver.net";
+	$mail->Host     = "mx1.hostinger.in";
 	$mail->Mailer   = "smtp";
 	$mail->SetFrom($from, $sendernm);
 	//$mail->AddReplyTo("vincy@phppot.com", "PHPPot");
