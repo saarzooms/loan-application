@@ -18,8 +18,8 @@ if(isset($_REQUEST['email'])){
 	$mail->IsSMTP();
 	$mail->SMTPDebug = 0;
 	$mail->SMTPAuth = true;
-	$mail->SMTPSecure = "tls";
-	$mail->Port     = 587;  
+	$mail->SMTPSecure = "SSL";
+	$mail->Port     = 993;  
 	//$mail->Username = "postmaster@sandbox89f874254d224787840918e8bf9a804f.mailgun.org";
 	//$mail->Password = "31527ba1cdd587c4bc2e93d7ca3a3240";
 	$mail->Username = "admin@streetwork.com";
