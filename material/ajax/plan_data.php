@@ -102,7 +102,7 @@ else if(isset($_REQUEST['planname']) && isset($_REQUEST['planamount']) && isset(
 			{
 				$planid=$r['planid'];
 			}
-			if($planid == null){
+			if($planid == 0){
 				$planid=1;
 			}else{
 				$planid=$planid+1;
