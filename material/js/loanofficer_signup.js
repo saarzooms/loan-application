@@ -26,7 +26,7 @@ $(document).ready(function() {
 								$('#btn_signup').hide();
 								$('#payment_div').show();
 								$('#payment_btn').show();
-								
+								$('#plan_details').hide();
 								//$('#msg_save').html(data);
 								/* $('#name').val('');
 								$('#email').val('');
@@ -48,5 +48,27 @@ $(document).ready(function() {
 		
 	}));
 	
-	
+	$(document).on('change','#plantype',function(){
+		var plantype=$('#plantype').val();
+		$.ajax({ 
+			type: "POST",
+			url: "ajax/loanofficer_signup_data.php",
+			data:{'type':plantype},
+			success: function(data)
+			{
+				var arr=eval(data);
+				$('#monthlyfee1').html(' '+'$ '+arr[0]);
+				$('#setupfee1').html(' '+'$ '+arr[1]);
+				$('#totalfee1').html(' '+'$ '+arr[2]);
+				
+				$('#monthlyfee').html(' '+'$ '+arr[0]);
+				$('#setupfee').html(' '+'$ '+arr[1]);
+				$('#totalfee').html(' '+'$ '+arr[2]);
+				
+				$('#plan_details').show();
+				$('#ptype').attr('value',plantype);
+			}
+		});
+	});
+
 });

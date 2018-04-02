@@ -27,5 +27,17 @@ if(isset($_REQUEST['name']) && isset($_REQUEST['email']) && isset($_REQUEST['pho
 		}
 		
 	}
+}else if(isset($_REQUEST['type'])){
+	$plantype=$_REQUEST['type'];
+	
+	$planamount='';$signupamt='';$result=array();
+	
+	$sql="SELECT * FROM `plan` where id=(select max(id) from plan where plantype='$plantype')";
+	foreach($dbh->query($sql) as $row){
+		$planamount=$row['planamount'];
+		$signupamt=$row['signupamount'];
+	}
+	array_push($result,$planamount,$signupamt,$planamount+$signupamt);
+	echo json_encode($result);
 }
 ?>

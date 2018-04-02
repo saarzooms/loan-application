@@ -7,12 +7,14 @@ $(document).ready(function() {
 		var planamount = document.getElementById('planamount').value;
 		var planstartdate = document.getElementById('planstartdate').value;
 		var signupamount = document.getElementById('signupamount').value;
+		var plantype = document.getElementById('plantype').value;
+		var trialdate = document.getElementById('trialdate').value;
 		
 		
 		//alert(state+","+zipcode+");
 		$.ajax({ 
 							type: "POST",
-							url: "ajax/plan_data.php?planname="+planname+"&planamount="+planamount+"&planstartdate="+planstartdate+"&signupamount="+signupamount,
+							url: "ajax/plan_data.php?planname="+planname+"&planamount="+planamount+"&planstartdate="+planstartdate+"&signupamount="+signupamount+"&plantype="+plantype+"&trialdate="+trialdate,
 							success: function(data)
 							{
 								if(data == 'NA'){
@@ -23,6 +25,7 @@ $(document).ready(function() {
 									$('#planamount').val('');
 									$('#planstartdate').val('');
 									$('#signupamount').val('');
+									$('#trialdate').val('');
 									
 									
 									$("#msg").html('');

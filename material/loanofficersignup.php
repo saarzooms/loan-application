@@ -1,19 +1,6 @@
 <?php
 include('db/connection.php');
-$sql="SELECT * FROM `plan` where id=(select max(id) from plan)";
-$planid='';$planname='';$planamount='';$startdt='';$enddt='';$signupamt='';$result='';
-$data=$dbh->query($sql);
-foreach($data as $r){
-	$planid=$r['id'];
-	$planname=$r['planname'];
-	$planamount=$r['planamount'];
-	$startdt=$r['planstartdate'];
-	$enddt = date('Y-m-d',strtotime('+1 month',  strtotime($startdt)));
-	$signupamt=$r['signupamount'];	
-}
-
-if($data->rowCount() != 0){  
-	
+$customer_id='';$id='';$planid='';$planname='';$plantype='';$planamount='';$startdt='';$enddt='';$signupamt='';$trialdate='';$result='';
 // Stripe library
 require 'stripe/stripe/Stripe.php';
 
@@ -32,9 +19,28 @@ if ($params['testmode'] == "on") {
 	Stripe::setApiKey($params['private_live_key']);
 	$pubkey = $params['public_live_key'];
 } 
-
 if(isset($_POST['stripeToken']))
-{	
+{
+	$plantype=$_POST['ptype'];
+$sql="SELECT * FROM `plan` where id=(select max(id) from plan where plantype='$plantype')";
+
+$data=$dbh->query($sql);
+foreach($data as $r){
+	$planid=$r['planid'];
+	$planname=$r['planname'];
+	$planamount=$r['planamount'];
+	$startdt=$r['planstartdate'];
+	$enddt = date('Y-m-d',strtotime('+1 month',  strtotime($startdt)));
+	$signupamt=$r['signupamount'];	
+	$trialdate=$r['trialdate'];	
+}
+
+if($data->rowCount() != 0){  
+	
+
+
+// if(isset($_POST['stripeToken']))
+// {	
     $token  = $_POST['stripeToken'];
     $email  = $_POST['useremail'];
     $id  = $_POST['userid'];
@@ -73,13 +79,16 @@ if( $customer_id ) {
  $subscription =Stripe_Subscription::create(array(
   "customer" => $customer_id,
   "items" => array(
-    array(
-      "plan" => $planname,
-    ),
-  )
+		array(
+		  "plan" => $planname,
+		),
+	),
+	"coupon" => 'free coupon',
+	"trial_end" => strtotime($trialdate),	
 ));
 
 $a="update loanofficer_master set planid='$planid',stripeid='$customer_id',startdate='$startdt',enddate='$enddt',status='Active' where id='$id'";
+//file_put_contents('./log_'.date("j.n.Y").'.txt', $a, FILE_APPEND);
 if($dbh->query($a)){
 	//$result = "Payment successful, Thank You!";
 	            $email_from = 'arzoo.rkcet@gmail.com';
@@ -272,7 +281,7 @@ if($dbh->query($a)){
                               <input type="text" name="lender" id="lender" class="form-control" placeholder="Enter Lender">
                            </div>
 						              </div> 
-									  <div class="col-md-4">
+					<div class="col-md-4">
                            <div class="form-group">
                               <label class="control-label">How did you hear about us? *</label>
                               <select name="hear" id="hear" class="form-control m-b" oninvalid="this.setCustomValidity('please select Value')" onchange="this.setCustomValidity('')" required>
@@ -289,14 +298,29 @@ if($dbh->query($a)){
                                 
                              </select>
                            </div>
-						              </div>
-									      <div class="col-md-4">
+						</div>
+					<div class="col-md-4">
+						<label class="control-label">Select Plan Type *</label>
+                            <select id="plantype" name="plantype" class="form-control" required>
+								<option selected disabled>---Select Plan Type---</option>
+								<option value="Monthly">Monthly</option>
+								<option value="Annual">Annual</option>
+							</select>
+						<div id="plan_details" style="display:none;">
+							<h3>Payment Details</h3>
+							<hr width="50%" align="left"/>
+							<h4>Monthly/Annual Subscription :<span id="monthlyfee1"></span></h4><br/>
+							<h4>One Time Setup Fee :<span id="setupfee1"></span></h4><br/>
+							<h4>Total :<span id="totalfee1"></span></h4>
+						</div>
+					</div>
+					<div class="col-md-4">
                            <div class="form-group">
                               <label class="control-label">Password *</label>
                               <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password*" oninvalid="this.setCustomValidity('please enter password')" onchange="this.setCustomValidity('')" required>
                            </div>
-						              </div>
-									  <div class="col-md-4">
+					</div>
+					<div class="col-md-4">
                            <div class="form-group">
                               <label class="control-label">Re-enter Password *</label>
                               <input type="password" name="repassword" id="repassword" class="form-control" placeholder="Re-enter Password*" oninvalid="this.setCustomValidity('please enter Re-enter Password')" onchange="this.setCustomValidity('');checkpass();" required>
@@ -316,9 +340,9 @@ if($dbh->query($a)){
 	<div class="col-md-6">
 		<h3>Payment Details</h3>
 		<hr width="50%" align="left"/>
-		<h4>Monthly Subscription :<span id="monthlyfee"><?php echo ' '.'$ '.($planamount);?></span></h4><br/>
-		<h4>One Time Setup Fee :<span id="setupfee"><?php echo ' '.'$ '.($signupamt);?></span></h4><br/>
-		<h4>Total :<span id="monthlyfee"><?php echo ' '.'$ '.(($planamount+$signupamt));?></span></h4>
+		<h4>Monthly Subscription :<span id="monthlyfee"></span></h4><br/>
+		<h4>One Time Setup Fee :<span id="setupfee"></span></h4><br/>
+		<h4>Total :<span id="totalfee"></span></h4>
 	</div>
 	<div class="col-md-6">
 		<h3>Card Details</h3>
@@ -361,6 +385,7 @@ if($dbh->query($a)){
 				<input type="hidden" id="userid" name="userid"/>
 				<input type="hidden" id="useremail" name="useremail"/>
 				<input type="hidden" id="userpassword" name="userpassword"/>
+				<input type="hidden" id="ptype" name="ptype"/>
 				<br/>
 				
 			</center>

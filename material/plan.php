@@ -73,6 +73,16 @@ include('db/connection.php');
 						<div class="col-md-12">
 													
 						<div class="col-md-3">
+							<div class="form-group">
+                              <label class="control-label">Plan Type *</label>
+                              <select id="plantype" name="plantype" class="form-control" required>
+									<option selected disabled>---Select Plan Type---</option>
+									<option value="Monthly">Monthly</option>
+									<option value="Annual">Annual</option>
+							  </select>
+                           </div>
+						</div/>
+						<div class="col-md-3">
                            <div class="form-group">
                               <label class="control-label">Plan Name *</label>
                               <input type="text" name="planname" id="planname" class="form-control" placeholder="Enter Plan Name*" oninvalid="this.setCustomValidity('please enter plan name')" onchange="this.setCustomValidity('')" required>
@@ -93,17 +103,29 @@ include('db/connection.php');
                                  <label id="d" style="color:red;"></label>
                               </div>
 				    </div>
+						
+						            
+					</div>
+								 
+                    <div class="col-md-12">
 						<div class="col-md-3">
                            <div class="form-group">
                               <label for="control-label">Signup Amount *</label>
                               <input type="text" name="signupamount" id="signupamount" class="form-control" placeholder="Enter Signup Amount*" oninvalid="this.setCustomValidity('please enter Signup Amount')" onchange="this.setCustomValidity('')" required>
 					        </div>
-				    </div>
-						            
+						</div>
+						<div class="col-md-3">
+                           <div class="form-group">
+                              <label for="control-label">Trial period</label>
+                              <div id="datetimepicker2" class="date">
+                                 <input type="text" class="form-control" id="trialdate" name="trialdate" placeholder="Select Trial Date">
+                                 <label id="d1" style="color:red;"></label>
+                              </div>
+					        </div>
+						</div>
 					</div>
-								 
                     <div class="col-md-12">
-															<div class="col-md-4"></div>
+						<div class="col-md-4"></div>
                               <div class="col-md-4">
                                 <center> 
 																		<button type="submit" id="btn_insert" class="btn btn-primary">Save</button>													
@@ -186,6 +208,7 @@ include('db/connection.php');
     $(document).ready(function() {
 		
 		$("#planstartdate").datetimepicker();
+		$("#trialdate").datetimepicker();
     $(document).on("click","#new",function(){
 		$('#planform').show();
 		$('#new').hide();

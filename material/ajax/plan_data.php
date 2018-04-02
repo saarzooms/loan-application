@@ -43,12 +43,14 @@ if(isset($_REQUEST['id']))
 	<table id="example" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
         <thead>
             <tr>
-				<th>Id</th>  			
+							
+				<th>Plan Type</th>  			
 				<th>Plan Name</th>  
 				<th>Plan Amount</th>   
 				<th>Plan Start Validity</th>   
 				<th>Plan End Validity</th>   
 				<th>Signup Amount</th>   
+				<th>Trial Date</th>   
 				
             </tr>
         </thead>
@@ -59,13 +61,13 @@ if(isset($_REQUEST['id']))
 			{
 ?>				
 		<tr>
-		<td><?php echo $row['id']; ?></td>
+		<td><?php echo $row['plantype']; ?></td>
 		<td><?php echo $row['planname']; ?></td>
 		<td><?php echo number_format($row['planamount'],2); ?></td>
 		<td><?php echo $row['planstartdate']; ?></td>
 		<td><?php echo $row['planenddate']; ?></td>
 		<td><?php echo number_format($row['signupamount'],2); ?></td>
-		
+		<td><?php echo $row['trialdate']; ?></td>
 		</tr>
 
 	<?php
@@ -75,39 +77,60 @@ if(isset($_REQUEST['id']))
 			</table>
 	<?php
 }
-else if(isset($_REQUEST['planname']) && isset($_REQUEST['planamount']) && isset($_REQUEST['planstartdate']) && isset($_REQUEST['signupamount']))
+else if(isset($_REQUEST['planname']) && isset($_REQUEST['planamount']) && isset($_REQUEST['planstartdate']) && isset($_REQUEST['signupamount'])&& isset($_REQUEST['plantype'])&& isset($_REQUEST['trialdate']))
 {
 	$planname=$_REQUEST['planname'];
 	$planamount=$_REQUEST['planamount'];
 	$planstartdate=date('Y-m-d',strtotime($_REQUEST['planstartdate']));
 	$planenddate='0000-00-00';
 	$signupamount=$_REQUEST['signupamount'];
+	$plantype=$_REQUEST['plantype'];
+	$trialdate=$_REQUEST['trialdate'];
 	
 	//file_put_contents('./log_'.date("j.n.Y").'.txt', $state.$zipcode, FILE_APPEND);
-	$msg="";$count=0;
+	$msg="";$count=0;$interval='';$planid=0;
 	try {
-		$sql="select count(*) as cnt from plan where planname='$planname'";
+		$sql="select count(*) as cnt from plan where planname='$planname' and plantype='$plantype'";
 		foreach($dbh->query($sql) as $r){
 			$count=$r['cnt'];
 		}
 		if($count == 1){
 			echo 'NA';
 		}else{
-			$sql1="INSERT INTO `plan`(`planname`, `planamount`, `planstartdate`, `planenddate`, `signupamount`) 
-			VALUES ('$planname','$planamount','$planstartdate','$planenddate','$signupamount')";
+			$str="select max(planid) as planid from plan where plantype='$plantype'";
+			foreach($dbh->query($str) as $r)
+			{
+				$planid=$r['planid'];
+			}
+			if($planid == null){
+				$planid=1;
+			}else{
+				$planid=$planid+1;
+			}
+			
+			$sql1="INSERT INTO `plan`(`planname`, `planamount`, `planstartdate`, `planenddate`, `signupamount`, `plantype`, `trialdate`, `planid`) 
+			VALUES ('$planname','$planamount','$planstartdate','$planenddate','$signupamount','$plantype','$trialdate','$planid')";
 			if($dbh->query($sql1))
 			{
-				$id = $dbh->lastInsertId();
-				$id--;
-				if($id != 0){
-					$sql2="update plan set planenddate='$planstartdate' where id='$id'";
+				// $id = $dbh->lastInsertId();
+				// $id--;
+				$planid--;
+				if($planid != 0){
+					$sql2="update plan set planenddate='$planstartdate' where planid='$planid' and plantype='$plantype'";
 					if($dbh->query($sql2)){
 						//echo 'Plan Data Save Successfully !!!';
 					}
 				}		try {
+								if($plantype == 'Monthly')
+								{
+									$interval='month';
+								}else{
+									$interval='year';
+								}
+								
 								$plan=Stripe_Plan::create(array(
 								  "amount" => $planamount,
-								  "interval" => "month",
+								  "interval" => $interval,
 								  "name" => $planname,
 								  "currency" => "usd",
 								  "id" => $planname
