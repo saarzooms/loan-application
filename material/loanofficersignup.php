@@ -84,7 +84,7 @@ if( $customer_id ) {
 		),
 	),
 	"coupon" => 'free coupon',
-	"trial_end" => strtotime($trialdate),	
+	//"trial_end" => strtotime($trialdate),	
 ));
 
 $a="update loanofficer_master set planid='$planid',stripeid='$customer_id',startdate='$startdt',enddate='$enddt',status='Active' where id='$id'";
