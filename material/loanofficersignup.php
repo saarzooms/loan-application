@@ -76,17 +76,29 @@ if($data->rowCount() != 0){
 
 if( $customer_id ) {
  
- $subscription =Stripe_Subscription::create(array(
-  "customer" => $customer_id,
-  "items" => array(
-		array(
-		  "plan" => $planname,
+ if($trialdate != '0000-00-00'){
+	 $subscription =Stripe_Subscription::create(array(
+	  "customer" => $customer_id,
+	  "items" => array(
+			array(
+			  "plan" => $planname,
+			),
 		),
-	),
-	"coupon" => 'free coupon',
-	//"trial_end" => strtotime($trialdate),	
-));
-
+		"coupon" => 'free coupon',
+		"trial_end" => strtotime($trialdate),	
+	));
+ }else{
+	 $subscription =Stripe_Subscription::create(array(
+	  "customer" => $customer_id,
+	  "items" => array(
+			array(
+			  "plan" => $planname,
+			),
+		),
+		"coupon" => 'free coupon',
+		//"trial_end" => strtotime($trialdate),	
+	));
+ }
 $a="update loanofficer_master set planid='$planid',stripeid='$customer_id',startdate='$startdt',enddate='$enddt',status='Active' where id='$id'";
 //file_put_contents('./log_'.date("j.n.Y").'.txt', $a, FILE_APPEND);
 if($dbh->query($a)){
