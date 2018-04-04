@@ -76,29 +76,17 @@ if($data->rowCount() != 0){
 
 if( $customer_id ) {
  
- if($trialdate != '0000-00-00'){
-	 $subscription =Stripe_Subscription::create(array(
-	  "customer" => $customer_id,
-	  "items" => array(
-			array(
-			  "plan" => $planname,
-			),
+ $subscription =Stripe_Subscription::create(array(
+  "customer" => $customer_id,
+  "items" => array(
+		array(
+		  "plan" => $planname,
 		),
-		"coupon" => 'free coupon',
-		"trial_end" => strtotime($trialdate),	
-	));
- }else{
-	 $subscription =Stripe_Subscription::create(array(
-	  "customer" => $customer_id,
-	  "items" => array(
-			array(
-			  "plan" => $planname,
-			),
-		),
-		"coupon" => 'free coupon',
-		//"trial_end" => strtotime($trialdate),	
-	));
- }
+	),
+	"coupon" => 'free coupon',
+	"trial_end" => strtotime($trialdate),	
+));
+
 $a="update loanofficer_master set planid='$planid',stripeid='$customer_id',startdate='$startdt',enddate='$enddt',status='Active' where id='$id'";
 //file_put_contents('./log_'.date("j.n.Y").'.txt', $a, FILE_APPEND);
 if($dbh->query($a)){
@@ -321,9 +309,9 @@ if($dbh->query($a)){
 						<div id="plan_details" style="display:none;">
 							<h3>Payment Details</h3>
 							<hr width="50%" align="left"/>
-							<h4>Monthly/Annual Subscription :<span id="monthlyfee1"></span></h4><br/>
-							<h4>One Time Setup Fee :<span id="setupfee1"></span></h4><br/>
-							<h4>Total :<span id="totalfee1"></span></h4>
+							<h4 id='month'></h4><br/>
+							<h4 id='one'></h4><br/>
+							<h4 id='total'></h4>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -352,9 +340,9 @@ if($dbh->query($a)){
 	<div class="col-md-6">
 		<h3>Payment Details</h3>
 		<hr width="50%" align="left"/>
-		<h4>Monthly Subscription :<span id="monthlyfee"></span></h4><br/>
-		<h4>One Time Setup Fee :<span id="setupfee"></span></h4><br/>
-		<h4>Total :<span id="totalfee"></span></h4>
+		<h4 id='month1'></h4><br/>
+		<h4 id='one1'></span></h4><br/>
+		<h4 id='total1'></h4>
 	</div>
 	<div class="col-md-6">
 		<h3>Card Details</h3>

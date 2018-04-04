@@ -57,13 +57,27 @@ $(document).ready(function() {
 			success: function(data)
 			{
 				var arr=eval(data);
-				$('#monthlyfee1').html(' '+'$ '+arr[0]);
-				$('#setupfee1').html(' '+'$ '+arr[1]);
-				$('#totalfee1').html(' '+'$ '+arr[2]);
+				if(plantype == 'Monthly')
+				{
+					$('#month').html("Monthly Subscription :<span id='monthlyfee1'>"+' '+'$ '+arr[0]+"</span>");
+					$('#month1').html("Monthly Subscription :<span id='monthlyfee1'>"+' '+'$ '+arr[0]+"</span>");
+				}else{
+					$('#month').html("Annual Subscription :<span id='monthlyfee1'>"+' '+'$ '+arr[0]+"</span>");
+					$('#month1').html("Annual Subscription :<span id='monthlyfee1'>"+' '+'$ '+arr[0]+"</span>");
+				}
+				$('#one').html("One Time Setup Fee :<span id='setupfee1'>"+' '+'$ '+arr[1]+"</span>");
+				$('#total').html("Total :<span id='totalfee1'>"+' '+'$ '+arr[2]+"</span>");
+				$('#one1').html("One Time Setup Fee :<span id='setupfee1'>"+' '+'$ '+arr[1]+"</span>");
+				$('#total1').html("Total :<span id='totalfee1'>"+' '+'$ '+arr[2]+"</span>");
 				
-				$('#monthlyfee').html(' '+'$ '+arr[0]);
-				$('#setupfee').html(' '+'$ '+arr[1]);
-				$('#totalfee').html(' '+'$ '+arr[2]);
+				
+				// $('#monthlyfee1').html(' '+'$ '+arr[0]);
+				// $('#setupfee1').html(' '+'$ '+arr[1]);
+				// $('#totalfee1').html(' '+'$ '+arr[2]);
+				
+				// $('#monthlyfee').html(' '+'$ '+arr[0]);
+				// $('#setupfee').html(' '+'$ '+arr[1]);
+				// $('#totalfee').html(' '+'$ '+arr[2]);
 				
 				$('#plan_details').show();
 				$('#ptype').attr('value',plantype);
